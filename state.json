@@ -1,0 +1,387 @@
+{
+  "heartbeat_at": 1790267901.5353065,
+  "last_scan_at": 1790267901.5353065,
+  "listings": {
+    "14e7b6340613b6e320793338": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary purchase section explicitly says unavailable",
+        "match": "exact",
+        "price": "3,499.00",
+        "source": "e2zStore",
+        "status": "out_of_stock",
+        "title": "Elden Ring Shadow of the Erdtree Edition PS5",
+        "url": "https://e2zstore.com/product/elden-ring-shadow-of-the-erdtree-edition-ps5",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "18a28c3efaa233ffb7732453": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "4,499.00",
+        "source": "MCube Games",
+        "status": "out_of_stock",
+        "title": "Elden Ring Shadow Of The Erdtree Edition -  PlayStation 5",
+        "url": "https://mcubegames.in/product/elden-ring-shadow-of-the-erdtree-edition---playstation-5",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "3843619324a50d55dce5f04a": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "Used (seller label)",
+        "currency": "INR",
+        "dlc": "Not included (seller statement)",
+        "evidence": "Shopify purchase-variant available flag; delivery not tested",
+        "match": "exact",
+        "price": "2,500.00",
+        "source": "Console Garage",
+        "status": "out_of_stock",
+        "title": "Elden Ring Shadow Of The Erdtree Edition ps5",
+        "url": "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5?variant=41872057499707",
+        "variant": "Pre-Owned(USED)(WITHOUT DLC CODE)"
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "57b52e536be3fd535617b213": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Shopify purchase-variant available flag; delivery not tested",
+        "match": "exact",
+        "price": "3,600.00",
+        "source": "Console Garage",
+        "status": "out_of_stock",
+        "title": "Elden Ring Shadow Of The Erdtree Edition ps5",
+        "url": "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5?variant=41872057532475",
+        "variant": "New"
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "836579a82223c0d2ddddc8fe": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary purchase section explicitly says unavailable",
+        "match": "exact",
+        "price": "3,499.00",
+        "source": "DTZone",
+        "status": "out_of_stock",
+        "title": "PS5 Elden Ring : Shadow of the Erdtree Edition | PlayStation 5",
+        "url": "https://dtzone.in/index.php/product/ps5-elden-ring-shadow-of-the-erdtree-edition-playstation-5",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "d2dbd29ce93e164b41838d3f": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Claimed unused; region/expiry unverified",
+        "evidence": "Primary purchase section explicitly says unavailable",
+        "match": "exact",
+        "price": "1,799.00",
+        "source": "Hitech Gamez",
+        "status": "out_of_stock",
+        "title": "Elden Ring Shadow of the Erdtree Edition PS5",
+        "url": "https://hitechgamez.in/product/elden-ring-shadow-of-the-erdtree-edition-ps5",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "dd153957ba661666021e88ac": {
+      "alerted_cycle": 0,
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary purchase section explicitly says unavailable",
+        "match": "exact",
+        "price": "4,999.00",
+        "source": "GameBuy",
+        "status": "out_of_stock",
+        "title": "Elden Ring Shadow Of The Erdtree PS5",
+        "url": "https://gamebuy.in/product/elden-ring-shadow-of-the-erdtree/",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1790267901.5353065,
+      "possible_sent": false,
+      "stock_cycle": 0
+    }
+  },
+  "reddit": {},
+  "sources": {
+    "cex": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
+        "errors": [
+          "sitemap: FetchError: Response too large; check skipped"
+        ],
+        "name": "CeX India",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 3
+      },
+      "sitemap_cursor": 0
+    },
+    "console-garage": {
+      "discovery_at": 1790267901.5353065,
+      "known": {
+        "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790267901.5353065
+      },
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [],
+        "name": "Console Garage",
+        "observations": 2,
+        "product_pages": 1,
+        "requests": 5
+      },
+      "sitemap_cursor": 0
+    },
+    "dacby": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [],
+        "name": "DACBY",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 4
+      },
+      "sitemap_cursor": 2
+    },
+    "dtzone": {
+      "discovery_at": 1790267901.5353065,
+      "known": {
+        "https://dtzone.in/index.php/product/ps5-elden-ring-shadow-of-the-erdtree-edition-playstation-5": 1790267901.5353065
+      },
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
+        "errors": [],
+        "name": "DTZone",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 6
+      }
+    },
+    "e2z": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
+        "errors": [],
+        "name": "e2zStore",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 4
+      }
+    },
+    "flipkart": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "product: FetchError: Network/DNS/TLS request failed",
+          "product: FetchError: Network/DNS/TLS request failed"
+        ],
+        "name": "Flipkart",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 2
+      }
+    },
+    "gamebuy": {
+      "discovery_at": 1790267901.5353065,
+      "known": {
+        "https://gamebuy.in/product/elden-ring-shadow-of-the-erdtree/": 1790267901.5353065,
+        "https://gamebuy.in/wp-content/uploads/2025/03/Elden-Ring-Shadow-Of-The-Erdtree-PS5.png": 1790267901.5353065
+      },
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
+        "errors": [
+          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+        ],
+        "name": "GameBuy",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 7
+      },
+      "sitemap_cursor": 2
+    },
+    "gameloot": {
+      "cooldown_until": 1790289512.008561,
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
+          "sitemap: FetchError: Store is in a temporary backoff window"
+        ],
+        "name": "GameLoot",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1
+      }
+    },
+    "gamenation": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "sitemap: FetchError: HTTP 404; not a stock result"
+        ],
+        "name": "GameNation",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 2
+      }
+    },
+    "gts": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "sitemap: ParseError: not well-formed (invalid token): line 52, column 42"
+        ],
+        "name": "Games The Shop",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 2
+      }
+    },
+    "hgworld": {
+      "discovery_at": 1790267901.5353065,
+      "known": {
+        "https://hgworld.in/shop/hgworld-elden-ring-shadow-of-the-erdtree-ps5-2/": 1790267901.5353065
+      },
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "product: FetchError: HTTP 404; not a stock result"
+        ],
+        "name": "HGWorld",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 6
+      },
+      "sitemap_cursor": 2
+    },
+    "hitech": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "sitemap: ParseError: XML or text declaration not at start of entity: line 2, column 0"
+        ],
+        "name": "Hitech Gamez",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 4
+      }
+    },
+    "mcube": {
+      "discovery_at": 1790267901.5353065,
+      "known": {
+        "https://mcubegames.in/product/elden-ring-shadow-of-the-erdtree-edition---playstation-5": 1790267901.5353065
+      },
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
+        "errors": [],
+        "name": "MCube Games",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 4
+      },
+      "sitemap_cursor": 0
+    },
+    "mx2": {
+      "discovery_at": 1790267901.5353065,
+      "known": {},
+      "report": {
+        "checked_at": 1790267901.5353065,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "catalogue: FetchError: Network/DNS/TLS request failed",
+          "sitemap: FetchError: Network/DNS/TLS request failed"
+        ],
+        "name": "MX2Games",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 2
+      }
+    }
+  },
+  "version": 1
+}
