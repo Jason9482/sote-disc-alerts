@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "discovery_hours": 6,
+  "catalogue_pages": 2,
+  "sitemap_pages": 3,
+  "products_per_store": 10,
+  "max_requests_per_store": 14,
+  "request_delay_seconds": 2,
+  "alert_possible": true,
+  "max_alerts_per_run": 12,
+  "max_price_inr": null,
+  "reddit": {
+    "enabled": false,
+    "subreddits": [
+      "IndianGaming",
+      "Indiangaming_Resale",
+      "PlaystationIndia",
+      "BangaloreMarketplace"
+    ],
+    "include_comments": true,
+    "max_age_hours": 24,
+    "limit": 100,
+    "message_retention_hours": 24
+  },
+  "sources": [
+    {
+      "id": "console-garage",
+      "name": "Console Garage",
+      "base": "https://consolegarage.com",
+      "adapter": "shopify",
+      "products": [
+        "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5"
+      ],
+      "catalogues": [
+        "https://consolegarage.com/search?q=elden+ring&type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Exact product page visually checked via web tool; public JSON endpoint still needs live runtime validation. Buyback must be excluded.",
+      "enabled": true,
+      "currency": "INR"
+    },
+    {
+      "id": "e2z",
+      "name": "e2zStore",
+      "base": "https://e2zstore.com",
+      "products": [
+        "https://e2zstore.com/product/elden-ring-shadow-of-the-erdtree-edition-ps5/"
+      ],
+      "catalogues": [
+        "https://e2zstore.com/product-tag/elden-ring/"
+      ],
+      "sitemap_discovery": false,
+      "default_condition": "New",
+      "notes": "Exact page and tag catalogue inspected via web tool. Raw HTML adapter needs first GitHub run.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR"
+    },
+    {
+      "id": "dtzone",
+      "name": "DTZone",
+      "base": "https://dtzone.in",
+      "products": [
+        "https://dtzone.in/index.php/product/ps5-elden-ring-shadow-of-the-erdtree-edition-playstation-5/"
+      ],
+      "catalogues": [
+        "https://dtzone.in/?s=elden+ring&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Exact page inspected via web tool. Search/robots/HTML adapter not live-tested.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR"
+    },
+    {
+      "id": "hitech",
+      "name": "Hitech Gamez",
+      "base": "https://hitechgamez.in",
+      "products": [
+        "https://hitechgamez.in/product/elden-ring-shadow-of-the-erdtree-edition-ps5/"
+      ],
+      "catalogues": [
+        "https://hitechgamez.in/?s=elden+ring&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Exact page inspected via web tool. Search and any separate preowned URL need discovery validation.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR"
+    },
+    {
+      "id": "gameloot",
+      "name": "GameLoot",
+      "base": "https://gameloot.in",
+      "catalogues": [
+        "https://gameloot.in/?s=elden+ring&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Experimental catalogue discovery; not a verified exact-edition page.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "gamebuy",
+      "name": "GameBuy",
+      "base": "https://gamebuy.in",
+      "catalogues": [
+        "https://gamebuy.in/?s=elden+ring&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Experimental catalogue discovery; no original-case guarantee.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "mx2",
+      "name": "MX2Games",
+      "base": "https://mx2games.com",
+      "catalogues": [
+        "https://mx2games.com/?s=elden+ring&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Experimental discovery; anti-bot blocks are reported, not bypassed.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "hgworld",
+      "name": "HGWorld",
+      "base": "https://hgworld.in",
+      "catalogues": [
+        "https://hgworld.in/?s=elden+ring&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Experimental discovery; no verified matching product seeded.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "mcube",
+      "name": "MCube Games",
+      "base": "https://mcubegames.in",
+      "catalogues": [],
+      "sitemap_discovery": true,
+      "notes": "Experimental bounded sitemap discovery. JavaScript pages may remain unreadable.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "gts",
+      "name": "Games The Shop",
+      "base": "https://www.gamestheshop.com",
+      "catalogues": [],
+      "sitemap_discovery": true,
+      "notes": "Experimental sitemap discovery. Opaque product identifiers may prevent title-based discovery.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "gamenation",
+      "name": "GameNation",
+      "base": "https://gamenation.in",
+      "catalogues": [],
+      "sitemap_discovery": true,
+      "notes": "Experimental sitemap discovery only; not a validated dynamic stock integration.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "dacby",
+      "name": "DACBY",
+      "base": "https://dacby.com",
+      "catalogues": [],
+      "sitemap_discovery": true,
+      "notes": "Experimental sitemap discovery only; not a validated dynamic stock integration.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "cex",
+      "name": "CeX India",
+      "base": "https://in.webuy.com",
+      "catalogues": [],
+      "sitemap_discovery": true,
+      "notes": "Experimental sitemap discovery only. Numeric item IDs may prevent title-based discovery.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR",
+      "products": []
+    },
+    {
+      "id": "flipkart",
+      "name": "Flipkart",
+      "base": "https://www.flipkart.com",
+      "products": [
+        "https://www.flipkart.com/elden-ring-shadow-erdtree-standard/p/itm00826f7c6f8b7",
+        "https://www.flipkart.com/elden-ring-shadow-erdtree-erdtree-edition/p/itm20c984b821e35"
+      ],
+      "catalogues": [],
+      "sitemap_discovery": false,
+      "notes": "Experimental exact-page probes; never verifies delivery PIN, selected seller or checkout. May be blocked or have ambiguous title.",
+      "enabled": true,
+      "adapter": "html",
+      "currency": "INR"
+    }
+  ],
+  "manual_only": [
+    {
+      "name": "Amazon India",
+      "reason": "No verified exact-edition ASIN or reliable permitted stock adapter. Not scanned."
+    }
+  ]
+}

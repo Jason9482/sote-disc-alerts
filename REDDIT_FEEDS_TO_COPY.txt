@@ -1,0 +1,21 @@
+REDDIT FEEDS FOR HOSTED MONITORSS - NOT A TRACKER CONFIG FILE
+Setup revision 2 - 24 September 2026
+
+Connect your spare Reddit account in MonitoRSS. Test each preview.
+Destination for all three: Game alerts / #reddit-sote.
+Free advertised allowance: 3 feeds, 20-minute checks.
+The combined and comment feeds require live verification.
+
+IndianGaming - new posts
+https://www.reddit.com/r/IndianGaming/new/.rss?limit=100
+
+Resale + Bangalore + PlayStation - new posts
+https://www.reddit.com/r/Indiangaming_Resale+BangaloreMarketplace+PlaystationIndia/new/.rss?limit=100
+
+PlayStation India - sale megathread comments
+https://www.reddit.com/r/PlaystationIndia/comments/1w2y8w7/wtb_wts_anyone_selling_price_check_megathread/.rss?sort=new&limit=100
+
+Filter: include ANY of elden ring / eldenring / erdtree / sote,
+case-insensitive, in title OR actual post/comment text.
+Update the comment feed when the megathread is replaced.
+Leave reddit.enabled=false in GitHub; this file is for copying into MonitoRSS.

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SOTE alerts - complete setup</title><style>
+:root { color-scheme: light; --ink:#172333; --accent:#1b6266; --muted:#566575; --line:#d5dfe4; }
+* { box-sizing:border-box; }
+body { margin:0; background:#f3f5f6; color:var(--ink); font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; }
+header { background:#172d3c; color:white; padding:24px max(24px,calc((100vw - 940px)/2)); }
+header p { margin:0; font-size:13px; text-transform:uppercase; letter-spacing:1.4px; }
+main { max-width:940px; margin:32px auto 70px; padding:38px 48px; background:#fff; border:1px solid var(--line); border-radius:12px; }
+h1 { font-size:36px; line-height:1.2; letter-spacing:-.7px; margin:0 0 22px; }
+h2 { font-size:25px; line-height:1.3; border-top:2px solid var(--line); padding-top:26px; margin-top:44px; scroll-margin-top:18px; }
+h3 { font-size:21px; line-height:1.4; margin-top:30px; scroll-margin-top:18px; }
+h4 { font-size:18px; }
+p { margin:14px 0; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px; }
+nav { background:#edf4f3; padding:18px 22px; border-radius:8px; margin:26px 0; }
+nav strong { display:block; margin-bottom:8px; }
+nav a { display:block; font-size:15px; padding:3px 0; }
+pre { padding:17px; background:#eff3f6; border:1px solid var(--line); border-radius:7px; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.5; }
+code { font-family:Consolas,"SFMono-Regular",monospace; font-size:.88em; background:#eff3f6; padding:2px 4px; border-radius:3px; }
+pre code { padding:0; }
+.table-wrap { overflow-x:auto; margin:22px 0; }
+table { width:100%; border-collapse:collapse; font-size:15px; }
+th { background:#e9eff2; text-align:left; }
+th,td { border-bottom:1px solid var(--line); padding:12px; vertical-align:top; }
+li { margin:6px 0; padding-left:3px; }
+footer { margin-top:35px; color:var(--muted); font-size:13px; }
+@media(max-width:680px) { body {font-size:16px;} main {margin:0; border:0; border-radius:0; padding:26px 20px;} h1 {font-size:30px;} th,td {padding:9px;} }
+@media print { body {background:white; font-size:11pt;} main {max-width:none;margin:0;padding:0;border:0;} header,nav {display:none;} h2,h3,h4 {break-after:avoid;} pre,table {break-inside:avoid;} a {color:inherit;} }
+</style></head><body><header><p>SOTE WATCH / SETUP REVISION 2 / 24 SEPTEMBER 2026</p></header><main><nav aria-label="Guide sections"><strong>Jump to a section</strong><a href="#before-you-start">Before you start</a><a href="#part-a-prepare-discord">Part A - Prepare Discord</a><a href="#part-b-start-the-indian-store-tracker">Part B - Start the Indian-store tracker</a><a href="#part-c-add-reddit-through-hosted-monitorss">Part C - Add Reddit through hosted MonitoRSS</a><a href="#troubleshooting">Troubleshooting</a><a href="#ongoing-care-and-stopping">Ongoing care and stopping</a><a href="#references-and-verification">References and verification</a></nav><h1>SOTE alerts: complete setup</h1>
+<p><strong>Indian shops + four Reddit communities -&gt; Discord on your phone</strong></p>
+<p>Setup guide revision 2 - 24 September 2026. Tracker engine: the existing version 1.0.0.</p>
+<p>You will use two separate services: <strong>GitHub runs the shop tracker</strong>; <strong>hosted MonitoRSS handles Reddit</strong>. Both send messages into your Discord server. Nothing needs to keep running on your PC after setup. This is not a single program installed on your phone.</p>
+<p><strong>Your four communities:</strong> r/IndianGaming, r/Indiangaming_Resale, r/PlaystationIndia and r/BangaloreMarketplace.</p>
+<h2 id="before-you-start">Before you start</h2>
+<p>Use a personal GitHub account, your normal Discord account and the spare Reddit account you already prepared. Keep your phone nearby with Discord installed and signed in to the same Discord account as on your PC. You do not need to install Python, Git, Docker or a database on your PC, create a Reddit developer application, or buy hosting for the setup below.</p>
+<p><strong>The free-plan constraint:</strong> MonitoRSS currently advertises three feeds, checked every 20 minutes. We will keep IndianGaming separate, combine the other three communities into one feed, and reserve the third feed for the PlayStation sale megathread. Reddit's legacy documentation describes combined-community RSS feeds, but it is no longer maintained. <strong>The combined feed and comment feed must pass the authenticated MonitoRSS preview before you rely on this arrangement.</strong> I could not test those feeds inside your account. A valid-looking URL is not proof of live coverage. [S1, S2, S3]</p>
+<p>The retailer code passed <strong>74 offline tests again during this revision</strong>. It has not been deployed to your accounts. Live retailer access, your MonitoRSS feeds, and phone delivery still need the checks below.</p>
+<p>Already uploaded the previous ZIP? The running retailer code does not need replacing for MonitoRSS to work. Use this guide for the Reddit setup. Do not create a second running GitHub tracker, which could send duplicate alerts.</p>
+<h2 id="part-a-prepare-discord">Part A - Prepare Discord</h2>
+<h3 id="1-make-a-server-and-two-channels">1. Make a server and two channels</h3>
+<p>Open <a href="https://discord.com/app" rel="noreferrer noopener" target="_blank">Discord</a> on your PC or in the browser. Create a server with the <strong>+</strong> in the left-hand server list and choose <strong>Create My Own</strong>. Name it <strong>Game alerts</strong>. Keep it just for you; there is no need to invite anybody.</p>
+<p>Create two ordinary <strong>text channels</strong>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>What it receives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sote-alerts</code></td>
+<td>Indian-store leads and the tracker health report</td>
+</tr>
+<tr>
+<td><code>reddit-sote</code></td>
+<td>Reddit keyword matches from MonitoRSS</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do not use a forum channel or a thread. Keeping both channels in the same server makes phone settings simpler.</p>
+<h3 id="2-enable-phone-notifications">2. Enable phone notifications</h3>
+<p>On your phone, open the Game alerts server's notification settings. Select <strong>All Messages</strong>, enable <strong>Mobile Push Notifications</strong>, and make sure the server and both channels are not muted. Enable Discord notifications in Android/iOS settings as well. On Android, check that the <strong>Server / Messages</strong> notification category is permitted. [S4]</p>
+<p>During the later test, temporarily close desktop Discord and lock the phone. A message visible in a channel does not prove that a phone notification worked.</p>
+<h3 id="3-create-the-shop-tracker-webhook">3. Create the shop-tracker webhook</h3>
+<p>On desktop Discord open:</p>
+<p><strong>Game alerts -&gt; Server Settings -&gt; Integrations -&gt; Webhooks -&gt; New Webhook</strong></p>
+<p>The button may say <strong>Create Webhook</strong>. Name it <strong>SOTE Watcher</strong>, select <strong>#sote-alerts</strong>, save, and choose <strong>Copy Webhook URL</strong>. [S5]</p>
+<p><strong>Keep the webhook URL private.</strong> Do not paste it into chat, a screenshot, code, a README, or a public issue. The next step puts it in GitHub's private secret store. Copy it exactly; do not append <code>/github</code>.</p>
+<p>MonitoRSS will use its own bot for #reddit-sote. You do not need a second webhook for this guide.</p>
+<h2 id="part-b-start-the-indian-store-tracker">Part B - Start the Indian-store tracker</h2>
+<h3 id="4-create-a-public-github-repository">4. Create a public GitHub repository</h3>
+<p>Sign in to <a href="https://github.com" rel="noreferrer noopener" target="_blank">GitHub</a> using a personal account. Open the <strong>+</strong> menu -&gt; <strong>New repository</strong>. Enter:</p>
+<pre><code class="language-text">sote-disc-alerts
+</code></pre>
+<p>Choose <strong>Public</strong>, add a README if the page offers that option, and click <strong>Create repository</strong>. A repository is just the online folder that holds your tracker. [S6]</p>
+<p>GitHub currently makes standard hosted runner time free for public repositories. This workflow uses <code>ubuntu-latest</code>, no paid larger runner, and no artifact uploads or dependency cache. Your code and non-secret shop-check history will be public. Never upload passwords, your address or your delivery PIN. [S7]</p>
+<h3 id="5-save-the-discord-webhook-as-a-secret">5. Save the Discord webhook as a secret</h3>
+<p>Inside the repository go to:</p>
+<p><strong>Settings -&gt; Secrets and variables -&gt; Actions -&gt; New repository secret</strong></p>
+<p>Set the <strong>Name</strong> to this exact text:</p>
+<pre><code class="language-text">DISCORD_WEBHOOK_URL
+</code></pre>
+<p>Paste your webhook URL in <strong>Secret</strong> and save it. Use <strong>Secrets</strong>, not <strong>Variables</strong>, and not the separate repository <strong>Webhooks</strong> page. [S8]</p>
+<p>Do not create a personal access token. The supplied workflow uses its automatically provided GitHub token to save alert history.</p>
+<h3 id="6-extract-and-upload-the-tracker-files">6. Extract and upload the tracker files</h3>
+<p>On Windows, right-click <strong>SOTE_Tracker_With_Reddit_Setup.zip</strong> -&gt; <strong>Extract All</strong>. Open the extracted <strong>sote-discord-tracker</strong> folder. You should see <code>tracker.py</code>, <code>config.json</code>, <code>requirements.txt</code>, <code>sote</code>, <code>tests</code>, <code>.github</code>, and the guides.</p>
+<p>In GitHub select <strong>Code -&gt; Add file -&gt; Upload files</strong>. Drag in the <strong>contents of the sote-discord-tracker folder</strong>, including its folders. Commit the upload to the default branch, normally <strong>main</strong>. [S9]</p>
+<p><strong>Do not upload only the ZIP. Do not upload the enclosing sote-discord-tracker folder as an extra level.</strong> On GitHub, <code>tracker.py</code> must be visible at the top level.</p>
+<p>Check that this file exists:</p>
+<pre><code class="language-text">.github/workflows/watch.yml
+</code></pre>
+<p>When Windows or the upload omits <code>.github</code>, use the fallback:</p>
+<ol>
+<li>Open <code>WORKFLOW_TO_COPY.yml</code> on your PC with Notepad and copy its entire contents.</li>
+<li>In GitHub choose <strong>Add file -&gt; Create new file</strong>.</li>
+<li>For the filename enter <code>.github/workflows/watch.yml</code> exactly, including the first dot and both slashes.</li>
+<li>Paste the contents and commit to <strong>main</strong>.</li>
+</ol>
+<p>The root <code>WORKFLOW_TO_COPY.yml</code> is only a spare; it does not activate a schedule by itself. <strong>Never paste your actual webhook URL into either workflow file.</strong></p>
+<p>Leave <code>config.json</code> unchanged for the first run. In particular, keep the built-in <code>reddit.enabled</code> setting <strong>false</strong>. The direct-API Reddit module is not the Reddit route in this guide. Leave <code>REDDIT_APPROVED</code> and every <code>REDDIT_*</code> credential unset in GitHub.</p>
+<h3 id="7-send-a-phone-test">7. Send a phone test</h3>
+<p>In GitHub open:</p>
+<p><strong>Actions -&gt; SOTE stock watcher -&gt; Run workflow</strong></p>
+<p>Enable Actions if prompted. Select the default branch, usually <strong>main</strong>. Choose mode <strong>test</strong> and click <strong>Run workflow</strong>. GitHub only shows the manual control when the actual workflow is on the default branch. [S10]</p>
+<p>The expected Discord message is:</p>
+<pre><code class="language-text">TEST: SOTE tracker connected
+</code></pre>
+<p>Check that it reaches <strong>#sote-alerts</strong> and gives your locked phone a notification. This tests delivery only, not store stock.</p>
+<h3 id="8-run-the-first-real-scan">8. Run the first real scan</h3>
+<p>Run the same workflow again, this time with mode <strong>status</strong>. It checks the configured stores and forces a health message. Open the workflow run's <strong>Summary</strong> for the source-by-source result.</p>
+<p><strong>A green workflow is not proof that all shops were readable.</strong> Review the successful product-page checks, discovery checks and failures. <code>Blocked</code>, <code>unreadable</code>, a timeout, or no discovered URL is not the same as <code>out of stock</code>.</p>
+<p>The package contains 14 configured shop targets, not 14 validated integrations. Some are experimental sitemap/catalogue discovery. Amazon India is not implemented. Exact-edition seed pages are included for Console Garage, e2zStore, DTZone and Hitech Gamez; the first GitHub run establishes whether this code can read them.</p>
+<p>The supplied schedule requests a run every <strong>30 minutes</strong>, at UTC minutes 17 and 47. New-listing discovery is attempted about every <strong>six hours</strong>. A shop health report is sent about once every 24 hours. Nothing needs to run on your PC. GitHub can delay or drop scheduled runs; it is a best-effort service. [S11]</p>
+<h2 id="part-c-add-reddit-through-hosted-monitorss">Part C - Add Reddit through hosted MonitoRSS</h2>
+<h3 id="9-add-monitorss-to-your-discord-server">9. Add MonitoRSS to your Discord server</h3>
+<p>Open <a href="https://monitorss.xyz" rel="noreferrer noopener" target="_blank">the official MonitoRSS website</a>. Choose <strong>Add to Discord</strong>, select <strong>Game alerts</strong>, review the permissions, and authorize it. Then use <strong>Dashboard</strong> on that site and sign in with the same Discord account. Use the hosted service; do not follow the self-hosting/Docker installation in its source repository. [S1, S12]</p>
+<p>Make sure the bot can view and send messages in <strong>#reddit-sote</strong> and embed links there. A channel made private can require explicitly giving the bot access. Do not make a separate paid workspace or buy a subscription just to follow this guide.</p>
+<p>The dashboard is an authenticated app, and its layout can change. Labels such as Add Feed, destination/connection, preview and filtering below describe the relevant controls; their exact wording may differ. The old docs.monitorss.xyz site is deprecated, so use the current dashboard's help for a changed control. [S13]</p>
+<h3 id="10-connect-your-spare-reddit-account">10. Connect your spare Reddit account</h3>
+<p>In another browser tab, log in to <strong>the spare Reddit account</strong>. Return to MonitoRSS and start adding a Reddit feed. Use its <strong>Connect Reddit</strong> prompt; current MonitoRSS releases require a Reddit connection when adding Reddit feeds. [S2]</p>
+<p>On the Reddit authorization screen, check that the displayed username is your spare account, review the permissions and authorize. Then return to MonitoRSS. Enter any Reddit password only on Reddit's own sign-in page, never into this tracker or a message.</p>
+<p><strong>No Reddit password, client ID, token or developer application goes into GitHub for this setup.</strong> The Reddit authorization belongs to MonitoRSS. You are not enabling the optional direct-API module in the ZIP.</p>
+<h3 id="11-add-and-verify-these-three-feeds">11. Add and verify these three feeds</h3>
+<p>Use the feed addresses below one at a time. For each one, paste the <strong>whole URL</strong>, inspect its preview before applying filters, and set the Discord destination to <strong>Game alerts -&gt; #reddit-sote</strong>. A feed that was merely saved, without a Discord destination/connection, is not a completed alert setup.</p>
+<h4>Feed 1 - IndianGaming: new posts</h4>
+<pre><code class="language-text">https://www.reddit.com/r/IndianGaming/new/.rss?limit=100
+</code></pre>
+<p>Suggested name: <strong>IndianGaming - new posts</strong>.</p>
+<p>Start with this single-community feed. Confirm the preview contains real recent posts and links to r/IndianGaming. No recent Elden Ring item is required for this connectivity test.</p>
+<h4>Feed 2 - Resale, Bangalore marketplace and PlayStation: new posts</h4>
+<pre><code class="language-text">https://www.reddit.com/r/Indiangaming_Resale+BangaloreMarketplace+PlaystationIndia/new/.rss?limit=100
+</code></pre>
+<p>Suggested name: <strong>Resale + Bangalore + PlayStation</strong>.</p>
+<p>The <strong>+</strong> signs join the three communities into one RSS source, so it uses one feed slot rather than three. Reddit's legacy RSS page documents this multireddit pattern. [S3]</p>
+<p>After saving, check that the stored URL still contains <strong>all three names</strong> and <strong>/new/</strong>. Inspect the preview's links to see which communities the returned entries belong to. A quieter community may not have an item in that particular snapshot; that alone does not prove it is excluded.</p>
+<p><strong>This combined feed is not live-tested here.</strong> MonitoRSS must accept it under your connected account. A successful Feed 1 does not establish that Feed 2 works. If it fails, use the combined-feed troubleshooting below rather than quietly dropping a community.</p>
+<h4>Feed 3 - PlayStation sale megathread: comments</h4>
+<pre><code class="language-text">https://www.reddit.com/r/PlaystationIndia/comments/1w2y8w7/wtb_wts_anyone_selling_price_check_megathread/.rss?sort=new&amp;limit=100
+</code></pre>
+<p>Suggested name: <strong>PlayStation - sale-thread comments</strong>.</p>
+<p>This is the buy/sell thread referenced during this setup check. Open the <a href="https://www.reddit.com/r/PlaystationIndia/" rel="noreferrer noopener" target="_blank">PlayStation India community</a> and compare its highlighted <strong>WTB / WTS / Anyone Selling / Price Check Megathread</strong> before adding it. If the moderators have replaced it, use the newer thread URL and put <code>.rss?sort=new&amp;limit=100</code> after its final slash. [S14]</p>
+<p>In the preview, look for <strong>individual comment text and comment links</strong>, not only the original thread announcement. Reddit documents a separate RSS pattern for comments on an individual post. [S3]</p>
+<p><strong>When moderators replace the megathread, update Feed 3's URL.</strong> This setup does not automatically discover replacement threads. Feed 3 does not cover every comment in all four communities.</p>
+<p>The <code>limit=100</code> parameter requests a larger recent snapshot; it is not a promise that every item will be returned. If more items arrive than the available snapshot holds between checks, some can be missed. Text in an image is not searched.</p>
+<h3 id="12-apply-the-same-keyword-rule-to-all-three-feeds">12. Apply the same keyword rule to all three feeds</h3>
+<p>Open each feed's Discord destination/connection and its filtering controls. Configure an <strong>include/allow rule</strong> using <strong>ANY / OR</strong>, not ALL / AND. Match without case sensitivity where the control allows it. MonitoRSS advertises article keyword filtering. [S1]</p>
+<p>Use these four keywords as <strong>separate alternatives</strong>:</p>
+<pre><code class="language-text">elden ring
+eldenring
+erdtree
+sote
+</code></pre>
+<p>Search the <strong>title</strong> and the field that actually contains the <strong>post/comment text</strong>. In a feed preview, that text field may be called <code>description</code>, <code>content</code>, or another feed-specific property. Select the actual text-bearing field rather than guessing from its name. If body text is not present, the feed can only provide title matches; do not count it as full-text coverage.</p>
+<p>The intended rule is:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Include when it contains ANY of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>elden ring; eldenring; erdtree; sote</td>
+</tr>
+<tr>
+<td>Actual post/comment text</td>
+<td>elden ring; eldenring; erdtree; sote</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Either field may match.</strong> When the dashboard permits only one keyword per condition, add four title conditions and four text conditions inside one <strong>ANY / OR</strong> group. Do not paste the four-line block into a single plain-text condition that expects one phrase. Do not require both title and body to match.</p>
+<p>Save the rule and check the filter preview/results. A message such as <code>Selling Elden Ring PS5</code> should qualify. A comment saying <code>SOTE disc available</code> should qualify. <code>Selling a sofa</code> should not. Use available preview examples; do not create fake listings on the communities to test the bot.</p>
+<p>Do <strong>not</strong> require PS5, WTS or the complete edition title at first. A seller might omit these details and show the Erdtree box in a picture. This broad filter also admits gameplay discussion, wanted ads and ordinary Elden Ring copies; you inspect these leads manually. The shop tracker's stricter matching does not automatically filter the separate MonitoRSS channel.</p>
+<p>Leave the default Discord message format initially. Check that it contains a title and an <strong>original Reddit link</strong>; include a short text snippet using the dashboard's field picker if needed. You do not need to type template syntax by hand.</p>
+<h3 id="13-test-reddit-delivery-and-finish">13. Test Reddit delivery and finish</h3>
+<p>Use each feed connection's <strong>preview/test-message control</strong> when available. Select a returned article/comment and send a test to <strong>#reddit-sote</strong>. A test may bypass filters: use it to verify delivery, then check the filtering results separately.</p>
+<p>Confirm the message appears in the right Discord channel, opens the correct Reddit post/comment, and triggers a phone notification. Keep all three feeds and their destinations enabled. A preview with no current matching SOTE item is normal; a preview with a fetch/authentication error is not.</p>
+<p>The advertised free polling interval is <strong>20 minutes</strong>, not instant. The tracker and MonitoRSS are separate: a successful GitHub health message does <strong>not</strong> verify that Reddit feeds are healthy. [S1]</p>
+<p><strong>Finished means:</strong> shop test received on phone; shop status inspected; each of the three Reddit feeds previews correctly; Discord destinations and filters are saved; and a Reddit test reaches the phone. Nothing is deployed or connected simply by downloading this package.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No SOTE stock watcher in GitHub Actions</td>
+<td><code>tracker.py</code> must be at the repository root, and <code>.github/workflows/watch.yml</code> must be on the default branch. The root spare workflow alone is not enough.</td>
+</tr>
+<tr>
+<td>GitHub says the webhook is missing</td>
+<td>The repository secret must be named exactly <code>DISCORD_WEBHOOK_URL</code>. It must be a secret, not a variable.</td>
+</tr>
+<tr>
+<td>Discord webhook fails with 401/404</td>
+<td>Re-copy or recreate it in Discord, replace the GitHub secret, and run test. Do not publish the URL.</td>
+</tr>
+<tr>
+<td>GitHub cannot save history / 403</td>
+<td>The supplied workflow requests <code>contents: write</code>. Inspect repository/organization restrictions rather than making a personal token. Prefer a personal repository.</td>
+</tr>
+<tr>
+<td>Retailer gets 403, CAPTCHA or a timeout</td>
+<td>This source was not successfully checked. Do not bypass access controls or label it sold out. Other readable sources can still work.</td>
+</tr>
+<tr>
+<td>MonitoRSS requires Reddit authorization</td>
+<td>Connect the spare account through its authorization prompt. This does not require filling GitHub Reddit credentials.</td>
+</tr>
+<tr>
+<td>A feed loads but sends nothing</td>
+<td>Check its Discord destination, enabled state, bot permissions, filter results and delivery logs. There may simply be no new keyword match.</td>
+</tr>
+<tr>
+<td>Comments never qualify</td>
+<td>Check that Feed 3 returns comments and that the rule examines comment text, not only the thread title.</td>
+</tr>
+<tr>
+<td>A message appears but the phone stays quiet</td>
+<td>Verify All Messages, Mobile Push, channel mutes and OS permissions. Close desktop Discord during the test and check Do Not Disturb/battery settings.</td>
+</tr>
+<tr>
+<td>No shop health message for more than a day</td>
+<td>Inspect GitHub's latest run and whether the schedule is enabled. GitHub cannot notify through this script while the entire schedule is stopped.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="combined-feed-fallback">Combined-feed fallback</h3>
+<p>First confirm Feed 1 works using the connected Reddit account. Recheck Feed 2 for accidental spaces or missing plus signs. Paste the complete RSS URL rather than choosing a single-community preset that discards the combined names.</p>
+<p>If MonitoRSS rejects the combined URL, one alternative to test is a <strong>public Reddit custom feed</strong> containing the same three communities. On Reddit, open a community's three-dot menu -&gt; <strong>Add to Custom Feed -&gt; Create A Custom Feed</strong>. Name it <code>sote-watch</code>, add r/Indiangaming_Resale, r/BangaloreMarketplace and r/PlaystationIndia, and make it public. Reddit documents custom feeds that combine communities. [S15]</p>
+<p>Open that custom feed, select <strong>New</strong>, and use its actual URL with <code>.rss</code> appended after the final slash. A typical pattern is:</p>
+<pre><code class="language-text">https://www.reddit.com/user/YOUR_REDDIT_USERNAME/m/sote_watch/new/.rss?limit=100
+</code></pre>
+<p><strong>Use the actual username and custom-feed slug from the address bar, not the placeholder above.</strong> Replace Feed 2; do not add a fourth slot. This fallback also needs a successful MonitoRSS preview and is not verified here.</p>
+<p>If neither combined nor custom feeds work, the advertised three-feed plan cannot be assumed to cover four separate communities plus a comment thread. Keep any working sources, record the error and resolve that limitation before relying on complete coverage. Do not create extra accounts to evade quotas or pay based on an unverified assumption.</p>
+<h2 id="ongoing-care-and-stopping">Ongoing care and stopping</h2>
+<p>Check MonitoRSS feed status periodically, especially after a Reddit authorization error. Check the PlayStation megathread weekly and replace Feed 3 when a new one is pinned. RSS is a recent-items feed, not a comprehensive historical search or guaranteed edit tracker.</p>
+<p>Check that GitHub continues running. GitHub says public-repository schedules can be disabled after 60 days without repository activity and can be delayed or dropped under load. This utility does not guarantee uninterrupted monitoring. [S11]</p>
+<p>After buying the game, disable <strong>SOTE stock watcher</strong> in GitHub Actions and disable/delete the three MonitoRSS feeds. Stopping one does not stop the other. You may then revoke MonitoRSS's Reddit authorization and delete the Discord webhook. [S16]</p>
+<p><strong>Buying safety:</strong> these are unverified leads, not buyer protection. Confirm the PS5 disc, original SOTE case, condition, included/redeemed DLC voucher, delivery and payment terms before buying. The PlayStation sale thread itself warns that moderators are not responsible for transactions. [S14]</p>
+<h2 id="references-and-verification">References and verification</h2>
+<p>[S1] <a href="https://monitorss.xyz/" rel="noreferrer noopener" target="_blank">MonitoRSS official hosted service: free feed allowance, polling, filtering and setup</a>.</p>
+<p>[S2] <a href="https://github.com/synzen/MonitoRSS/releases" rel="noreferrer noopener" target="_blank">MonitoRSS release notes: Reddit connection requirement</a>.</p>
+<p>[S3] <a href="https://www.reddit.com/r/reddit.com/wiki/rss/" rel="noreferrer noopener" target="_blank">Reddit legacy RSS documentation: subreddit, multireddit and post-comment feeds</a>. This page explicitly says it is no longer updated.</p>
+<p>[S4] <a href="https://support.discord.com/hc/en-us/articles/218892547--Mobile-Notifications-Settings-101" rel="noreferrer noopener" target="_blank">Discord mobile notifications</a>.</p>
+<p>[S5] <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks" rel="noreferrer noopener" target="_blank">Discord webhook creation</a>.</p>
+<p>[S6] <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" rel="noreferrer noopener" target="_blank">GitHub: create a repository</a>.</p>
+<p>[S7] <a href="https://docs.github.com/en/billing/concepts/product-billing/github-actions" rel="noreferrer noopener" target="_blank">GitHub Actions billing</a>.</p>
+<p>[S8] <a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets" rel="noreferrer noopener" target="_blank">GitHub Actions secrets</a>.</p>
+<p>[S9] <a href="https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository" rel="noreferrer noopener" target="_blank">GitHub: upload files</a>.</p>
+<p>[S10] <a href="https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow" rel="noreferrer noopener" target="_blank">GitHub: manually run a workflow</a>.</p>
+<p>[S11] <a href="https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule" rel="noreferrer noopener" target="_blank">GitHub: scheduled workflow limitations</a>.</p>
+<p>[S12] <a href="https://github.com/synzen/MonitoRSS" rel="noreferrer noopener" target="_blank">MonitoRSS project: public instance versus self-hosting</a>.</p>
+<p>[S13] <a href="https://docs.monitorss.xyz/advanced-bot-customizations/filtered-message-formats" rel="noreferrer noopener" target="_blank">Deprecated MonitoRSS documentation notice</a>.</p>
+<p>[S14] <a href="https://www.reddit.com/r/PlaystationIndia/comments/1w2y8w7/wtb_wts_anyone_selling_price_check_megathread/" rel="noreferrer noopener" target="_blank">PlayStation India sale megathread</a> and <a href="https://www.reddit.com/r/PlaystationIndia/" rel="noreferrer noopener" target="_blank">current community</a>.</p>
+<p>[S15] <a href="https://support.reddithelp.com/hc/en-us/articles/360043043412-What-is-a-custom-feed-and-how-do-I-make-one" rel="noreferrer noopener" target="_blank">Reddit: create a custom feed</a>.</p>
+<p>[S16] <a href="https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows" rel="noreferrer noopener" target="_blank">GitHub: disabling/enabling a workflow</a>.</p>
+<p>The feed URLs are proposed configuration addresses, not a claim of successful authenticated fetching. GitHub and MonitoRSS account setup must be completed by you. No credentials are included. This revision updates setup documentation and the inactive optional subreddit list; it does not add a new custom Reddit scraper or deploy anything.</p>
+<footer>This local guide does not collect credentials or make background network requests.</footer></main></body></html>

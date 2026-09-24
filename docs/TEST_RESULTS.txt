@@ -1,0 +1,83 @@
+test_config_valid (test_tracker.IntegrationTests.test_config_valid) ... ok
+test_end_to_end_offline_mocked_scan (test_tracker.IntegrationTests.test_end_to_end_offline_mocked_scan) ... ok
+test_failed_notification_not_lost (test_tracker.IntegrationTests.test_failed_notification_not_lost) ... ok
+test_source_with_synthetic_client (test_tracker.IntegrationTests.test_source_with_synthetic_client) ... ok
+test_abbreviation (test_tracker.MatchingTests.test_abbreviation) ... ok
+test_buyback (test_tracker.MatchingTests.test_buyback) ... ok
+test_code_only_rejected (test_tracker.MatchingTests.test_code_only_rejected) ... ok
+test_collector_rejected (test_tracker.MatchingTests.test_collector_rejected) ... ok
+test_digital_rejected (test_tracker.MatchingTests.test_digital_rejected) ... ok
+test_dlc_labels (test_tracker.MatchingTests.test_dlc_labels) ... ok
+test_empty_case_rejected (test_tracker.MatchingTests.test_empty_case_rejected) ... ok
+test_exact (test_tracker.MatchingTests.test_exact) ... ok
+test_external_host_rejected (test_tracker.MatchingTests.test_external_host_rejected) ... ok
+test_missing_platform_possible (test_tracker.MatchingTests.test_missing_platform_possible) ... ok
+test_mixed_platform_possible (test_tracker.MatchingTests.test_mixed_platform_possible) ... ok
+test_nightreign_rejected (test_tracker.MatchingTests.test_nightreign_rejected) ... ok
+test_ps4_rejected (test_tracker.MatchingTests.test_ps4_rejected) ... ok
+test_standalone_digital_rejected (test_tracker.MatchingTests.test_standalone_digital_rejected) ... ok
+test_standard_disc_rejected (test_tracker.MatchingTests.test_standard_disc_rejected) ... ok
+test_tracking_parameters_removed (test_tracker.MatchingTests.test_tracking_parameters_removed) ... ok
+test_url_platform_hint (test_tracker.MatchingTests.test_url_platform_hint) ... ok
+test_used_no_code_accepted (test_tracker.MatchingTests.test_used_no_code_accepted) ... ok
+test_variant_preserved_in_key (test_tracker.MatchingTests.test_variant_preserved_in_key) ... ok
+test_missing_secret_rejected (test_tracker.NetworkSafetyTests.test_missing_secret_rejected) ... ok
+test_retry_after (test_tracker.NetworkSafetyTests.test_retry_after) ... ok
+test_robots_disallow (test_tracker.NetworkSafetyTests.test_robots_disallow) ... ok
+test_robots_end_anchor (test_tracker.NetworkSafetyTests.test_robots_end_anchor) ... ok
+test_robots_longer_allow (test_tracker.NetworkSafetyTests.test_robots_longer_allow) ... ok
+test_robots_specific_group (test_tracker.NetworkSafetyTests.test_robots_specific_group) ... ok
+test_robots_wildcard_query (test_tracker.NetworkSafetyTests.test_robots_wildcard_query) ... ok
+test_store_backoff_respected (test_tracker.NetworkSafetyTests.test_store_backoff_respected) ... ok
+test_store_client_denies_external (test_tracker.NetworkSafetyTests.test_store_client_denies_external) ... ok
+test_webhook_failure_raises (test_tracker.NetworkSafetyTests.test_webhook_failure_raises) ... ok
+test_webhook_success_wait_ack (test_tracker.NetworkSafetyTests.test_webhook_success_wait_ack) ... ok
+test_wrong_webhook_domain_rejected (test_tracker.NetworkSafetyTests.test_wrong_webhook_domain_rejected) ... ok
+test_backorder_not_stock (test_tracker.ParserTests.test_backorder_not_stock) ... ok
+test_disabled_button_conflict (test_tracker.ParserTests.test_disabled_button_conflict) ... ok
+test_discovery_never_follows_add_cart (test_tracker.ParserTests.test_discovery_never_follows_add_cart) ... ok
+test_enabled_purchase_button (test_tracker.ParserTests.test_enabled_purchase_button) ... ok
+test_no_primary_title_no_positive (test_tracker.ParserTests.test_no_primary_title_no_positive) ... ok
+test_out_of_stock (test_tracker.ParserTests.test_out_of_stock) ... ok
+test_recommendations_not_stock (test_tracker.ParserTests.test_recommendations_not_stock) ... ok
+test_sale_price_not_struck_price (test_tracker.ParserTests.test_sale_price_not_struck_price) ... ok
+test_schema_primary_product (test_tracker.ParserTests.test_schema_primary_product) ... ok
+test_shopify_available_used (test_tracker.ParserTests.test_shopify_available_used) ... ok
+test_shopify_buyback_does_not_make_new_available (test_tracker.ParserTests.test_shopify_buyback_does_not_make_new_available) ... ok
+test_shopify_html_never_uses_aggregate_stock (test_tracker.ParserTests.test_shopify_html_never_uses_aggregate_stock) ... ok
+test_shopify_nonshipping_rejected (test_tracker.ParserTests.test_shopify_nonshipping_rejected) ... ok
+test_sitemap_discovery (test_tracker.ParserTests.test_sitemap_discovery) ... ok
+test_sitemap_external_ignored (test_tracker.ParserTests.test_sitemap_external_ignored) ... ok
+test_standard_title_with_sote_body_rejected (test_tracker.ParserTests.test_standard_title_with_sote_body_rejected) ... ok
+test_woo_ajax_variants_unknown (test_tracker.ParserTests.test_woo_ajax_variants_unknown) ... ok
+test_woo_variant_available (test_tracker.ParserTests.test_woo_variant_available) ... ok
+test_xml_entities_rejected (test_tracker.ParserTests.test_xml_entities_rejected) ... ok
+test_zero_price_unknown (test_tracker.ParserTests.test_zero_price_unknown) ... ok
+test_comment_sale (test_tracker.RedditTests.test_comment_sale) ... ok
+test_disabled_without_approval (test_tracker.RedditTests.test_disabled_without_approval) ... ok
+test_discussion_rejected (test_tracker.RedditTests.test_discussion_rejected) ... ok
+test_removed_rejected (test_tracker.RedditTests.test_removed_rejected) ... ok
+test_sale_match (test_tracker.RedditTests.test_sale_match) ... ok
+test_sold_rejected (test_tracker.RedditTests.test_sold_rejected) ... ok
+test_wanted_rejected (test_tracker.RedditTests.test_wanted_rejected) ... ok
+test_corrupt_state_not_reset (test_tracker.StateTests.test_corrupt_state_not_reset) ... ok
+test_github_read_only_error_no_empty_state (test_tracker.StateTests.test_github_read_only_error_no_empty_state) ... ok
+test_initial_available_alert (test_tracker.StateTests.test_initial_available_alert) ... ok
+test_local_state_roundtrip (test_tracker.StateTests.test_local_state_roundtrip) ... ok
+test_out_never_alert (test_tracker.StateTests.test_out_never_alert) ... ok
+test_possible_only_once (test_tracker.StateTests.test_possible_only_once) ... ok
+test_price_cap (test_tracker.StateTests.test_price_cap) ... ok
+test_real_restock_alert (test_tracker.StateTests.test_real_restock_alert) ... ok
+test_unacknowledged_message_retried (test_tracker.StateTests.test_unacknowledged_message_retried) ... ok
+test_unchanged_no_duplicate (test_tracker.StateTests.test_unchanged_no_duplicate) ... ok
+test_unknown_does_not_fake_restock (test_tracker.StateTests.test_unknown_does_not_fake_restock) ... ok
+test_unsupported_state_not_reset (test_tracker.StateTests.test_unsupported_state_not_reset) ... ok
+
+----------------------------------------------------------------------
+Ran 74 tests in 0.038s
+
+OK
+offline test
+offline test
+offline test
+offline test
