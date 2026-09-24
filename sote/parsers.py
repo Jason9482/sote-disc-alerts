@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import re
 from decimal import Decimal, InvalidOperation
-from urllib.parse import urljoin, urlencode
+from urllib.parse import urljoin, urlencode, urlsplit, parse_qsl
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup, Tag
 
@@ -94,6 +94,57 @@ def primary_scope(soup: BeautifulSoup, heading: Tag | None) -> Tag | None:
     return None
 
 
+def clean_purchase_scope(scope: Tag | None) -> Tag | None:
+    """Exclude hidden templates, related cards and store-wide policy fragments.
+
+    This is static parsing, not a browser: external CSS/JavaScript is not evaluated.
+    """
+    if scope is None:
+        return None
+    copy = BeautifulSoup(str(scope), "html.parser")
+    selector = ("script, style, template, noscript, [hidden], [aria-hidden='true'], "
+                ".related, .upsells, .cross-sells, .recommendations, .recently-viewed, "
+                ".reviews, #reviews")
+    for node in list(copy.select(selector)):
+        if node.parent is not None:
+            node.decompose()
+    for node in list(copy.select("[style]")):
+        if node.parent is not None and re.search(
+                r"(?:display\s*:\s*none|visibility\s*:\s*hidden)", str(node.get("style", "")), re.I):
+            node.decompose()
+    return copy
+
+
+def stock_label(text: str) -> str | None:
+    """Recognize a short affirmative stock label, not a shipping-policy paragraph."""
+    t = normalized(text)
+    if not t or len(t) > 140 or re.search(r"\b(?:policy|policies|terms|rules|guidelines|instructions|example)\b", t):
+        return None
+    # The wrapper must be affirmative and local, e.g. 'Availability: Out of stock'.
+    t = re.sub(r"^(?:availability|stock status|status)\s+", "", t)
+    t = re.sub(r"^(?:this\s+)?(?:item|product)\s+is\s+", "", t)
+    if re.match(r"^(?:out of stock|sold out|currently unavailable)(?:$|\s)", t):
+        return "out_of_stock"
+    if re.match(r"^(?:available on back ?order|on back ?order|back ?order(?:ed)?|"
+                r"available (?:for|on) pre ?order|pre ?order(?:s)?(?: available| now)?)(?:$|\s)", t):
+        if not re.search(r"\b(?:not|unavailable|disabled|closed|cannot)\b", t):
+            return "backorder"
+    return None
+
+
+def scope_stock_labels(scope: Tag) -> set[str]:
+    states = set()
+    # Short labels only. Do not scan the entire purchase area's combined text:
+    # that includes generic 'preorder policy' or 'notify when back in stock' copy.
+    for node in scope.select("p, span, div, strong, button, .stock, .availability, .product-availability"):
+        if any(x.name in {"p", "div", "form", "section", "h1"} for x in node.find_all(recursive=False)):
+            continue
+        state = stock_label(node.get_text(" ", strip=True))
+        if state:
+            states.add(state)
+    return states
+
+
 def availability_from_offer(offer: dict) -> str:
     value = str(offer.get("availability", "")).rsplit("/", 1)[-1].lower()
     return {"instock": "in_stock", "outofstock": "out_of_stock", "soldout": "out_of_stock",
@@ -111,7 +162,7 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
     level = match_title(title, url)
     if level == "reject":
         return []
-    scope = primary_scope(soup, heading)
+    scope = clean_purchase_scope(primary_scope(soup, heading))
     scope_text = scope.get_text(" ", strip=True) if scope else ""
 
     # Shopify HTML can contain complete product JSON. Do not guess from free text.
@@ -150,7 +201,12 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
                 available = v.get("is_in_stock")
                 status = "in_stock" if available is True and active and buyable else (
                     "out_of_stock" if available is False or not active or not buyable else "unknown")
-                if "backorder" in str(v.get("availability_html", "")).lower():
+                availability = clean_purchase_scope(BeautifulSoup(str(v.get("availability_html", "")), "html.parser"))
+                labels = scope_stock_labels(availability) if availability is not None else set()
+                availability_label = stock_label(availability.get_text(" ", strip=True)) if availability is not None else None
+                if "out_of_stock" in labels or availability_label == "out_of_stock":
+                    status = "out_of_stock"
+                elif status == "in_stock" and ("backorder" in labels or availability_label == "backorder"):
                     status = "backorder"
                 query = {"variation_id": v.get("variation_id", ""), **v.get("attributes", {})}
                 results.append(Listing(source["name"], title, url.split("?")[0] + "?" + urlencode(query),
@@ -187,14 +243,18 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
         text = normalized(scope_text)
         out_nodes = scope.select(".stock.out-of-stock, .stock.outofstock, .out-of-stock-message")
         stock_nodes = scope.select(".stock.in-stock, .stock.instock")
-        if re.search(r"\bback order\b|\bbackorder\b|\bpre order\b|\bpreorder\b", text):
-            status, evidence = "backorder", "Primary purchase section says backorder/preorder"
-        elif out_nodes or re.search(r"\bout of stock\b|\bsold out\b|\bcurrently unavailable\b", text):
-            status, evidence = "out_of_stock", "Primary purchase section explicitly says unavailable"
+        labels = scope_stock_labels(scope)
+        if out_nodes or "out_of_stock" in labels:
+            status, evidence = "out_of_stock", "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored"
+        elif "backorder" in labels:
+            status, evidence = "backorder", "Explicit primary-product backorder/preorder label; not ready stock"
         elif is_buyback(text):
             status, evidence = "unknown", "Mixed buy/sell content: purchase variant could not be isolated"
         elif stock_nodes:
-            status, evidence = "in_stock", "Primary purchase section explicitly says in stock; delivery not tested"
+            if status in {"out_of_stock", "backorder"}:
+                status, evidence = "unknown", "Conflicting primary stock label and structured offer; manual verification required"
+            else:
+                status, evidence = "in_stock", "Primary purchase section explicitly says in stock; delivery not tested"
         else:
             button = scope.select_one("button.single_add_to_cart_button, button[name='add-to-cart']")
             if button is not None:
@@ -202,7 +262,10 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
                 if disabled and status == "in_stock":
                     status, evidence = "unknown", "Conflicting signals: structured in-stock but purchase button disabled"
                 elif not disabled:
-                    status, evidence = "in_stock", "Enabled product-specific Add to Cart button; delivery not tested"
+                    if status in {"out_of_stock", "backorder"}:
+                        status, evidence = "unknown", "Enabled Add to Cart conflicts with structured unavailability; manual verification required"
+                    else:
+                        status, evidence = "in_stock", "Enabled product-specific Add to Cart button; delivery not tested"
         pnode = next((node for selector in (".price ins .amount", ".price ins", ".price > .amount", ".price .amount")
                           if (node := scope.select_one(selector)) is not None), None)
         if pnode:
@@ -238,7 +301,8 @@ def discover_html(html: str, url: str) -> tuple[list[str], str | None]:
     return sorted(urls), next_url if next_url and same_site(next_url, url) else None
 
 
-def sitemap_links(xml: str, base: str, warnings: list[str] | None = None) -> tuple[list[str], list[str]]:
+def sitemap_links(xml: str, base: str, warnings: list[str] | None = None,
+                  stats: dict | None = None) -> tuple[list[str], list[str]]:
     """Extract discovery leads, never availability, from a verified sitemap root.
 
     A narrowly scoped retry repairs unescaped ampersands only. Other malformed
@@ -269,6 +333,8 @@ def sitemap_links(xml: str, base: str, warnings: list[str] | None = None) -> tup
     if kind not in {"sitemapindex", "urlset"}:
         raise ValueError("Response is not an XML sitemap (HTML/error page is not catalogue coverage)")
     urls: list[str] = []
+    if stats is not None:
+        stats.update(page_urls=0, opaque_without_title=0)
     for entry in root:
         if local(entry.tag) != ("sitemap" if kind == "sitemapindex" else "url"):
             continue
@@ -284,6 +350,15 @@ def sitemap_links(xml: str, base: str, warnings: list[str] | None = None) -> tup
             # A URL or an explicit sitemap title is only a discovery hint.
             # Numeric-ID pages still require the normal primary-title/stock check.
             titles = [x.text or "" for x in entry.iter() if local(x.tag) == "title"]
+            if stats is not None:
+                stats["page_urls"] += 1
+                parsed = urlsplit(u)
+                ids = {k.lower() for k, _ in parse_qsl(parsed.query)}
+                identifier_only = bool(ids & {"boxid", "id", "product_id", "pid"}) or bool(
+                    re.search(r"/(?:product|products|detail|details)/[0-9a-f-]{8,}/?$", parsed.path, re.I))
+                descriptive = bool(re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", normalized(u)))
+                if identifier_only and not any(t.strip() for t in titles) and not descriptive:
+                    stats["opaque_without_title"] += 1
             if (re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", normalized(u))
                     or any(match_title(t, u) != "reject" for t in titles)):
                 urls.append(u)

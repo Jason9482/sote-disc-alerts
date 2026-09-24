@@ -13,8 +13,9 @@ from .http import StoreClient, FetchError
 from .model import Listing, canonical_url, same_site
 from .parsers import parse_html, parse_shopify, discover_html, sitemap_links
 from .notify import Discord, NotificationError, safe_text
+from .discovery import ordered_child_maps
 
-SCANNER_REVISION = "store-repair-1"
+SCANNER_REVISION = "store-repair-2"
 
 
 def read_config(path: str) -> dict:
@@ -131,19 +132,33 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
                 max_maps = max(1, min(8, int(cfg.get("sitemap_pages", 3))))
                 seen = set()
                 successful_roots = []
+                map_attempted_at = source_state.setdefault("sitemap_attempted_at", {})
+                # Bound persisted scheduling history without erasing alert state.
+                if len(map_attempted_at) > 256:
+                    newest = sorted(map_attempted_at, key=lambda u: map_attempted_at[u], reverse=True)[:256]
+                    map_attempted_at = {u: map_attempted_at[u] for u in newest}
+                    source_state["sitemap_attempted_at"] = map_attempted_at
                 while queue and len(seen) < max_maps:
                     current = queue.pop(0)
                     if current in seen or not same_site(current, base):
                         continue
                     seen.add(current)
+                    map_attempted_at[current] = now
                     label = urlsplit(current).path or "/"
                     attempt = {"path": label, "result": "failed"}
                     report["sitemap_attempts"].append(attempt)
                     try:
                         getter = getattr(client, "get_sitemap", client.get)
-                        children, found = sitemap_links(getter(current), base, report["warnings"])
+                        map_stats = {}
+                        children, found = sitemap_links(getter(current), base, report["warnings"], map_stats)
                         report["discovery_pages"] += 1
-                        attempt["result"] = f"parsed; {len(found)} candidate URL(s); {len(children)} child map(s)"
+                        attempt["result"] = (f"parsed; {len(found)} candidate URL(s); {len(children)} child map(s); "
+                                             f"{map_stats.get('page_urls', 0)} page URL(s) inspected")
+                        opaque = map_stats.get("opaque_without_title", 0)
+                        if opaque:
+                            report["warnings"].append(
+                                f"{label}: {opaque} opaque product URL(s) had no identifying title; "
+                                "their editions were NOT checked")
                         leads = {canonical_url(u) for u in found}
                         urls.update(leads)
                         known.update({u: now for u in leads})
@@ -152,11 +167,8 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
                         # A verified map takes priority over additional guessed paths.
                         queue = [u for u in queue if u not in guessed]
                         if children:
-                            preferred = [x for x in children if "product" in x.lower()] or children
-                            cursor = int(source_state.get("sitemap_cursor", 0)) % len(preferred)
-                            rotated = preferred[cursor:] + preferred[:cursor]
-                            queue = rotated + queue
-                            source_state["sitemap_cursor"] = (cursor + max(1, max_maps - len(seen))) % len(preferred)
+                            ranked = ordered_child_maps(children, base, map_attempted_at)
+                            queue = list(dict.fromkeys(ranked + queue))
                     except Exception as exc:
                         # One missing or malformed map must not stop other declared
                         # maps. Blocks/backoff are NOT permission to try alternatives.
@@ -275,9 +287,11 @@ def write_run_summary(reports: list[dict], observations: list[Listing], notes: l
     lines.extend(["", "## Matching observations", ""])
     for item in observations:
         lines.append(f"- {item.source}: {item.status}, {item.match}, {item.variant or 'single/unspecified variant'}; {item.url}")
+        evidence = item.evidence.replace("\n", " ").replace("`", "")[:300]
+        lines.append(f"  - Evidence: {evidence}")
     attempts = [(r["name"], a) for r in reports for a in r.get("sitemap_attempts", [])]
     if attempts:
-        lines.extend(["", "## Discovery diagnostics", "", "Paths below are sitemap files, not stock claims.", ""])
+        lines.extend(["", "## Discovery diagnostics", "", "Paths below are sitemap files, not stock claims. Game/product maps are prioritized; lower-priority maps may remain unchecked.", ""])
         for name, attempt in attempts:
             text = (attempt["path"] + " - " + attempt["result"]).replace("\n", " ").replace("`", "")
             lines.append(f"- {name}: {text}")
