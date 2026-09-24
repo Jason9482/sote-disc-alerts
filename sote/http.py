@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
+import gzip
+import io
 import re
 import time
 from urllib.parse import urljoin, urlsplit, unquote
@@ -13,6 +15,9 @@ from .model import same_site
 
 class FetchError(RuntimeError):
     """Safe-to-log fetch error; never contains an authentication token."""
+    def __init__(self, message: str, *, status_code: int | None = None):
+        super().__init__(message)
+        self.status_code = status_code
 
 
 def retry_seconds(value: str | None, default: int = 3600) -> int:
@@ -116,8 +121,18 @@ class StoreClient:
         try:
             response = self.session.get(url, timeout=(8, 15), allow_redirects=False, stream=True)
             self.last_request = time.monotonic()
+        except requests.exceptions.SSLError:
+            raise FetchError("TLS certificate/handshake failed; verification was NOT disabled") from None
+        except requests.exceptions.Timeout:
+            raise FetchError("Connection or read timed out; not a stock result") from None
+        except requests.exceptions.ConnectionError as exc:
+            # Inspect, but do not print, the exception: raw messages may contain URLs.
+            detail = str(exc).lower()
+            dns = any(x in detail for x in ("name resolution", "failed to resolve", "getaddrinfo", "nameresolutionerror"))
+            raise FetchError("DNS resolution failed; not a stock result" if dns else
+                             "Network connection failed; not a stock result") from None
         except requests.RequestException:
-            raise FetchError("Network/DNS/TLS request failed") from None
+            raise FetchError("HTTP request failed; not a stock result") from None
         if response.status_code in {301, 302, 303, 307, 308}:
             target = urljoin(url, response.headers.get("Location", ""))
             response.close()
@@ -133,13 +148,13 @@ class StoreClient:
         return response
 
     @staticmethod
-    def _read(response: requests.Response, max_bytes: int = 4_000_000) -> str:
+    def _read(response: requests.Response, max_bytes: int = 4_000_000, *, allow_gzip: bool = False) -> str:
         pieces, size = [], 0
         try:
             for chunk in response.iter_content(65536):
                 size += len(chunk)
                 if size > max_bytes:
-                    raise FetchError("Response too large; check skipped")
+                    raise FetchError(f"Response exceeds {max_bytes:,}-byte safety limit; check skipped")
                 pieces.append(chunk)
         except requests.RequestException:
             raise FetchError("Response download failed") from None
@@ -148,7 +163,18 @@ class StoreClient:
         encoding = response.encoding
         if not encoding or encoding.lower() == "iso-8859-1":
             encoding = "utf-8"
-        return b"".join(pieces).decode(encoding, errors="replace")
+        data = b"".join(pieces)
+        # Requests decodes HTTP Content-Encoding gzip itself. A .xml.gz document
+        # without that header is still compressed; decode it once, with a hard cap.
+        if allow_gzip and data.startswith(b"\x1f\x8b"):
+            try:
+                with gzip.GzipFile(fileobj=io.BytesIO(data)) as stream:
+                    data = stream.read(max_bytes + 1)
+            except (OSError, EOFError):
+                raise FetchError("Invalid/truncated compressed sitemap; check skipped") from None
+            if len(data) > max_bytes:
+                raise FetchError("Decompressed sitemap exceeds safety limit; check skipped")
+        return data.decode(encoding, errors="replace")
 
     def load_robots(self) -> None:
         if self.robots is not None:
@@ -167,7 +193,7 @@ class StoreClient:
         else:
             status = response.status_code
             response.close()
-            raise FetchError(f"robots.txt not accessible (HTTP {status}); check deferred")
+            raise FetchError(f"robots.txt not accessible (HTTP {status}); check deferred", status_code=status)
         delay = robot.crawl_delay(self.agent) or robot.crawl_delay("*") or 0
         rate = robot.request_rate(self.agent) or robot.request_rate("*")
         if rate and rate.requests:
@@ -178,7 +204,11 @@ class StoreClient:
         self.delay = max(self.delay, delay)
         self.robots = robot
 
-    def get(self, url: str) -> str:
+    def get_sitemap(self, url: str) -> str:
+        """Permit protocol-sized sitemaps, but keep ordinary HTML capped at 4 MB."""
+        return self.get(url, sitemap=True)
+
+    def get(self, url: str, *, sitemap: bool = False) -> str:
         if url in self.cache:
             return self.cache[url]
         self.load_robots()
@@ -189,8 +219,11 @@ class StoreClient:
         if response.status_code != 200:
             status = response.status_code
             response.close()
-            raise FetchError(f"HTTP {status}; not a stock result")
-        text = self._read(response)
+            raise FetchError(f"HTTP {status}; not a stock result", status_code=status)
+        # The sitemap protocol permits up to 50 MiB. Both compressed and expanded
+        # data remain bounded. No blanket increase for ordinary product pages.
+        limit = 52_428_800 if sitemap else 4_000_000
+        text = self._read(response, max_bytes=limit, allow_gzip=sitemap)
         first = text[:15000].lower()
         if ("<title>just a moment" in first or "<title>access denied" in first or
                 "verify you are human" in first or "cf-chl-" in first):

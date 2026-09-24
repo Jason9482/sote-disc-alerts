@@ -14,6 +14,8 @@ from .model import Listing, canonical_url, same_site
 from .parsers import parse_html, parse_shopify, discover_html, sitemap_links
 from .notify import Discord, NotificationError, safe_text
 
+SCANNER_REVISION = "store-repair-1"
+
 
 def read_config(path: str) -> dict:
     cfg = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -58,7 +60,7 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
     client = client_factory(source, source_state, cfg)
     observations: list[Listing] = []
     report = {"name": source["name"], "checked_at": now, "product_pages": 0, "discovery_pages": 0,
-              "observations": 0, "errors": [], "requests": 0, "discovery": "not due"}
+              "observations": 0, "errors": [], "warnings": [], "sitemap_attempts": [], "requests": 0, "discovery": "not due"}
     known = source_state.setdefault("known", {})
     # A bounded URL list avoids unbounded crawling or state growth.
     for old in list(known):
@@ -88,8 +90,12 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
         except (FetchError, ValueError, TypeError, KeyError) as exc:
             error("product", exc)
 
-    due = now - float(source_state.get("discovery_at", 0)) >= cfg.get("discovery_hours", 6) * 3600
+    due = (source_state.get("scanner_revision") != SCANNER_REVISION or
+           now - float(source_state.get("discovery_at", 0)) >= cfg.get("discovery_hours", 6) * 3600)
     if due:
+        # Recheck discovery once after an upgrade; preserve alerts, known URLs and
+        # site-requested cooldowns. No user has to delete the state branch.
+        source_state["scanner_revision"] = SCANNER_REVISION
         source_state["discovery_at"] = now
         report["discovery"] = "bounded catalogue/sitemap sample (not exhaustive)"
         for catalogue in source.get("catalogues", [])[:2]:
@@ -109,30 +115,65 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
             try:
                 client.load_robots()
                 maps = list(client.robots.site_maps() or []) if client.robots else []
-                maps = [u for u in maps if same_site(u, source["base"])]
-                if not maps:
-                    maps = [source["base"].rstrip("/") + "/sitemap.xml"]
-                max_maps = int(cfg.get("sitemap_pages", 3))
-                queue = maps[:1]
+                maps = list(dict.fromkeys(u for u in maps if same_site(u, source["base"])))
+                if len(maps) > 1:
+                    root_cursor = int(source_state.get("sitemap_root_cursor", 0)) % len(maps)
+                    maps = maps[root_cursor:] + maps[:root_cursor]
+                    source_state["sitemap_root_cursor"] = (root_cursor + 1) % len(maps)
+                cached = [u for u in source_state.get("working_sitemaps", []) if same_site(u, source["base"])]
+                base = source["base"].rstrip("/")
+                fallbacks = [base + p for p in ("/sitemap.xml", "/sitemap_index.xml", "/wp-sitemap.xml")]
+                # Do not throw away all but the first robots.txt sitemap. Normal
+                # request, robots and response limits still apply to every URL.
+                roots = list(dict.fromkeys(maps + cached + fallbacks))
+                guessed = set(fallbacks) - set(maps) - set(cached)
+                queue = list(roots)
+                max_maps = max(1, min(8, int(cfg.get("sitemap_pages", 3))))
                 seen = set()
+                successful_roots = []
                 while queue and len(seen) < max_maps:
                     current = queue.pop(0)
-                    if current in seen:
+                    if current in seen or not same_site(current, base):
                         continue
                     seen.add(current)
-                    children, found = sitemap_links(client.get(current), source["base"])
-                    report["discovery_pages"] += 1
-                    urls.update(found)
-                    known.update({u: now for u in found})
-                    if children:
-                        preferred = [x for x in children if "product" in x.lower()] or children
-                        cursor = int(source_state.get("sitemap_cursor", 0)) % len(preferred)
-                        rotated = preferred[cursor:] + preferred[:cursor]
-                        queue.extend(rotated)
-                        source_state["sitemap_cursor"] = (cursor + max(1, max_maps - 1)) % len(preferred)
+                    label = urlsplit(current).path or "/"
+                    attempt = {"path": label, "result": "failed"}
+                    report["sitemap_attempts"].append(attempt)
+                    try:
+                        getter = getattr(client, "get_sitemap", client.get)
+                        children, found = sitemap_links(getter(current), base, report["warnings"])
+                        report["discovery_pages"] += 1
+                        attempt["result"] = f"parsed; {len(found)} candidate URL(s); {len(children)} child map(s)"
+                        leads = {canonical_url(u) for u in found}
+                        urls.update(leads)
+                        known.update({u: now for u in leads})
+                        if current in roots:
+                            successful_roots.append(current)
+                        # A verified map takes priority over additional guessed paths.
+                        queue = [u for u in queue if u not in guessed]
+                        if children:
+                            preferred = [x for x in children if "product" in x.lower()] or children
+                            cursor = int(source_state.get("sitemap_cursor", 0)) % len(preferred)
+                            rotated = preferred[cursor:] + preferred[:cursor]
+                            queue = rotated + queue
+                            source_state["sitemap_cursor"] = (cursor + max(1, max_maps - len(seen))) % len(preferred)
+                    except Exception as exc:
+                        # One missing or malformed map must not stop other declared
+                        # maps. Blocks/backoff are NOT permission to try alternatives.
+                        error("sitemap " + label[:70], exc)
+                        attempt["result"] = (type(exc).__name__ + ": " + str(exc))[:180]
+                        status = getattr(exc, "status_code", None)
+                        if (status in {401, 403, 429, 503} or
+                                float(source_state.get("cooldown_until", 0)) > time.time()):
+                            break
+                if successful_roots:
+                    source_state["working_sitemaps"] = list(dict.fromkeys(successful_roots + cached))[:8]
+                if queue:
+                    reason = ("Sitemap sampling limit reached" if len(seen) >= max_maps else
+                              "Sitemap access was deferred")
+                    report["warnings"].append(reason + "; other map files were not checked")
             except Exception as exc:
-                # Catch malformed XML as a failed discovery, not a whole-run crash.
-                error("sitemap", exc)
+                error("sitemap setup", exc)
 
     max_products = int(cfg.get("products_per_store", 10))
     # Explicit known-edition pages get priority over newly discovered leads.
@@ -203,7 +244,7 @@ def acknowledge(item: Listing, history: dict, kind: str) -> None:
 
 def health_text(reports: list[dict], state: dict, reddit_status: str) -> str:
     when = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %b %Y, %I:%M %p IST")
-    lines = [f"Last scan: {when}", "", "Configured does not mean successfully checked:"]
+    lines = [f"Last scan: {when}", f"Code: {SCANNER_REVISION}", "", "Configured does not mean successfully checked:"]
     for r in reports:
         if r["product_pages"]:
             msg = f"{r['product_pages']} matching product page(s) read"
@@ -215,6 +256,8 @@ def health_text(reports: list[dict], state: dict, reddit_status: str) -> str:
             msg = "no known product; discovery not due"
         if r["errors"]:
             msg += f"; {len(r['errors'])} issue(s)"
+        if r.get("warnings"):
+            msg += "; discovery notes in report"
         lines.append(f"{r['name']}: {msg}")
     lines.extend(["", f"Reddit: {reddit_status}",
                   "Delivery/PIN and payment protection are never automatically confirmed.",
@@ -223,14 +266,21 @@ def health_text(reports: list[dict], state: dict, reddit_status: str) -> str:
 
 
 def write_run_summary(reports: list[dict], observations: list[Listing], notes: list[str]) -> str:
-    lines = ["# SOTE tracker run", "", "Stock signals are store claims, not verified checkout/delivery.", "",
+    lines = ["# SOTE tracker run", "", f"Code: {SCANNER_REVISION}", "", "Stock signals are store claims, not verified checkout/delivery.", "",
              "| Source | Matching pages | Discovery pages | Issues |", "|---|---:|---:|---|"]
     for r in reports:
-        issues = "; ".join(r["errors"][:3]).replace("|", "/").replace("\n", " ") or "None this run"
+        details = r["errors"] + ["Note: " + w for w in r.get("warnings", [])]
+        issues = "; ".join(details[:4]).replace("|", "/").replace("\n", " ") or "None this run"
         lines.append(f"| {r['name']} | {r['product_pages']} | {r['discovery_pages']} | {issues} |")
     lines.extend(["", "## Matching observations", ""])
     for item in observations:
         lines.append(f"- {item.source}: {item.status}, {item.match}, {item.variant or 'single/unspecified variant'}; {item.url}")
+    attempts = [(r["name"], a) for r in reports for a in r.get("sitemap_attempts", [])]
+    if attempts:
+        lines.extend(["", "## Discovery diagnostics", "", "Paths below are sitemap files, not stock claims.", ""])
+        for name, attempt in attempts:
+            text = (attempt["path"] + " - " + attempt["result"]).replace("\n", " ").replace("`", "")
+            lines.append(f"- {name}: {text}")
     lines.extend(["", "## Notes", "", *["- " + n for n in notes]])
     result = "\n".join(lines) + "\n"
     Path("last-run.md").write_text(result, encoding="utf-8")
@@ -281,7 +331,7 @@ def run_scan(cfg: dict, store, notifier: Discord | None, *, dry_run: bool = Fals
                 notes.append(str(exc))
                 delivery_failed = True
                 break
-    reddit_status = "disabled; approved API access and optional setup required"
+    reddit_status = "off in GitHub; external MonitoRSS feeds are separate and not checked here"
     if not cfg.get("reddit", {}).get("enabled") and state["reddit"].get("items") and not dry_run:
         from .reddit import remove_alerts
         try:

@@ -238,16 +238,56 @@ def discover_html(html: str, url: str) -> tuple[list[str], str | None]:
     return sorted(urls), next_url if next_url and same_site(next_url, url) else None
 
 
-def sitemap_links(xml: str, base: str) -> tuple[list[str], list[str]]:
-    """Return child sitemap URLs and exact-ish product URL leads. Bounded by HTTP size limit."""
-    # stdlib ElementTree does not fetch external entities, but reject declarations anyway.
+def sitemap_links(xml: str, base: str, warnings: list[str] | None = None) -> tuple[list[str], list[str]]:
+    """Extract discovery leads, never availability, from a verified sitemap root.
+
+    A narrowly scoped retry repairs unescaped ampersands only. Other malformed
+    XML, HTML error pages and entity declarations still fail closed. Image URLs
+    must not be mistaken for product-page URLs.
+    """
     if "<!DOCTYPE" in xml.upper() or "<!ENTITY" in xml.upper():
         raise ValueError("Unsupported XML declaration")
-    root = ET.fromstring(xml)
-    locs = [x.text.strip() for x in root.iter() if x.tag.rsplit("}", 1)[-1] == "loc" and x.text]
-    locs = [u for u in locs if same_site(u, base)]
-    if root.tag.rsplit("}", 1)[-1] == "sitemapindex":
-        # Product maps first; never claim complete catalogue coverage from a bounded scan.
-        return sorted(locs, key=lambda u: ("product" not in u.lower(), u)), []
-    matches = [u for u in locs if re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", normalized(u))]
-    return [], matches
+    xml = xml.lstrip("\ufeff \t\r\n")
+    try:
+        root = ET.fromstring(xml)
+    except ET.ParseError:
+        # Protect CDATA/comments: their ampersands are not XML entities.
+        pieces = re.split(r"(<!\[CDATA\[.*?\]\]>|<!--.*?-->)", xml, flags=re.S)
+        for n in range(0, len(pieces), 2):
+            pieces[n] = re.sub(r"&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9A-Fa-f]+;)", "&amp;", pieces[n])
+        repaired = "".join(pieces)
+        if repaired == xml:
+            raise
+        root = ET.fromstring(repaired)
+        if warnings is not None:
+            warnings.append("Sitemap contained unescaped ampersands; repaired for URL discovery only")
+
+    def local(tag: str) -> str:
+        return tag.rsplit("}", 1)[-1]
+
+    kind = local(root.tag)
+    if kind not in {"sitemapindex", "urlset"}:
+        raise ValueError("Response is not an XML sitemap (HTML/error page is not catalogue coverage)")
+    urls: list[str] = []
+    for entry in root:
+        if local(entry.tag) != ("sitemap" if kind == "sitemapindex" else "url"):
+            continue
+        loc = next((x for x in entry if local(x.tag) == "loc" and x.text), None)
+        if loc is None:
+            continue
+        u = loc.text.strip()
+        if not same_site(u, base):
+            continue
+        if kind == "sitemapindex":
+            urls.append(u)
+        else:
+            # A URL or an explicit sitemap title is only a discovery hint.
+            # Numeric-ID pages still require the normal primary-title/stock check.
+            titles = [x.text or "" for x in entry.iter() if local(x.tag) == "title"]
+            if (re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", normalized(u))
+                    or any(match_title(t, u) != "reject" for t in titles)):
+                urls.append(u)
+    urls = list(dict.fromkeys(urls))
+    if kind == "sitemapindex":
+        return sorted(urls, key=lambda u: ("product" not in u.lower(), u)), []
+    return [], urls
