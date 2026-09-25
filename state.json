@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1790273068.630737,
-  "last_scan_at": 1790317972.6940336,
+  "last_scan_at": 1790319413.6062605,
   "listings": {
     "14e7b6340613b6e320793338": {
       "alerted_cycle": 0,
@@ -18,7 +18,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -38,7 +38,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -58,7 +58,7 @@
         "variant": "Pre-Owned(USED)(WITHOUT DLC CODE)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -97,7 +97,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -117,7 +117,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -136,7 +136,7 @@
         "url": "https://www.flipkart.com/elden-ring-shadow-erdtree-standard/p/itm00826f7c6f8b7",
         "variant": ""
       },
-      "last_seen": 1790299521.5726163,
+      "last_seen": 1790319413.6062605,
       "possible_sent": true,
       "stock_cycle": 0
     },
@@ -156,7 +156,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -168,7 +168,7 @@
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
         "match": "exact",
-        "price": "1,699.00",
+        "price": "549.00",
         "source": "GameBuy",
         "status": "out_of_stock",
         "title": "Elden Ring Shadow Of The Erdtree PS5",
@@ -176,7 +176,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790317972.6940336,
+      "last_seen": 1790319413.6062605,
       "possible_sent": false,
       "stock_cycle": 0
     }
@@ -184,26 +184,43 @@
   "reddit": {},
   "sources": {
     "cex": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "next sample not due; last attempt 1790296487.4571762",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "CeX India",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 4 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 31856 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-supercats.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 183 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "/sitemaps/cex/in/sitemap-in-products-1.xml: 31856 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1790296487.4571762,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1790296487.4571762,
+        "https://in.webuy.com/sitemap.xml": 1790319413.6062605,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1790319413.6062605,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1790273068.630737,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1790296487.4571762
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1790296487.4571762,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1790319413.6062605
       },
       "sitemap_cursor": 0,
       "working_sitemaps": [
@@ -211,28 +228,44 @@
       ]
     },
     "console-garage": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {
-        "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790296487.4571762
+        "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790319413.6062605
       },
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
         "errors": [],
         "name": "Console Garage",
         "observations": 2,
         "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_products_1.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 964 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_collections_1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 12 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1790296487.4571762,
+        "https://consolegarage.com/sitemap.xml": 1790319413.6062605,
         "https://consolegarage.com/sitemap_agentic_discovery.xml": 1790273068.630737,
         "https://consolegarage.com/sitemap_blogs_1.xml": 1790296487.4571762,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7915130585147": 1790296487.4571762
+        "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1790319413.6062605,
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7915130585147": 1790319413.6062605
       },
       "sitemap_cursor": 0,
       "working_sitemaps": [
@@ -240,25 +273,40 @@
       ]
     },
     "dacby": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "next sample not due; last attempt 1790296487.4571762",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "DACBY",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 16 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps5-cds.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 538 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps4-cds.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 823 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1790296487.4571762,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1790296487.4571762,
-        "https://dacby.com/sitemap.xml": 1790296487.4571762
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1790319413.6062605,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1790319413.6062605,
+        "https://dacby.com/sitemap.xml": 1790319413.6062605
       },
       "sitemap_cursor": 4,
       "working_sitemaps": [
@@ -266,61 +314,66 @@
       ]
     },
     "dtzone": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {
-        "https://dtzone.in/index.php/product/ps5-elden-ring-shadow-of-the-erdtree-edition-playstation-5": 1790296487.4571762
+        "https://dtzone.in/index.php/product/ps5-elden-ring-shadow-of-the-erdtree-edition-playstation-5": 1790319413.6062605
       },
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [],
         "name": "DTZone",
         "observations": 1,
         "product_pages": 1,
-        "requests": 3,
-        "sitemap_attempts": [],
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 0 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://dtzone.in/sitemap.xml": 1790296487.4571762
+        "https://dtzone.in/sitemap.xml": 1790319413.6062605
       },
       "working_sitemaps": [
         "https://dtzone.in/sitemap.xml"
       ]
     },
     "e2z": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
         "errors": [],
         "name": "e2zStore",
         "observations": 1,
         "product_pages": 1,
-        "requests": 3,
+        "requests": 4,
         "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "store-repair-2"
     },
     "flipkart": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "Seed page did not expose a matching primary product; not an out-of-stock result",
-          "Seed page did not expose a matching primary product; not an out-of-stock result"
+          "A matching page has unreadable/ambiguous stock signals"
         ],
         "name": "Flipkart",
-        "observations": 0,
-        "product_pages": 0,
+        "observations": 1,
+        "product_pages": 1,
         "requests": 3,
         "sitemap_attempts": [],
         "warnings": []
@@ -328,31 +381,46 @@
       "scanner_revision": "store-repair-2"
     },
     "gamebuy": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {
-        "https://gamebuy.in/product/elden-ring-shadow-of-the-erdtree": 1790296487.4571762,
+        "https://gamebuy.in/product/elden-ring-shadow-of-the-erdtree": 1790319413.6062605,
         "https://gamebuy.in/product/elden-ring-shadow-of-the-erdtree/": 1790267901.5353065,
         "https://gamebuy.in/wp-content/uploads/2025/03/Elden-Ring-Shadow-Of-The-Erdtree-PS5.png": 1790267901.5353065
       },
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "GameBuy",
         "observations": 2,
         "product_pages": 2,
-        "requests": 5,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 9,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 1001 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 724 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://gamebuy.in/product-sitemap.xml": 1790296487.4571762,
-        "https://gamebuy.in/product-sitemap2.xml": 1790296487.4571762,
-        "https://gamebuy.in/sitemap_index.xml": 1790296487.4571762
+        "https://gamebuy.in/product-sitemap.xml": 1790319413.6062605,
+        "https://gamebuy.in/product-sitemap2.xml": 1790319413.6062605,
+        "https://gamebuy.in/sitemap_index.xml": 1790319413.6062605
       },
       "sitemap_cursor": 4,
       "working_sitemaps": [
@@ -360,12 +428,12 @@
       ]
     },
     "gameloot": {
-      "cooldown_until": 1790318097.415055,
-      "discovery_at": 1790296487.4571762,
+      "cooldown_until": 1790341024.4471166,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "next sample not due; last attempt 1790296487.4571762",
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
@@ -374,18 +442,18 @@
         "name": "GameLoot",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "store-repair-2"
     },
     "gamenation": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "next sample not due; last attempt 1790296487.4571762",
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "sitemap /sitemap.xml: FetchError: HTTP 404; not a stock result",
@@ -395,60 +463,97 @@
         "name": "GameNation",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/sitemap_index.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/wp-sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1790296487.4571762,
-        "https://gamenation.in/sitemap_index.xml": 1790296487.4571762,
-        "https://gamenation.in/wp-sitemap.xml": 1790296487.4571762
+        "https://gamenation.in/sitemap.xml": 1790319413.6062605,
+        "https://gamenation.in/sitemap_index.xml": 1790319413.6062605,
+        "https://gamenation.in/wp-sitemap.xml": 1790319413.6062605
       }
     },
     "gts": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "next sample not due; last attempt 1790296487.4571762",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
         "errors": [],
         "name": "Games The Shop",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 2,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 33 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap contained unescaped ampersands; repaired for URL discovery only",
+          "/sitemap.xml: 20 opaque product URL(s) had no identifying title; their editions were NOT checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1790296487.4571762
+        "https://www.gamestheshop.com/sitemap.xml": 1790319413.6062605
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
       ]
     },
     "hgworld": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {
         "https://hgworld.in/shop/hgworld-elden-ring-shadow-of-the-erdtree-ps5-2": 1790296487.4571762,
         "https://hgworld.in/shop/hgworld-elden-ring-shadow-of-the-erdtree-ps5-2/": 1790267901.5353065
       },
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
           "product: FetchError: HTTP 404; not a stock result",
           "product: FetchError: HTTP 404; not a stock result"
         ],
         "name": "HGWorld",
         "observations": 0,
         "product_pages": 0,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 7,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap5.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 60 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap6.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
@@ -456,7 +561,9 @@
         "https://hgworld.in/product-sitemap2.xml": 1790273068.630737,
         "https://hgworld.in/product-sitemap3.xml": 1790296487.4571762,
         "https://hgworld.in/product-sitemap4.xml": 1790296487.4571762,
-        "https://hgworld.in/sitemap.xml": 1790296487.4571762
+        "https://hgworld.in/product-sitemap5.xml": 1790319413.6062605,
+        "https://hgworld.in/product-sitemap6.xml": 1790319413.6062605,
+        "https://hgworld.in/sitemap.xml": 1790319413.6062605
       },
       "sitemap_cursor": 4,
       "working_sitemaps": [
@@ -464,27 +571,44 @@
       ]
     },
     "hitech": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {
-        "https://hitechgamez.in/product/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790296487.4571762
+        "https://hitechgamez.in/product/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790319413.6062605
       },
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [],
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt"
+        ],
         "name": "Hitech Gamez",
         "observations": 1,
         "product_pages": 1,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 584 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://hitechgamez.in/product-sitemap.xml": 1790296487.4571762,
-        "https://hitechgamez.in/product-sitemap2.xml": 1790296487.4571762,
-        "https://hitechgamez.in/sitemap_index.xml": 1790296487.4571762
+        "https://hitechgamez.in/product-sitemap.xml": 1790319413.6062605,
+        "https://hitechgamez.in/product-sitemap2.xml": 1790319413.6062605,
+        "https://hitechgamez.in/sitemap_index.xml": 1790319413.6062605
       },
       "sitemap_cursor": 2,
       "working_sitemaps": [
@@ -492,27 +616,40 @@
       ]
     },
     "mcube": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {
-        "https://mcubegames.in/product/elden-ring-shadow-of-the-erdtree-edition---playstation-5": 1790296487.4571762
+        "https://mcubegames.in/product/elden-ring-shadow-of-the-erdtree-edition---playstation-5": 1790319413.6062605
       },
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "MCube Games",
         "observations": 1,
         "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 2 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-products.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 2048 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-blog.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 3 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "store-repair-2",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1790296487.4571762,
-        "https://mcubegames.in/sitemap-products.xml": 1790296487.4571762,
-        "https://mcubegames.in/sitemap.xml": 1790296487.4571762
+        "https://mcubegames.in/sitemap-blog.xml": 1790319413.6062605,
+        "https://mcubegames.in/sitemap-products.xml": 1790319413.6062605,
+        "https://mcubegames.in/sitemap.xml": 1790319413.6062605
       },
       "sitemap_cursor": 0,
       "working_sitemaps": [
@@ -520,11 +657,11 @@
       ]
     },
     "mx2": {
-      "discovery_at": 1790296487.4571762,
+      "discovery_at": 1790319413.6062605,
       "known": {},
       "report": {
-        "checked_at": 1790317972.6940336,
-        "discovery": "next sample not due; last attempt 1790296487.4571762",
+        "checked_at": 1790319413.6062605,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: DNS resolution failed; not a stock result",
@@ -533,7 +670,7 @@
         "name": "MX2Games",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
