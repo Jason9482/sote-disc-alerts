@@ -358,7 +358,7 @@ def run_scan(cfg: dict, store, notifier: Discord | None, *, dry_run: bool = Fals
         else:
             from .reddit import scan_reddit
             reddit_status = scan_reddit(cfg["reddit"], state["reddit"], notifier, now)
-    if not dry_run and (force_health or now - float(state.get("heartbeat_at", 0)) >= 86400):
+    if not dry_run and force_health:
         try:
             assert notifier is not None
             notifier.send("HEALTH: SOTE tracker", safe_text(health_text(reports, state, reddit_status), 3900))
