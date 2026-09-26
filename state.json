@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1790360928.1883426,
-  "last_scan_at": 1790401914.3471384,
+  "last_scan_at": 1790404287.5726533,
   "listings": {
     "14e7b6340613b6e320793338": {
       "alerted_cycle": 0,
@@ -18,7 +18,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790401914.3471384,
+      "last_seen": 1790404287.5726533,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -38,7 +38,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790401914.3471384,
+      "last_seen": 1790404287.5726533,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -58,7 +58,7 @@
         "variant": "Pre-Owned(USED)(WITHOUT DLC CODE)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790401914.3471384,
+      "last_seen": 1790404287.5726533,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -77,7 +77,7 @@
         "url": "https://www.flipkart.com/elden-ring-shadow-erdtree-erdtree-edition/p/itm20c984b821e35",
         "variant": ""
       },
-      "last_seen": 1790401914.3471384,
+      "last_seen": 1790404287.5726533,
       "possible_sent": true,
       "stock_cycle": 0
     },
@@ -97,7 +97,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790401914.3471384,
+      "last_seen": 1790404287.5726533,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -136,7 +136,7 @@
         "url": "https://www.flipkart.com/elden-ring-shadow-erdtree-standard/p/itm00826f7c6f8b7",
         "variant": ""
       },
-      "last_seen": 1790401914.3471384,
+      "last_seen": 1790404287.5726533,
       "possible_sent": true,
       "stock_cycle": 0
     },
@@ -187,7 +187,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "next sample not due; last attempt 1790387548.8903992",
         "discovery_pages": 0,
         "errors": [],
@@ -217,7 +217,7 @@
         "https://consolegarage.com/products/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790387548.8903992
       },
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -247,7 +247,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "next sample not due; last attempt 1790387548.8903992",
         "discovery_pages": 0,
         "errors": [],
@@ -276,14 +276,16 @@
         "https://dtzone.in/index.php/product/ps5-elden-ring-shadow-of-the-erdtree-edition-playstation-5": 1790387548.8903992
       },
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
-        "errors": [],
+        "errors": [
+          "product: FetchError: Network connection failed; not a stock result"
+        ],
         "name": "DTZone",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -299,7 +301,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -316,7 +318,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -341,7 +343,7 @@
         "https://gamebuy.in/wp-content/uploads/2025/03/Elden-Ring-Shadow-Of-The-Erdtree-PS5.png": 1790267901.5353065
       },
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -372,7 +374,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "next sample not due; last attempt 1790387548.8903992",
         "discovery_pages": 0,
         "errors": [
@@ -392,7 +394,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "next sample not due; last attempt 1790387548.8903992",
         "discovery_pages": 0,
         "errors": [
@@ -418,7 +420,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "next sample not due; last attempt 1790387548.8903992",
         "discovery_pages": 0,
         "errors": [],
@@ -438,18 +440,19 @@
       ]
     },
     "hgworld": {
+      "cooldown_until": 1790425894.7320848,
       "discovery_at": 1790387548.8903992,
       "known": {
         "https://hgworld.in/shop/hgworld-elden-ring-shadow-of-the-erdtree-ps5-2": 1790365941.2890775,
         "https://hgworld.in/shop/hgworld-elden-ring-shadow-of-the-erdtree-ps5-2/": 1790267901.5353065
       },
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
           "product: FetchError: HTTP 404; not a stock result",
-          "product: FetchError: HTTP 404; not a stock result"
+          "product: FetchError: HTTP 403; not a stock result"
         ],
         "name": "HGWorld",
         "observations": 0,
@@ -480,7 +483,7 @@
         "https://hitechgamez.in/product/elden-ring-shadow-of-the-erdtree-edition-ps5": 1790387548.8903992
       },
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -510,7 +513,7 @@
         "https://mcubegames.in/product/elden-ring-shadow-of-the-erdtree-edition---playstation-5": 1790387548.8903992
       },
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -536,7 +539,7 @@
       "discovery_at": 1790387548.8903992,
       "known": {},
       "report": {
-        "checked_at": 1790401914.3471384,
+        "checked_at": 1790404287.5726533,
         "discovery": "next sample not due; last attempt 1790387548.8903992",
         "discovery_pages": 0,
         "errors": [
