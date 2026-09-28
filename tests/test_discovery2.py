@@ -192,7 +192,7 @@ class DiagnosticTests(unittest.TestCase):
                 with patch.dict(os.environ,{'GITHUB_STEP_SUMMARY':''}):
                     txt=write_run_summary([], [Listing('Demo',TITLE,URL,status='out_of_stock',evidence='Primary product unavailable')], [])
                 self.assertIn('Evidence: Primary product unavailable',txt)
-                self.assertIn('store-repair-2',txt)
+                self.assertIn(SCANNER_REVISION,txt)
             finally:
                 os.chdir(old)
 

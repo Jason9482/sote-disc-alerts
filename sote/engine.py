@@ -10,23 +10,35 @@ from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
 from .http import StoreClient, FetchError
-from .model import Listing, canonical_url, same_site
+from .model import Listing, canonical_url, same_site, match_product, target_name, SUPPORTED_TARGETS
+from .budget import budget_decision
 from .parsers import parse_html, parse_shopify, discover_html, sitemap_links
 from .notify import Discord, NotificationError, safe_text
 from .discovery import ordered_child_maps
 
-SCANNER_REVISION = "store-repair-2"
+SCANNER_REVISION = "pragmata-switch-1"
 
 
 def read_config(path: str) -> dict:
     cfg = json.loads(Path(path).read_text(encoding="utf-8"))
     if not isinstance(cfg.get("sources"), list) or not cfg["sources"]:
         raise ValueError("config.json must contain a nonempty sources array")
+    target = cfg.get("target", "sote")
+    if target not in SUPPORTED_TARGETS:
+        raise ValueError("Unsupported target; use pragmata or sote")
+    cap = cfg.get("max_price_inr")
+    if cap is not None and (isinstance(cap, bool) or not isinstance(cap, (int, float)) or not 0 < cap < 10000000):
+        raise ValueError("max_price_inr must be a positive number, or null")
+    if not isinstance(cfg.get("daily_health", False), bool):
+        raise ValueError("daily_health must be true or false")
+    if target == "pragmata" and cfg.get("reddit", {}).get("enabled"):
+        raise ValueError("Keep the GitHub Reddit module disabled; use the separate MonitoRSS filters")
     ids = set()
     for src in cfg["sources"]:
         if not src.get("id") or src["id"] in ids or not src.get("name"):
             raise ValueError("Each source needs a unique id and a name")
         ids.add(src["id"])
+        src["target"] = target
         base = src.get("base", "")
         p = urlsplit(base)
         if p.scheme != "https" or not p.hostname or not same_site(base, base):
@@ -58,6 +70,7 @@ def product_check(client: StoreClient, source: dict, url: str) -> list[Listing]:
 
 def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
                 client_factory=StoreClient) -> tuple[list[Listing], dict]:
+    source = {**source, "target": cfg.get("target", source.get("target", "sote"))}
     client = client_factory(source, source_state, cfg)
     observations: list[Listing] = []
     report = {"name": source["name"], "checked_at": now, "product_pages": 0, "discovery_pages": 0,
@@ -105,7 +118,7 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
                 if not next_url:
                     break
                 try:
-                    found, next_url = discover_html(client.get(next_url), next_url)
+                    found, next_url = discover_html(client.get(next_url), next_url, source.get("target", "sote"))
                     report["discovery_pages"] += 1
                     urls.update(found)
                     known.update({u: now for u in found})
@@ -150,7 +163,7 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
                     try:
                         getter = getattr(client, "get_sitemap", client.get)
                         map_stats = {}
-                        children, found = sitemap_links(getter(current), base, report["warnings"], map_stats)
+                        children, found = sitemap_links(getter(current), base, report["warnings"], map_stats, source.get("target", "sote"))
                         report["discovery_pages"] += 1
                         attempt["result"] = (f"parsed; {len(found)} candidate URL(s); {len(children)} child map(s); "
                                              f"{map_stats.get('page_urls', 0)} page URL(s) inspected")
@@ -222,6 +235,8 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
 
 def event_for(item: Listing, history: dict, now: float, cfg: dict) -> str | None:
     """Observe stock; failures/unknowns never erase the last definite stock state."""
+    if cfg.get("target") == "pragmata" and match_product(item.title + " " + item.variant, item.url, "pragmata") == "reject":
+        return None
     entry = history.setdefault(item.key, {"stock_cycle": 0, "alerted_cycle": 0, "possible_sent": False})
     last_definite = entry.get("last_definite")
     if item.status == "in_stock":
@@ -231,9 +246,17 @@ def event_for(item: Listing, history: dict, now: float, cfg: dict) -> str | None
     elif item.status in {"out_of_stock", "backorder"}:
         entry["last_definite"] = item.status
     entry.update({"last_seen": now, "item": item.as_dict()})
-    cap = cfg.get("max_price_inr")
-    if cap and item.currency == "INR" and item.price != "Not verified":
-        if float(item.price.replace(",", "")) > float(cap):
+    allowed, reason, amount = budget_decision(item, cfg)
+    entry["budget_note"] = reason
+    if cfg.get("max_price_inr") is not None:
+        previous = entry.get("within_budget")
+        if amount is not None and item.currency.upper() == "INR":
+            entry["within_budget"] = allowed
+            # A price returning below the cap is a new opportunity even if stock
+            # never changed. An unreadable price does NOT rearm notifications.
+            if allowed and previous is False and item.status == "in_stock" and last_definite == "in_stock":
+                entry["stock_cycle"] += 1
+        if not allowed:
             return None
     if item.status in {"out_of_stock", "backorder"}:
         return None
@@ -254,9 +277,10 @@ def acknowledge(item: Listing, history: dict, kind: str) -> None:
         entry["possible_sent"] = True
 
 
-def health_text(reports: list[dict], state: dict, reddit_status: str) -> str:
+def health_text(reports: list[dict], state: dict, reddit_status: str, cfg: dict | None = None) -> str:
+    cfg = cfg or {}
     when = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %b %Y, %I:%M %p IST")
-    lines = [f"Last scan: {when}", f"Code: {SCANNER_REVISION}", "", "Configured does not mean successfully checked:"]
+    lines = [f"Last scan: {when}", f"Code: {SCANNER_REVISION}", f"Target: {target_name(cfg.get('target', 'sote'))} PS5", f"Item-price cap: INR {cfg.get('max_price_inr') or 'not set'}", "", "Configured does not mean successfully checked:"]
     for r in reports:
         if r["product_pages"]:
             msg = f"{r['product_pages']} matching product page(s) read"
@@ -273,12 +297,13 @@ def health_text(reports: list[dict], state: dict, reddit_status: str) -> str:
         lines.append(f"{r['name']}: {msg}")
     lines.extend(["", f"Reddit: {reddit_status}",
                   "Delivery/PIN and payment protection are never automatically confirmed.",
-                  "See the GitHub run summary for failures and coverage. Missing daily messages: inspect Actions."])
+                  "Daily health messages are off unless enabled in config. Inspect Actions for failures and coverage."])
     return "\n".join(lines)
 
 
-def write_run_summary(reports: list[dict], observations: list[Listing], notes: list[str]) -> str:
-    lines = ["# SOTE tracker run", "", f"Code: {SCANNER_REVISION}", "", "Stock signals are store claims, not verified checkout/delivery.", "",
+def write_run_summary(reports: list[dict], observations: list[Listing], notes: list[str], cfg: dict | None = None) -> str:
+    cfg = cfg or {}
+    lines = [f"# {target_name(cfg.get('target', 'sote'))} tracker run", "", f"Code: {SCANNER_REVISION}", "", f"Target: {target_name(cfg.get('target', 'sote'))} PS5 | Item-price cap: INR {cfg.get('max_price_inr') or 'not set'} | Daily health: {'on' if cfg.get('daily_health', False) else 'off'}", "", "Stock signals are store claims, not verified checkout/delivery.", "",
              "| Source | Matching pages | Discovery pages | Issues |", "|---|---:|---:|---|"]
     for r in reports:
         details = r["errors"] + ["Note: " + w for w in r.get("warnings", [])]
@@ -288,7 +313,9 @@ def write_run_summary(reports: list[dict], observations: list[Listing], notes: l
     for item in observations:
         lines.append(f"- {item.source}: {item.status}, {item.match}, {item.variant or 'single/unspecified variant'}; {item.url}")
         evidence = item.evidence.replace("\n", " ").replace("`", "")[:300]
+        lines.append(f"  - Price: {item.currency} {item.price}")
         lines.append(f"  - Evidence: {evidence}")
+        lines.append("  - Budget: " + budget_decision(item, cfg)[1])
     attempts = [(r["name"], a) for r in reports for a in r.get("sitemap_attempts", [])]
     if attempts:
         lines.extend(["", "## Discovery diagnostics", "", "Paths below are sitemap files, not stock claims. Game/product maps are prioritized; lower-priority maps may remain unchecked.", ""])
@@ -308,8 +335,21 @@ def write_run_summary(reports: list[dict], observations: list[Listing], notes: l
 def run_scan(cfg: dict, store, notifier: Discord | None, *, dry_run: bool = False, force_health: bool = False) -> int:
     now = time.time()
     state = store.load()
+    target = cfg.get("target", "sote")
+    previous_target = state.get("target", "sote")
+    migrated = previous_target != target
+    if migrated:
+        # Drop old product discovery/deduplication, but retain store-requested
+        # cooldowns. Previous state remains in GitHub commit history.
+        state["sources"] = {key: {"cooldown_until": val.get("cooldown_until", 0)}
+                            for key, val in state.get("sources", {}).items()}
+        state["listings"] = {}
+        state["heartbeat_at"] = 0
+    state["target"] = target
     enabled = [s for s in cfg["sources"] if s.get("enabled", True)]
     observations, reports, notes = [], [], []
+    if migrated:
+        notes.append("Changed target: old product URLs and alert history were reset; site cooldowns were preserved.")
     for src in enabled:
         state["sources"].setdefault(src["id"], {})
     with ThreadPoolExecutor(max_workers=min(4, max(1, len(enabled)))) as executor:
@@ -358,10 +398,10 @@ def run_scan(cfg: dict, store, notifier: Discord | None, *, dry_run: bool = Fals
         else:
             from .reddit import scan_reddit
             reddit_status = scan_reddit(cfg["reddit"], state["reddit"], notifier, now)
-    if not dry_run and force_health:
+    if not dry_run and (force_health or (cfg.get("daily_health", False) and now - float(state.get("heartbeat_at", 0)) >= 86400)):
         try:
             assert notifier is not None
-            notifier.send("HEALTH: SOTE tracker", safe_text(health_text(reports, state, reddit_status), 3900))
+            notifier.send(f"HEALTH: {target_name(target)} tracker", safe_text(health_text(reports, state, reddit_status, cfg), 3900))
             state["heartbeat_at"] = now
         except NotificationError as exc:
             notes.append(str(exc))
@@ -373,7 +413,7 @@ def run_scan(cfg: dict, store, notifier: Discord | None, *, dry_run: bool = Fals
     notes.extend([f"Delivered {sent} retailer alert(s).", f"Reddit: {reddit_status}",
                   "Sitemap/catalogue discovery is bounded and not exhaustive.",
                   "No automated checkout or PIN-code delivery test is performed."])
-    summary = write_run_summary(reports, observations, notes)
+    summary = write_run_summary(reports, observations, notes, cfg)
     print(summary)
     if not dry_run:
         store.save(state)

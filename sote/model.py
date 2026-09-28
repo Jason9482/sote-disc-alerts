@@ -101,3 +101,40 @@ class Listing:
 
     def as_dict(self) -> dict:
         return asdict(self)
+
+
+SUPPORTED_TARGETS = {"sote", "pragmata"}
+
+
+def target_name(target: str = "sote") -> str:
+    return "Pragmata" if target == "pragmata" else "SOTE"
+
+
+def match_product(title: str, url: str = "", target: str = "sote") -> str:
+    """Classify a primary product title. Discovery never establishes availability."""
+    if target == "sote":
+        return match_title(title, url)
+    if target != "pragmata":
+        return "reject"
+    t = normalized(title)
+    u = normalized(urlsplit(url).path)
+    if not re.search(r"\bpragmata\b", t) or is_buyback(t):
+        return "reject"
+    if re.search(r"\b(?:digital|account|rental|rent|steam|key|code|voucher|dlc|upgrade|bonus|demo|soundtrack|artbook|poster|statue|figure|amiibo)\b", t):
+        return "reject"
+    if re.search(r"\b(?:case|box|steelbook) only\b|\bempty (?:case|box)\b|\bno (?:game|disc)\b|\bdisc not included\b|\bwtb\b|\bwanted\b|\blooking to buy\b", t):
+        return "reject"
+    ps5 = bool(re.search(r"\bps\s?5\b|\bplaystation\s?5\b", t))
+    other = bool(re.search(r"\bps\s?4\b|\bplaystation\s?4\b|\bxbox\b|\bswitch\b|\bpc\b", t))
+    if other:
+        return "possible" if ps5 else "reject"
+    if ps5 or re.search(r"\bps\s?5\b|\bplaystation\s?5\b", u):
+        return "exact"
+    return "possible"
+
+
+def discovery_hint(text: str, target: str = "sote") -> bool:
+    t = normalized(text)
+    if target == "pragmata":
+        return bool(re.search(r"\bpragmata\b", t))
+    return bool(re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", t))

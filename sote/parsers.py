@@ -7,7 +7,7 @@ from urllib.parse import urljoin, urlencode, urlsplit, parse_qsl
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup, Tag
 
-from .model import Listing, canonical_url, condition, dlc_status, is_buyback, match_title, normalized, same_site
+from .model import Listing, canonical_url, condition, dlc_status, is_buyback, match_title, normalized, same_site, match_product, discovery_hint
 
 
 def money(value: object, cents: bool = False) -> str:
@@ -24,7 +24,7 @@ def money(value: object, cents: bool = False) -> str:
 
 def parse_shopify(data: dict, source: dict, url: str) -> list[Listing]:
     title = str(data.get("title", ""))
-    level = match_title(title, url)
+    level = match_product(title, url, source.get("target", "sote"))
     if level == "reject":
         return []
     variants = data.get("variants")
@@ -36,7 +36,7 @@ def parse_shopify(data: dict, source: dict, url: str) -> list[Listing]:
         label = str(v.get("title", ""))
         if is_buyback(label) or v.get("requires_shipping") is False:
             continue
-        variant_level = match_title(title + " " + label, url)
+        variant_level = match_product(title + " " + label, url, source.get("target", "sote"))
         if variant_level == "reject":
             continue
         ident = v.get("id")
@@ -159,11 +159,15 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
     if heading is None:
         return []
     title = heading.get_text(" ", strip=True)
-    level = match_title(title, url)
+    level = match_product(title, url, source.get("target", "sote"))
     if level == "reject":
         return []
     scope = clean_purchase_scope(primary_scope(soup, heading))
     scope_text = scope.get_text(" ", strip=True) if scope else ""
+    if source.get("target") == "pragmata" and re.search(
+            r"\bno physical disc\b|\b(?:account credentials|shared account|account login)\b|"
+            r"\bdigital delivery only\b|\bcode in (?:a )?box\b", normalized(scope_text)):
+        return []
 
     # Shopify HTML can contain complete product JSON. Do not guess from free text.
     if source.get("adapter") == "shopify":
@@ -193,7 +197,7 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
                 label = " / ".join(str(x) for x in v.get("attributes", {}).values())
                 if is_buyback(label):
                     continue
-                variant_level = match_title(title + " " + label, url)
+                variant_level = match_product(title + " " + label, url, source.get("target", "sote"))
                 if variant_level == "reject":
                     continue
                 active = v.get("variation_is_active", True) is not False
@@ -236,7 +240,7 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
     offer_states = {availability_from_offer(o) for o in offers} - {"unknown"}
     status = next(iter(offer_states)) if len(offer_states) == 1 else "unknown"
     evidence = "Primary-product structured availability; delivery not tested" if offer_states else "No reliable stock signal"
-    price = money(offers[0].get("price")) if len(offers) == 1 else "Not verified"
+    price = money(offers[0].get("price")) if len(offers) == 1 and not _typed(offers[0], "AggregateOffer") else "Not verified"
     currency = str(offers[0].get("priceCurrency", source.get("currency", "INR"))) if offers else source.get("currency", "INR")
 
     if scope:
@@ -266,13 +270,23 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
                         status, evidence = "unknown", "Enabled Add to Cart conflicts with structured unavailability; manual verification required"
                     else:
                         status, evidence = "in_stock", "Enabled product-specific Add to Cart button; delivery not tested"
-        pnode = next((node for selector in (".price ins .amount", ".price ins", ".price > .amount", ".price .amount")
-                          if (node := scope.select_one(selector)) is not None), None)
-        if pnode:
-            text_price = pnode.get_text(" ", strip=True)
-            numeric = re.search(r"\d[\d,]*(?:\.\d{1,2})?", text_price)
-            if numeric:
-                price = money(numeric.group())
+        price_scope = scope.select_one(".price")
+        if price_scope:
+            current_prices = price_scope.select("ins .amount") or price_scope.select("ins")
+            if not current_prices:
+                current_prices = [n for n in price_scope.select(".amount") if n.find_parent("del") is None]
+            amounts = []
+            for n in current_prices:
+                raw = n.get_text(" ", strip=True)
+                m = re.search(r"\d[\d,]*(?:\.\d{1,2})?", raw)
+                if m:
+                    amounts.append(money(m.group()))
+            distinct = set(amounts) - {"Not verified"}
+            if len(distinct) == 1:
+                price = next(iter(distinct))
+            elif len(distinct) > 1:
+                price = "Not verified"
+                evidence += "; price range cannot be assigned to one purchase variant"
 
     # A mixed-platform heading can never produce a strong stock alert.
     return [Listing(source["name"], title, url, status=status, match=level, price=price,
@@ -280,7 +294,7 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
                     dlc=dlc_status(title + " " + scope_text), evidence=evidence)]
 
 
-def discover_html(html: str, url: str) -> tuple[list[str], str | None]:
+def discover_html(html: str, url: str, target: str = "sote") -> tuple[list[str], str | None]:
     soup = BeautifulSoup(html, "html.parser")
     urls = set()
     for a in soup.select("a[href]"):
@@ -293,7 +307,7 @@ def discover_html(html: str, url: str) -> tuple[list[str], str | None]:
             name = str(img.get("alt", ""))
         slug = normalized(href)
         # URL slug is only a discovery lead. The detail page must still pass title checks.
-        if match_title(name, href) != "reject" or re.search(r"shadow (?:of )?(?:the )?erdtree", slug):
+        if match_product(name, href, target) != "reject" or discovery_hint(slug, target):
             if any(p in href for p in ("/product/", "/products/", "/shop/", "/Games/", "/p/")):
                 urls.add(canonical_url(href))
     next_link = soup.select_one("a.next.page-numbers, a[rel='next'], a.pagination__next")
@@ -302,7 +316,7 @@ def discover_html(html: str, url: str) -> tuple[list[str], str | None]:
 
 
 def sitemap_links(xml: str, base: str, warnings: list[str] | None = None,
-                  stats: dict | None = None) -> tuple[list[str], list[str]]:
+                  stats: dict | None = None, target: str = "sote") -> tuple[list[str], list[str]]:
     """Extract discovery leads, never availability, from a verified sitemap root.
 
     A narrowly scoped retry repairs unescaped ampersands only. Other malformed
@@ -356,11 +370,11 @@ def sitemap_links(xml: str, base: str, warnings: list[str] | None = None,
                 ids = {k.lower() for k, _ in parse_qsl(parsed.query)}
                 identifier_only = bool(ids & {"boxid", "id", "product_id", "pid"}) or bool(
                     re.search(r"/(?:product|products|detail|details)/[0-9a-f-]{8,}/?$", parsed.path, re.I))
-                descriptive = bool(re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", normalized(u)))
+                descriptive = discovery_hint(u, target)
                 if identifier_only and not any(t.strip() for t in titles) and not descriptive:
                     stats["opaque_without_title"] += 1
-            if (re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", normalized(u))
-                    or any(match_title(t, u) != "reject" for t in titles)):
+            if (discovery_hint(u, target)
+                    or any(match_product(t, u, target) != "reject" for t in titles)):
                 urls.append(u)
     urls = list(dict.fromkeys(urls))
     if kind == "sitemapindex":

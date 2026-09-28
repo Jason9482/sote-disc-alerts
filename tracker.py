@@ -8,38 +8,42 @@ import os
 import sys
 
 from sote.engine import read_config, run_scan
-from sote.model import Listing
+from sote.model import Listing, target_name
 from sote.notify import Discord, NotificationError
 from sote.storage import GitHubStore, LocalStore, StorageError
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="PS5 Shadow of the Erdtree availability watcher")
+    parser = argparse.ArgumentParser(description="Configured PS5 disc and price watcher")
     parser.add_argument("--mode", choices=["test", "scan", "status", "dry-run", "demo"], default="scan")
     parser.add_argument("--config", default="config.json")
     parser.add_argument("--state-file", default="state.json")
     args = parser.parse_args()
     if args.mode == "demo":
-        sample = Listing("EXAMPLE ONLY - not a real store", "Elden Ring Shadow of the Erdtree Edition PS5",
-                         "https://example.com/fictional-product", status="in_stock", variant="Pre-Owned (WITHOUT DLC CODE)",
-                         condition="Used (seller label)", price="2,800.00", dlc="Not included (seller statement)",
+        sample = Listing("EXAMPLE ONLY - not a real store", "Pragmata PS5",
+                         "https://example.com/fictional-product", status="in_stock", variant="Pre-Owned",
+                         condition="Used (seller label)", price="3,900.00", dlc="Not included (seller statement)",
                          evidence="Synthetic demonstration; not a live listing")
         print(json.dumps(sample.as_dict(), indent=2))
         return 0
+    cfg = read_config(args.config)
+    target = cfg.get("target", "sote")
+    notifier = None if args.mode == "dry-run" else Discord(target=target, max_price_inr=cfg.get("max_price_inr"))
     if args.mode == "test":
-        Discord().send("TEST: SOTE tracker connected",
-                       "This confirms GitHub can post to this Discord channel. It is NOT a stock alert. "
+        notifier.send(f"TEST: {target_name(target)} tracker connected",
+                       f"Target: {target_name(target)} PS5. Maximum listed item price: INR {cfg.get('max_price_inr')}. "
+                       f"Daily health messages: {'on' if cfg.get('daily_health', False) else 'off'}. "
+                       "This confirms GitHub can post here. It is NOT a stock alert. "
                        "Next run the workflow in 'status' mode for the first store scan. "
                        "Check phone notification permissions with your phone locked.")
         print("Discord acknowledged the test message. Phone push delivery still needs your check.")
         return 0
-    cfg = read_config(args.config)
     dry = args.mode == "dry-run"
     if os.getenv("GITHUB_ACTIONS") == "true" and not dry:
         store = GitHubStore()
     else:
         store = LocalStore(args.state_file)
-    return run_scan(cfg, store, None if dry else Discord(), dry_run=dry, force_health=args.mode == "status")
+    return run_scan(cfg, store, notifier, dry_run=dry, force_health=args.mode == "status")
 
 
 if __name__ == "__main__":

@@ -92,7 +92,7 @@ class GitHubStore:
         data = json.dumps(state, ensure_ascii=True, sort_keys=True, indent=2).encode("utf-8")
         if len(data) > 900_000:
             raise StorageError("State exceeded safe size; prune history before continuing")
-        body = {"message": "Record SOTE availability observations", "branch": self.branch,
+        body = {"message": "Record game availability observations", "branch": self.branch,
                 "content": base64.b64encode(data).decode("ascii")}
         if self.file_sha:
             body["sha"] = self.file_sha

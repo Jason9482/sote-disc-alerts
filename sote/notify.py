@@ -7,7 +7,7 @@ import time
 from urllib.parse import urlsplit
 import requests
 
-from .model import Listing
+from .model import Listing, target_name
 
 
 class NotificationError(RuntimeError):
@@ -29,7 +29,10 @@ def webhook_valid(url: str) -> bool:
 
 
 class Discord:
-    def __init__(self, url: str | None = None):
+    def __init__(self, url: str | None = None, *, target: str = "sote", max_price_inr=None):
+        self.target = target
+        self.label = target_name(target)
+        self.max_price_inr = max_price_inr
         self.url = (url if url is not None else os.getenv("DISCORD_WEBHOOK_URL", "")).strip()
         if not webhook_valid(self.url):
             raise NotificationError("DISCORD_WEBHOOK_URL is missing/invalid. Set it as a GitHub Actions secret.")
@@ -39,12 +42,12 @@ class Discord:
              link: str | None = None) -> str:
         embed = {"title": safe_text(title, 240), "description": description[:3900],
                  "timestamp": datetime.now(timezone.utc).isoformat(),
-                 "footer": {"text": "SOTE Watcher | A lead, not a seller endorsement"}}
+                 "footer": {"text": f"{self.label} Watcher | A lead, not a seller endorsement"}}
         if fields:
             embed["fields"] = fields[:20]
         if link and link.startswith("https://"):
             embed["url"] = link
-        payload = {"username": "SOTE Watcher", "allowed_mentions": {"parse": []}, "embeds": [embed]}
+        payload = {"username": f"{self.label} Watcher", "allowed_mentions": {"parse": []}, "embeds": [embed]}
         # wait=true gives delivery acknowledgement; mark alerts sent only after success.
         for attempt in range(3):
             try:
@@ -106,8 +109,8 @@ class Discord:
             {"name": "Listed price", "value": safe_text(f"{item.currency} {item.price}"), "inline": True},
             {"name": "Site availability", "value": safe_text(item.status.replace("_", " ")), "inline": True},
             {"name": "Selected variant", "value": safe_text(item.variant or "Not separately stated"), "inline": False},
-            {"name": "DLC voucher", "value": safe_text(item.dlc), "inline": False},
+            {"name": "Price limit", "value": safe_text(f"INR {self.max_price_inr}; item price only. Shipping/fees must be checked." if self.max_price_inr else "Not configured"), "inline": False},
             {"name": "Evidence", "value": safe_text(item.evidence), "inline": False},
-            {"name": "Before paying", "value": "Delivery/PIN, original SOTE case, seller and payment protection are NOT verified. Open the listing and check them.", "inline": False},
+            {"name": "Before paying", "value": "Confirm physical PS5 disc, original case, final delivered total, seller and payment protection before paying.", "inline": False},
         ]
-        return self.send(f"{kind}: PS5 Shadow of the Erdtree", safe_text(item.title), fields, item.url)
+        return self.send(f"{kind}: {self.label} PS5", safe_text(item.title), fields, item.url)
