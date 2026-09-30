@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1790600111.509439,
-  "last_scan_at": 1790733618.7759728,
+  "last_scan_at": 1790735505.3334713,
   "listings": {
     "00cd8fd9bc66134b4d926476": {
       "alerted_cycle": 0,
@@ -19,7 +19,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -41,7 +41,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": "Pre-Owned (USED)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -106,7 +106,7 @@
         "url": "https://www.flipkart.com/ps5-pragmata-standard/p/itmb431192eaadcb",
         "variant": ""
       },
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -127,7 +127,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -149,7 +149,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -171,21 +171,21 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
     },
     "f747e02ed94c6d84529f40da": {
       "alerted_cycle": 0,
-      "budget_note": "Within item-price cap: INR 2,699.00 <= INR 4,000.00; delivery/fees unverified",
+      "budget_note": "Within item-price cap: INR 3,449.00 <= INR 4,000.00; delivery/fees unverified",
       "item": {
         "condition": "Used (seller label)",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
         "match": "exact",
-        "price": "2,699.00",
+        "price": "3,449.00",
         "source": "GameBuy",
         "status": "out_of_stock",
         "title": "Pragmata PS5 (Pre-Owned)",
@@ -193,7 +193,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -215,7 +215,7 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1790733618.7759728,
+      "last_seen": 1790735505.3334713,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -228,32 +228,16 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 3,
+        "checked_at": 1790735505.3334713,
+        "discovery": "next sample not due; last attempt 1790733618.7759728",
+        "discovery_pages": 0,
         "errors": [],
         "name": "CeX India",
         "observations": 0,
         "product_pages": 0,
-        "requests": 4,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 4 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 31940 page URL(s) inspected"
-          },
-          {
-            "path": "/sitemaps/cex/in/sitemap-in-static.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 24 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "/sitemaps/cex/in/sitemap-in-products-1.xml: 31940 opaque product URL(s) had no identifying title; their editions were NOT checked",
-          "Sitemap sampling limit reached; other map files were not checked"
-        ]
+        "requests": 0,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -275,33 +259,18 @@
         "https://consolegarage.com/products/pragmata-ps5": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 4,
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "Console Garage",
         "observations": 2,
         "product_pages": 1,
-        "requests": 7,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/sitemap_products_1.xml",
-            "result": "parsed; 2 candidate URL(s); 0 child map(s); 968 page URL(s) inspected"
-          },
-          {
-            "path": "/sitemap_collections_1.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 12 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "Sitemap sampling limit reached; other map files were not checked"
-        ]
+        "requests": 3,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -324,31 +293,16 @@
         "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 3,
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
         "errors": [],
         "name": "DACBY",
         "observations": 2,
         "product_pages": 2,
-        "requests": 6,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 16 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap-ps5-cds.xml",
-            "result": "parsed; 2 candidate URL(s); 0 child map(s); 542 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap-ps4-cds.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 831 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "Sitemap sampling limit reached; other map files were not checked"
-        ]
+        "requests": 3,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -365,20 +319,15 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 2,
+        "checked_at": 1790735505.3334713,
+        "discovery": "next sample not due; last attempt 1790733618.7759728",
+        "discovery_pages": 0,
         "errors": [],
         "name": "DTZone",
         "observations": 0,
         "product_pages": 0,
-        "requests": 5,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 0 page URL(s) inspected"
-          }
-        ],
+        "requests": 0,
+        "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
@@ -394,12 +343,10 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
         "discovery_pages": 0,
-        "errors": [
-          "catalogue: FetchError: Disallowed by this site's robots.txt"
-        ],
+        "errors": [],
         "name": "e2zStore",
         "observations": 1,
         "product_pages": 1,
@@ -414,8 +361,8 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
           "A matching page has unreadable/ambiguous stock signals"
@@ -438,33 +385,18 @@
         "https://gamebuy.in/product/pragmata-ps5-pre-owned": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 5,
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "GameBuy",
         "observations": 2,
         "product_pages": 2,
-        "requests": 13,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap_index.xml",
-            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1001 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap2.xml",
-            "result": "parsed; 3 candidate URL(s); 0 child map(s); 724 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "Sitemap sampling limit reached; other map files were not checked"
-        ]
+        "requests": 7,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -481,8 +413,8 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "checked_at": 1790735505.3334713,
+        "discovery": "next sample not due; last attempt 1790733618.7759728",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
@@ -491,7 +423,7 @@
         "name": "GameLoot",
         "observations": 0,
         "product_pages": 0,
-        "requests": 1,
+        "requests": 0,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -504,33 +436,17 @@
         "https://gamenation.in/Products/Games/pragmata-ps5-pre-owned-WzUwODEsMl0": 1790600111.509439
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 1,
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
         "errors": [
-          "sitemap /sitemap.xml: FetchError: HTTP 404; not a stock result",
-          "sitemap /sitemap_index.xml: FetchError: HTTP 404; not a stock result",
-          "sitemap /wp-sitemap.xml: FetchError: HTTP 404; not a stock result",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "GameNation",
         "observations": 0,
         "product_pages": 0,
-        "requests": 7,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "FetchError: HTTP 404; not a stock result"
-          },
-          {
-            "path": "/sitemap_index.xml",
-            "result": "FetchError: HTTP 404; not a stock result"
-          },
-          {
-            "path": "/wp-sitemap.xml",
-            "result": "FetchError: HTTP 404; not a stock result"
-          }
-        ],
+        "requests": 3,
+        "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
@@ -545,24 +461,16 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 1,
+        "checked_at": 1790735505.3334713,
+        "discovery": "next sample not due; last attempt 1790733618.7759728",
+        "discovery_pages": 0,
         "errors": [],
         "name": "Games The Shop",
         "observations": 0,
         "product_pages": 0,
-        "requests": 2,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 33 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "Sitemap contained unescaped ampersands; repaired for URL discovery only",
-          "/sitemap.xml: 20 opaque product URL(s) had no identifying title; their editions were NOT checked"
-        ]
+        "requests": 0,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -579,34 +487,18 @@
         "https://hgworld.in/shop/pragmata-nintendo-switch-2-game-capcom-sci-fi-action-adventure-physical-switch-2-game-shooting-puzzle-gameplay": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 3,
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
         "errors": [
-          "catalogue: FetchError: Disallowed by this site's robots.txt",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "HGWorld",
         "observations": 0,
         "product_pages": 0,
-        "requests": 7,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap5.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 60 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap6.xml",
-            "result": "parsed; 1 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "Sitemap sampling limit reached; other map files were not checked"
-        ]
+        "requests": 3,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -629,33 +521,16 @@
         "https://hitechgamez.in/product/pragmata-ps5": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 3,
-        "errors": [
-          "catalogue: FetchError: Disallowed by this site's robots.txt"
-        ],
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
+        "errors": [],
         "name": "Hitech Gamez",
         "observations": 1,
         "product_pages": 1,
-        "requests": 6,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap_index.xml",
-            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap.xml",
-            "result": "parsed; 1 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap2.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 587 page URL(s) inspected"
-          }
-        ],
-        "warnings": [
-          "Sitemap sampling limit reached; other map files were not checked"
-        ]
+        "requests": 3,
+        "sitemap_attempts": [],
+        "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
@@ -675,30 +550,17 @@
         "https://mcubegames.in/product/pragmata---playstation-5": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 3,
+        "checked_at": 1790735505.3334713,
+        "discovery": "not due",
+        "discovery_pages": 0,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "MCube Games",
         "observations": 1,
         "product_pages": 1,
-        "requests": 6,
-        "sitemap_attempts": [
-          {
-            "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 2 child map(s); 0 page URL(s) inspected"
-          },
-          {
-            "path": "/sitemap-products.xml",
-            "result": "parsed; 2 candidate URL(s); 0 child map(s); 2075 page URL(s) inspected"
-          },
-          {
-            "path": "/sitemap-blog.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 3 page URL(s) inspected"
-          }
-        ],
+        "requests": 3,
+        "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "pragmata-switch-1",
@@ -716,8 +578,8 @@
       "discovery_at": 1790733618.7759728,
       "known": {},
       "report": {
-        "checked_at": 1790733618.7759728,
-        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "checked_at": 1790735505.3334713,
+        "discovery": "next sample not due; last attempt 1790733618.7759728",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: DNS resolution failed; not a stock result",
@@ -726,7 +588,7 @@
         "name": "MX2Games",
         "observations": 0,
         "product_pages": 0,
-        "requests": 2,
+        "requests": 0,
         "sitemap_attempts": [],
         "warnings": []
       },
