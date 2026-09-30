@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1790600111.509439,
-  "last_scan_at": 1790760863.1568148,
+  "last_scan_at": 1790762369.9850354,
   "listings": {
     "00cd8fd9bc66134b4d926476": {
       "alerted_cycle": 0,
@@ -19,7 +19,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -41,7 +41,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": "Pre-Owned (USED)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -106,7 +106,7 @@
         "url": "https://www.flipkart.com/ps5-pragmata-standard/p/itmb431192eaadcb",
         "variant": ""
       },
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -127,7 +127,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -149,7 +149,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790760863.1568148,
+      "last_seen": 1790762369.9850354,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -228,7 +228,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "next sample not due; last attempt 1790757363.5652468",
         "discovery_pages": 0,
         "errors": [],
@@ -259,7 +259,7 @@
         "https://consolegarage.com/products/pragmata-ps5": 1790757363.5652468
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -293,7 +293,7 @@
         "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1790757363.5652468
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -319,7 +319,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "next sample not due; last attempt 1790757363.5652468",
         "discovery_pages": 0,
         "errors": [],
@@ -343,7 +343,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -361,7 +361,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -377,7 +377,7 @@
       "scanner_revision": "pragmata-switch-1"
     },
     "gamebuy": {
-      "cooldown_until": 1790419939.8221858,
+      "cooldown_until": 1790783970.709379,
       "discovery_at": 1790757363.5652468,
       "known": {
         "https://gamebuy.in/product/pragmata-nintendo-switch-2": 1790757363.5652468,
@@ -385,16 +385,18 @@
         "https://gamebuy.in/product/pragmata-ps5-pre-owned": 1790757363.5652468
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "product: FetchError: robots.txt not accessible (HTTP 403); check deferred",
+          "product: FetchError: Store is in a temporary backoff window",
+          "product: FetchError: Store is in a temporary backoff window"
         ],
         "name": "GameBuy",
-        "observations": 2,
-        "product_pages": 2,
-        "requests": 7,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -413,7 +415,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "next sample not due; last attempt 1790757363.5652468",
         "discovery_pages": 0,
         "errors": [
@@ -436,7 +438,7 @@
         "https://gamenation.in/Products/Games/pragmata-ps5-pre-owned-WzUwODEsMl0": 1790600111.509439
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -461,7 +463,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "next sample not due; last attempt 1790757363.5652468",
         "discovery_pages": 0,
         "errors": [],
@@ -487,7 +489,7 @@
         "https://hgworld.in/shop/pragmata-nintendo-switch-2-game-capcom-sci-fi-action-adventure-physical-switch-2-game-shooting-puzzle-gameplay": 1790733618.7759728
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -515,20 +517,22 @@
       ]
     },
     "hitech": {
-      "cooldown_until": 1790419939.6606731,
+      "cooldown_until": 1790783970.7693655,
       "discovery_at": 1790757363.5652468,
       "known": {
         "https://hitechgamez.in/product/pragmata-ps5": 1790757363.5652468
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
-        "errors": [],
+        "errors": [
+          "product: FetchError: robots.txt not accessible (HTTP 403); check deferred"
+        ],
         "name": "Hitech Gamez",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -550,7 +554,7 @@
         "https://mcubegames.in/product/pragmata---playstation-5": 1790757363.5652468
       },
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -578,7 +582,7 @@
       "discovery_at": 1790757363.5652468,
       "known": {},
       "report": {
-        "checked_at": 1790760863.1568148,
+        "checked_at": 1790762369.9850354,
         "discovery": "next sample not due; last attempt 1790757363.5652468",
         "discovery_pages": 0,
         "errors": [
