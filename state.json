@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1790600111.509439,
-  "last_scan_at": 1790854382.041181,
+  "last_scan_at": 1790855965.1823702,
   "listings": {
     "00cd8fd9bc66134b4d926476": {
       "alerted_cycle": 0,
@@ -19,7 +19,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -41,7 +41,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": "Pre-Owned (USED)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -106,7 +106,7 @@
         "url": "https://www.flipkart.com/ps5-pragmata-standard/p/itmb431192eaadcb",
         "variant": ""
       },
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -127,7 +127,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -149,7 +149,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1790854382.041181,
+      "last_seen": 1790855965.1823702,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -228,7 +228,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "next sample not due; last attempt 1790845174.9012554",
         "discovery_pages": 0,
         "errors": [],
@@ -259,7 +259,7 @@
         "https://consolegarage.com/products/pragmata-ps5": 1790845174.9012554
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -294,7 +294,7 @@
         "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1790845174.9012554
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -320,7 +320,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "next sample not due; last attempt 1790845174.9012554",
         "discovery_pages": 0,
         "errors": [],
@@ -344,7 +344,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -362,7 +362,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -386,7 +386,7 @@
         "https://gamebuy.in/product/pragmata-ps5-pre-owned": 1790823527.0235329
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -416,7 +416,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "next sample not due; last attempt 1790845174.9012554",
         "discovery_pages": 0,
         "errors": [
@@ -439,7 +439,7 @@
         "https://gamenation.in/Products/Games/pragmata-ps5-pre-owned-WzUwODEsMl0": 1790600111.509439
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -464,7 +464,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "next sample not due; last attempt 1790845174.9012554",
         "discovery_pages": 0,
         "errors": [],
@@ -490,7 +490,7 @@
         "https://hgworld.in/shop/pragmata-nintendo-switch-2-game-capcom-sci-fi-action-adventure-physical-switch-2-game-shooting-puzzle-gameplay": 1790823527.0235329
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -524,7 +524,7 @@
         "https://hitechgamez.in/product/pragmata-ps5": 1790823527.0235329
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -555,7 +555,7 @@
         "https://mcubegames.in/product/pragmata---playstation-5": 1790845174.9012554
       },
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -583,7 +583,7 @@
       "discovery_at": 1790845174.9012554,
       "known": {},
       "report": {
-        "checked_at": 1790854382.041181,
+        "checked_at": 1790855965.1823702,
         "discovery": "next sample not due; last attempt 1790845174.9012554",
         "discovery_pages": 0,
         "errors": [
