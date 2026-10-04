@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1790600111.509439,
-  "last_scan_at": 1791111420.3439445,
+  "last_scan_at": 1791136926.2486756,
   "listings": {
     "00cd8fd9bc66134b4d926476": {
       "alerted_cycle": 0,
@@ -19,7 +19,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -41,7 +41,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": "Pre-Owned (USED)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -106,7 +106,7 @@
         "url": "https://www.flipkart.com/ps5-pragmata-standard/p/itmb431192eaadcb",
         "variant": ""
       },
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -127,7 +127,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -149,7 +149,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -171,21 +171,21 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
     },
     "f747e02ed94c6d84529f40da": {
       "alerted_cycle": 0,
-      "budget_note": "Within item-price cap: INR 1,799.00 <= INR 4,000.00; delivery/fees unverified",
+      "budget_note": "Within item-price cap: INR 3,449.00 <= INR 4,000.00; delivery/fees unverified",
       "item": {
         "condition": "Used (seller label)",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
         "match": "exact",
-        "price": "1,799.00",
+        "price": "3,449.00",
         "source": "GameBuy",
         "status": "out_of_stock",
         "title": "Pragmata PS5 (Pre-Owned)",
@@ -193,21 +193,21 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
     },
     "fd9458d6c91610816f4812b3": {
       "alerted_cycle": 0,
-      "budget_note": "Within item-price cap: INR 2,399.00 <= INR 4,000.00; delivery/fees unverified",
+      "budget_note": "Within item-price cap: INR 899.00 <= INR 4,000.00; delivery/fees unverified",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
         "match": "exact",
-        "price": "2,399.00",
+        "price": "899.00",
         "source": "GameBuy",
         "status": "backorder",
         "title": "Pragmata PS5",
@@ -215,7 +215,7 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1791111420.3439445,
+      "last_seen": 1791136926.2486756,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -225,10 +225,10 @@
   "sources": {
     "cex": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [],
@@ -246,8 +246,8 @@
             "result": "parsed; 0 candidate URL(s); 0 child map(s); 32025 page URL(s) inspected"
           },
           {
-            "path": "/sitemaps/cex/in/sitemap-in-stores.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 14 page URL(s) inspected"
+            "path": "/sitemaps/cex/in/sitemap-in-supercats.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 183 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -257,11 +257,11 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1791111420.3439445,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791111420.3439445,
+        "https://in.webuy.com/sitemap.xml": 1791136926.2486756,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791136926.2486756,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791081353.7399998,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1791111420.3439445,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1791056600.974843
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://in.webuy.com/sitemap.xml"
@@ -269,13 +269,13 @@
     },
     "console-garage": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
-        "https://consolegarage.com/products/pragmata-nintendo-switch-2": 1791111420.3439445,
-        "https://consolegarage.com/products/pragmata-ps5": 1791111420.3439445
+        "https://consolegarage.com/products/pragmata-nintendo-switch-2": 1791136926.2486756,
+        "https://consolegarage.com/products/pragmata-ps5": 1791136926.2486756
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 4,
         "errors": [
@@ -295,8 +295,8 @@
             "result": "parsed; 2 candidate URL(s); 0 child map(s); 969 page URL(s) inspected"
           },
           {
-            "path": "/sitemap_collections_1.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 12 page URL(s) inspected"
+            "path": "/sitemap_pages_1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 4 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -305,13 +305,13 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1791111420.3439445,
+        "https://consolegarage.com/sitemap.xml": 1791136926.2486756,
         "https://consolegarage.com/sitemap_agentic_discovery.xml": 1791056600.974843,
         "https://consolegarage.com/sitemap_blogs_1.xml": 1791081353.7399998,
         "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1791111420.3439445,
-        "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1791023715.6525342,
+        "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1791136926.2486756,
         "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7918891008059": 1790757363.5652468,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791111420.3439445
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://consolegarage.com/sitemap.xml"
@@ -319,13 +319,13 @@
     },
     "dacby": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
-        "https://dacby.com/buy/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1791111420.3439445,
-        "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1791111420.3439445
+        "https://dacby.com/buy/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1791136926.2486756,
+        "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1791136926.2486756
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [],
@@ -353,9 +353,9 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791111420.3439445,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791111420.3439445,
-        "https://dacby.com/sitemap.xml": 1791111420.3439445
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791136926.2486756,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791136926.2486756,
+        "https://dacby.com/sitemap.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://dacby.com/sitemap.xml"
@@ -363,10 +363,10 @@
     },
     "dtzone": {
       "cooldown_until": 1790340173.353402,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 2,
         "errors": [],
@@ -384,7 +384,7 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://dtzone.in/sitemap.xml": 1791111420.3439445
+        "https://dtzone.in/sitemap.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://dtzone.in/sitemap.xml"
@@ -392,10 +392,10 @@
     },
     "e2z": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
@@ -412,10 +412,10 @@
     },
     "flipkart": {
       "cooldown_until": 1790850890.7343924,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
@@ -432,14 +432,14 @@
     },
     "gamebuy": {
       "cooldown_until": 1790899179.372637,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
-        "https://gamebuy.in/product/pragmata-nintendo-switch-2": 1791111420.3439445,
-        "https://gamebuy.in/product/pragmata-ps5": 1791111420.3439445,
-        "https://gamebuy.in/product/pragmata-ps5-pre-owned": 1791111420.3439445
+        "https://gamebuy.in/product/pragmata-nintendo-switch-2": 1791136926.2486756,
+        "https://gamebuy.in/product/pragmata-ps5": 1791136926.2486756,
+        "https://gamebuy.in/product/pragmata-ps5-pre-owned": 1791136926.2486756
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 5,
         "errors": [
@@ -460,7 +460,7 @@
           },
           {
             "path": "/product-sitemap2.xml",
-            "result": "parsed; 3 candidate URL(s); 0 child map(s); 726 page URL(s) inspected"
+            "result": "parsed; 3 candidate URL(s); 0 child map(s); 727 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -469,20 +469,20 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://gamebuy.in/product-sitemap.xml": 1791111420.3439445,
-        "https://gamebuy.in/product-sitemap2.xml": 1791111420.3439445,
-        "https://gamebuy.in/sitemap_index.xml": 1791111420.3439445
+        "https://gamebuy.in/product-sitemap.xml": 1791136926.2486756,
+        "https://gamebuy.in/product-sitemap2.xml": 1791136926.2486756,
+        "https://gamebuy.in/sitemap_index.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://gamebuy.in/sitemap_index.xml"
       ]
     },
     "gameloot": {
-      "cooldown_until": 1791133027.182136,
-      "discovery_at": 1791111420.3439445,
+      "cooldown_until": 1791158533.1458316,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
@@ -500,12 +500,12 @@
     },
     "gamenation": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
         "https://gamenation.in/Products/Games/pragmata-ps5-pre-owned-WzUwODEsMl0": 1790600111.509439
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 1,
         "errors": [
@@ -536,17 +536,17 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1791111420.3439445,
-        "https://gamenation.in/sitemap_index.xml": 1791111420.3439445,
-        "https://gamenation.in/wp-sitemap.xml": 1791111420.3439445
+        "https://gamenation.in/sitemap.xml": 1791136926.2486756,
+        "https://gamenation.in/sitemap_index.xml": 1791136926.2486756,
+        "https://gamenation.in/wp-sitemap.xml": 1791136926.2486756
       }
     },
     "gts": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 1,
         "errors": [],
@@ -567,7 +567,7 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1791111420.3439445
+        "https://www.gamestheshop.com/sitemap.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
@@ -575,12 +575,12 @@
     },
     "hgworld": {
       "cooldown_until": 1790996336.6516454,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
         "https://hgworld.in/shop/pragmata-nintendo-switch-2-game-capcom-sci-fi-action-adventure-physical-switch-2-game-shooting-puzzle-gameplay": 1791111420.3439445
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [
@@ -597,12 +597,12 @@
             "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
           },
           {
-            "path": "/product-sitemap5.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 60 page URL(s) inspected"
+            "path": "/product-sitemap1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 201 page URL(s) inspected"
           },
           {
-            "path": "/product-sitemap6.xml",
-            "result": "parsed; 1 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -611,13 +611,13 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://hgworld.in/product-sitemap1.xml": 1791056600.974843,
-        "https://hgworld.in/product-sitemap2.xml": 1791056600.974843,
+        "https://hgworld.in/product-sitemap1.xml": 1791136926.2486756,
+        "https://hgworld.in/product-sitemap2.xml": 1791136926.2486756,
         "https://hgworld.in/product-sitemap3.xml": 1791081353.7399998,
         "https://hgworld.in/product-sitemap4.xml": 1791081353.7399998,
         "https://hgworld.in/product-sitemap5.xml": 1791111420.3439445,
         "https://hgworld.in/product-sitemap6.xml": 1791111420.3439445,
-        "https://hgworld.in/sitemap.xml": 1791111420.3439445
+        "https://hgworld.in/sitemap.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://hgworld.in/sitemap.xml"
@@ -625,12 +625,12 @@
     },
     "hitech": {
       "cooldown_until": 1790899179.5103369,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
-        "https://hitechgamez.in/product/pragmata-ps5": 1791111420.3439445
+        "https://hitechgamez.in/product/pragmata-ps5": 1791136926.2486756
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [
@@ -660,9 +660,9 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://hitechgamez.in/product-sitemap.xml": 1791111420.3439445,
-        "https://hitechgamez.in/product-sitemap2.xml": 1791111420.3439445,
-        "https://hitechgamez.in/sitemap_index.xml": 1791111420.3439445
+        "https://hitechgamez.in/product-sitemap.xml": 1791136926.2486756,
+        "https://hitechgamez.in/product-sitemap2.xml": 1791136926.2486756,
+        "https://hitechgamez.in/sitemap_index.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://hitechgamez.in/sitemap_index.xml"
@@ -670,13 +670,13 @@
     },
     "mcube": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {
-        "https://mcubegames.in/product/pragmata---nintendo-switch-2": 1791111420.3439445,
-        "https://mcubegames.in/product/pragmata---playstation-5": 1791111420.3439445
+        "https://mcubegames.in/product/pragmata---nintendo-switch-2": 1791136926.2486756,
+        "https://mcubegames.in/product/pragmata---playstation-5": 1791136926.2486756
       },
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [
@@ -704,9 +704,9 @@
       },
       "scanner_revision": "pragmata-switch-1",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1791111420.3439445,
-        "https://mcubegames.in/sitemap-products.xml": 1791111420.3439445,
-        "https://mcubegames.in/sitemap.xml": 1791111420.3439445
+        "https://mcubegames.in/sitemap-blog.xml": 1791136926.2486756,
+        "https://mcubegames.in/sitemap-products.xml": 1791136926.2486756,
+        "https://mcubegames.in/sitemap.xml": 1791136926.2486756
       },
       "working_sitemaps": [
         "https://mcubegames.in/sitemap.xml"
@@ -714,10 +714,10 @@
     },
     "mx2": {
       "cooldown_until": 0,
-      "discovery_at": 1791111420.3439445,
+      "discovery_at": 1791136926.2486756,
       "known": {},
       "report": {
-        "checked_at": 1791111420.3439445,
+        "checked_at": 1791136926.2486756,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
