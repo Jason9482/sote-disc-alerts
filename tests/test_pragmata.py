@@ -171,7 +171,9 @@ class SwitchIntegrationTests(unittest.TestCase):
         notify.listing.assert_not_called(); notify.send.assert_not_called()
         self.invoke(store,notify,listing("4000")); self.assertEqual(notify.listing.call_count,1)
     def test_config_valid_and_no_old_urls(self):
-        cfg=read_config(str(Path(__file__).resolve().parents[1]/'config.json'))
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/'config.json'; path.write_text(json.dumps(CFG))
+            cfg=read_config(str(path))
         self.assertEqual(cfg['target'],'pragmata'); self.assertEqual(cfg['max_price_inr'],4000)
         self.assertFalse(cfg['daily_health']); self.assertFalse(cfg['alert_possible']); self.assertFalse(cfg['reddit']['enabled'])
         for source in cfg['sources']:

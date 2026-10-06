@@ -103,17 +103,20 @@ class Listing:
         return asdict(self)
 
 
-SUPPORTED_TARGETS = {"sote", "pragmata"}
+SUPPORTED_TARGETS = {"sote", "pragmata", "onimusha"}
 
 
 def target_name(target: str = "sote") -> str:
-    return "Pragmata" if target == "pragmata" else "SOTE"
+    return {"sote": "SOTE", "pragmata": "Pragmata",
+            "onimusha": "Onimusha: Way of the Sword"}.get(target, "SOTE")
 
 
 def match_product(title: str, url: str = "", target: str = "sote") -> str:
     """Classify a primary product title. Discovery never establishes availability."""
     if target == "sote":
         return match_title(title, url)
+    if target == "onimusha":
+        return match_onimusha(title, url)
     if target != "pragmata":
         return "reject"
     t = normalized(title)
@@ -135,6 +138,48 @@ def match_product(title: str, url: str = "", target: str = "sote") -> str:
 
 def discovery_hint(text: str, target: str = "sote") -> bool:
     t = normalized(text)
+    if target == "onimusha":
+        return bool(re.search(r"\bonimusha\b|\bway (?:of )?(?:the )?sword\b", t))
     if target == "pragmata":
         return bool(re.search(r"\bpragmata\b", t))
     return bool(re.search(r"shadow (?:of )?(?:the )?erdtree|\bsote\b", t))
+
+
+
+def match_onimusha(title: str, url: str = "") -> str:
+    """Identify Way of the Sword, not merely a game in the Onimusha series.
+
+    A primary title is mandatory. A descriptive URL can supply a missing
+    subtitle/platform, but cannot overrule an explicitly wrong game or platform.
+    Generic 'Onimusha PS5' is possible, not a confirmed exact-edition match.
+    """
+    t = normalized(title)
+    u = normalized(urlsplit(url).path)
+    if not re.search(r"\bonimusha\b", t) or is_buyback(t):
+        return "reject"
+    if re.search(r"\bwarlords\b|\bsamurai(?: s)? destiny\b|\bdemon siege\b|"
+                 r"\bdawn of dreams\b|\bblade warriors\b|\btactics\b|"
+                 r"\bonimusha\s+(?:[1234]|ii|iii|iv)\b", t):
+        return "reject"
+    if re.search(r"\b(?:digital|account|rental|rent|steam|key|code|voucher|dlc|upgrade|"
+                 r"bonus|demo|soundtrack|artbook|poster|statue|figure|amiibo|"
+                 r"deposit|reservation|booking|walkthrough|guide)\b", t):
+        return "reject"
+    if re.search(r"\b(?:case|box|steel\s?book) only\b|\bempty (?:case|box|steel\s?book)\b|"
+                 r"\bno (?:game|disc)\b|\b(?:game\s+)?disc (?:is )?not included\b|"
+                 r"\bwithout (?:a |the )?(?:game|disc)\b|\bwtb\b|\bwanted\b|\blooking to buy\b", t):
+        return "reject"
+    ps5 = bool(re.search(r"\bps\s?5\b|\bplaystation\s?5\b", t))
+    other = bool(re.search(r"\bps\s?[1234]\b|\bplaystation\s?[1234]\b|\bxbox\b|\bswitch\b|\bpc\b", t))
+    if other:
+        return "possible" if ps5 else "reject"
+    subtitle = bool(re.search(r"\bway (?:of )?(?:the )?sword\b|\bwots\b", t))
+    # An exact, same-site product slug may disambiguate an abbreviated title.
+    if not subtitle:
+        subtitle = bool(re.search(r"\bonimusha\b", u) and
+                        re.search(r"\bway (?:of )?(?:the )?sword\b", u))
+    if not subtitle:
+        return "possible"
+    if ps5 or re.search(r"\bps\s?5\b|\bplaystation\s?5\b", u):
+        return "exact"
+    return "possible"

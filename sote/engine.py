@@ -11,12 +11,12 @@ from urllib.parse import urlsplit, urlunsplit
 
 from .http import StoreClient, FetchError
 from .model import Listing, canonical_url, same_site, match_product, target_name, SUPPORTED_TARGETS
-from .budget import budget_decision
+from .budget import budget_decision, price_limit_label
 from .parsers import parse_html, parse_shopify, discover_html, sitemap_links
 from .notify import Discord, NotificationError, safe_text
 from .discovery import ordered_child_maps
 
-SCANNER_REVISION = "pragmata-switch-1"
+SCANNER_REVISION = "onimusha-unlimited-1"
 
 
 def read_config(path: str) -> dict:
@@ -25,13 +25,13 @@ def read_config(path: str) -> dict:
         raise ValueError("config.json must contain a nonempty sources array")
     target = cfg.get("target", "sote")
     if target not in SUPPORTED_TARGETS:
-        raise ValueError("Unsupported target; use pragmata or sote")
+        raise ValueError("Unsupported target; use onimusha, pragmata or sote")
     cap = cfg.get("max_price_inr")
     if cap is not None and (isinstance(cap, bool) or not isinstance(cap, (int, float)) or not 0 < cap < 10000000):
         raise ValueError("max_price_inr must be a positive number, or null")
     if not isinstance(cfg.get("daily_health", False), bool):
         raise ValueError("daily_health must be true or false")
-    if target == "pragmata" and cfg.get("reddit", {}).get("enabled"):
+    if target in {"pragmata", "onimusha"} and cfg.get("reddit", {}).get("enabled"):
         raise ValueError("Keep the GitHub Reddit module disabled; use the separate MonitoRSS filters")
     ids = set()
     for src in cfg["sources"]:
@@ -235,8 +235,14 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
 
 def event_for(item: Listing, history: dict, now: float, cfg: dict) -> str | None:
     """Observe stock; failures/unknowns never erase the last definite stock state."""
-    if cfg.get("target") == "pragmata" and match_product(item.title + " " + item.variant, item.url, "pragmata") == "reject":
-        return None
+    target = cfg.get("target", "sote")
+    if target in {"pragmata", "onimusha"}:
+        verified = match_product(item.title + " " + item.variant, item.url, target)
+        if verified == "reject":
+            return None
+        if verified == "possible":
+            item.match = "possible"
+
     entry = history.setdefault(item.key, {"stock_cycle": 0, "alerted_cycle": 0, "possible_sent": False})
     last_definite = entry.get("last_definite")
     if item.status == "in_stock":
@@ -280,7 +286,7 @@ def acknowledge(item: Listing, history: dict, kind: str) -> None:
 def health_text(reports: list[dict], state: dict, reddit_status: str, cfg: dict | None = None) -> str:
     cfg = cfg or {}
     when = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d %b %Y, %I:%M %p IST")
-    lines = [f"Last scan: {when}", f"Code: {SCANNER_REVISION}", f"Target: {target_name(cfg.get('target', 'sote'))} PS5", f"Item-price cap: INR {cfg.get('max_price_inr') or 'not set'}", "", "Configured does not mean successfully checked:"]
+    lines = [f"Last scan: {when}", f"Code: {SCANNER_REVISION}", f"Target: {target_name(cfg.get('target', 'sote'))} PS5", f"Price limit: {price_limit_label(cfg.get('max_price_inr'))}", "", "Configured does not mean successfully checked:"]
     for r in reports:
         if r["product_pages"]:
             msg = f"{r['product_pages']} matching product page(s) read"
@@ -303,7 +309,7 @@ def health_text(reports: list[dict], state: dict, reddit_status: str, cfg: dict 
 
 def write_run_summary(reports: list[dict], observations: list[Listing], notes: list[str], cfg: dict | None = None) -> str:
     cfg = cfg or {}
-    lines = [f"# {target_name(cfg.get('target', 'sote'))} tracker run", "", f"Code: {SCANNER_REVISION}", "", f"Target: {target_name(cfg.get('target', 'sote'))} PS5 | Item-price cap: INR {cfg.get('max_price_inr') or 'not set'} | Daily health: {'on' if cfg.get('daily_health', False) else 'off'}", "", "Stock signals are store claims, not verified checkout/delivery.", "",
+    lines = [f"# {target_name(cfg.get('target', 'sote'))} tracker run", "", f"Code: {SCANNER_REVISION}", "", f"Target: {target_name(cfg.get('target', 'sote'))} PS5 | Price limit: {price_limit_label(cfg.get('max_price_inr'))} | Daily health: {'on' if cfg.get('daily_health', False) else 'off'}", "", "Stock signals are store claims, not verified checkout/delivery.", "",
              "| Source | Matching pages | Discovery pages | Issues |", "|---|---:|---:|---|"]
     for r in reports:
         details = r["errors"] + ["Note: " + w for w in r.get("warnings", [])]

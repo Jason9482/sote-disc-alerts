@@ -45,6 +45,9 @@ def parse_shopify(data: dict, source: dict, url: str) -> list[Listing]:
         # Never use the product-level 'available': it may refer to BUYBACK only.
         available = v.get("available")
         status = "in_stock" if available is True else "out_of_stock" if available is False else "unknown"
+        if source.get("target") == "onimusha" and re.search(
+                r"\bpre\s?order\b|\bback\s?order\b", normalized(title + " " + label)):
+            status = "backorder"
         if v.get("requires_selling_plan") is True:
             status = "unknown"
         results.append(Listing(source["name"], title,
@@ -164,9 +167,11 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
         return []
     scope = clean_purchase_scope(primary_scope(soup, heading))
     scope_text = scope.get_text(" ", strip=True) if scope else ""
-    if source.get("target") == "pragmata" and re.search(
+    if source.get("target") in {"pragmata", "onimusha"} and re.search(
             r"\bno physical disc\b|\b(?:account credentials|shared account|account login)\b|"
-            r"\bdigital delivery only\b|\bcode in (?:a )?box\b", normalized(scope_text)):
+            r"\bdigital delivery only\b|\bcode in (?:a |the )?box\b|"
+            r"\b(?:game\s+)?disc (?:is )?not included\b|\bno (?:ps5 )?game disc\b|"
+            r"\bsteel\s?book only\b|\bempty (?:case|box)\b", normalized(scope_text)):
         return []
 
     # Shopify HTML can contain complete product JSON. Do not guess from free text.

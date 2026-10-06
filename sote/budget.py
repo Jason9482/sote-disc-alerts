@@ -16,7 +16,9 @@ def price_number(value):
 
 
 def budget_decision(item, cfg):
-    """Return (eligible, reason, numeric price); None price is never a bargain."""
+    """Return (eligible, reason, numeric price). Unreadable prices are allowed
+    only with no budget cap; they are not a claim of a bargain or a zero price.
+    """
     cap = cfg.get("max_price_inr")
     number = price_number(item.price)
     if cap is None:
@@ -29,3 +31,8 @@ def budget_decision(item, cfg):
     if number > maximum:
         return False, f"Suppressed: INR {number:,.2f} is above INR {maximum:,.2f}", number
     return True, f"Within item-price cap: INR {number:,.2f} <= INR {maximum:,.2f}; delivery/fees unverified", number
+
+
+def price_limit_label(cap) -> str:
+    """Human-readable, explicit unlimited mode; do not render INR None."""
+    return "Unlimited (no price cap)" if cap is None else f"INR {cap}"

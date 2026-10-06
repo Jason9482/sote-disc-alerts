@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 import requests
 
 from .model import Listing, target_name
+from .budget import price_limit_label
 
 
 class NotificationError(RuntimeError):
@@ -109,7 +110,7 @@ class Discord:
             {"name": "Listed price", "value": safe_text(f"{item.currency} {item.price}"), "inline": True},
             {"name": "Site availability", "value": safe_text(item.status.replace("_", " ")), "inline": True},
             {"name": "Selected variant", "value": safe_text(item.variant or "Not separately stated"), "inline": False},
-            {"name": "Price limit", "value": safe_text(f"INR {self.max_price_inr}; item price only. Shipping/fees must be checked." if self.max_price_inr else "Not configured"), "inline": False},
+            {"name": "Price limit", "value": safe_text(price_limit_label(self.max_price_inr) + "; shipping and fees must be checked."), "inline": False},
             {"name": "Evidence", "value": safe_text(item.evidence), "inline": False},
             {"name": "Before paying", "value": "Confirm physical PS5 disc, original case, final delivered total, seller and payment protection before paying.", "inline": False},
         ]

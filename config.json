@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "target": "pragmata",
-  "max_price_inr": 4000,
+  "target": "onimusha",
+  "max_price_inr": null,
   "daily_health": false,
   "alert_possible": false,
   "discovery_hours": 6,
@@ -30,14 +30,12 @@
       "name": "Console Garage",
       "base": "https://consolegarage.com",
       "adapter": "shopify",
-      "products": [
-        "https://consolegarage.com/products/pragmata-ps5"
-      ],
+      "products": [],
       "catalogues": [
-        "https://consolegarage.com/search?q=pragmata&type=product"
+        "https://consolegarage.com/search?q=onimusha&type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata PS5. Direct seed URL checked via web tool; scanner access must be validated on GitHub. Purchase-variant stock only; ignore buyback.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "currency": "INR"
     },
@@ -45,15 +43,13 @@
       "id": "e2z",
       "name": "e2zStore",
       "base": "https://e2zstore.com",
-      "products": [
-        "https://e2zstore.com/product/pragmata-ps5/"
-      ],
+      "products": [],
       "catalogues": [
-        "https://e2zstore.com/?s=pragmata&post_type=product"
+        "https://e2zstore.com/?s=onimusha&post_type=product"
       ],
-      "sitemap_discovery": false,
+      "sitemap_discovery": true,
       "default_condition": "New",
-      "notes": "Pragmata PS5. Direct seed URL checked via web tool; scanner access must be validated on GitHub.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
@@ -64,10 +60,10 @@
       "base": "https://dtzone.in",
       "products": [],
       "catalogues": [
-        "https://dtzone.in/?s=pragmata&post_type=product"
+        "https://dtzone.in/?s=onimusha&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
@@ -78,10 +74,10 @@
       "base": "https://hitechgamez.in",
       "products": [],
       "catalogues": [
-        "https://hitechgamez.in/?s=pragmata&post_type=product"
+        "https://hitechgamez.in/?s=onimusha&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
@@ -91,10 +87,10 @@
       "name": "GameLoot",
       "base": "https://gameloot.in",
       "catalogues": [
-        "https://gameloot.in/?s=pragmata&post_type=product"
+        "https://gameloot.in/?s=onimusha&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -105,16 +101,16 @@
       "name": "GameBuy",
       "base": "https://gamebuy.in",
       "catalogues": [
-        "https://gamebuy.in/?s=pragmata&post_type=product",
-        "https://gamebuy.in/product-category/all/playstation/"
+        "https://gamebuy.in/?s=onimusha&post_type=product",
+        "https://gamebuy.in/"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata PS5 product URL discovered in the official catalogue. Detail page access unverified. Used copies still require discovery.",
+      "notes": "Seed obtained by following the official catalogue link on 2026-10-06. Product page retrieved via web tool. Scanner access/parse must still be tested on GitHub.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
       "products": [
-        "https://gamebuy.in/product/pragmata-ps5/"
+        "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5/"
       ]
     },
     {
@@ -122,10 +118,10 @@
       "name": "MX2Games",
       "base": "https://mx2games.com",
       "catalogues": [
-        "https://mx2games.com/?s=pragmata&post_type=product"
+        "https://mx2games.com/?s=onimusha&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -136,10 +132,10 @@
       "name": "HGWorld",
       "base": "https://hgworld.in",
       "catalogues": [
-        "https://hgworld.in/?s=pragmata&post_type=product"
+        "https://hgworld.in/?s=onimusha&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -151,7 +147,7 @@
       "base": "https://mcubegames.in",
       "catalogues": [],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -163,7 +159,7 @@
       "base": "https://www.gamestheshop.com",
       "catalogues": [],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -177,7 +173,7 @@
         "https://gamenation.in/"
       ],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -189,7 +185,7 @@
       "base": "https://dacby.com",
       "catalogues": [],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -201,7 +197,7 @@
       "base": "https://in.webuy.com",
       "catalogues": [],
       "sitemap_discovery": true,
-      "notes": "Pragmata discovery only; bounded catalogue/sitemap sample, not guaranteed full-store coverage.",
+      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -212,20 +208,35 @@
       "name": "Flipkart",
       "base": "https://www.flipkart.com",
       "products": [
-        "https://www.flipkart.com/ps5-pragmata-standard/p/itmb431192eaadcb"
+        "https://www.flipkart.com/ps5-onimusha-way-sword-lenticular-standard/p/itm96761ed58385f"
       ],
       "catalogues": [],
       "sitemap_discovery": false,
-      "notes": "Pragmata PS5. Direct seed URL checked via web tool; scanner access must be validated on GitHub. Delivery PIN, seller selection, cart and discounts are NOT checked.",
+      "notes": "Official exact-product search result located 2026-10-06; live page failed in web tool. Scanner compatibility unverified. PIN delivery, seller selection and checkout fees are NOT checked.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
+    },
+    {
+      "id": "sheenu",
+      "name": "Sheenu Game Center",
+      "base": "https://sheenugamecenter.com",
+      "adapter": "html",
+      "currency": "INR",
+      "enabled": true,
+      "default_condition": "New",
+      "products": [
+        "https://sheenugamecenter.com/product/onimusha-way-of-the-sword-ps5/"
+      ],
+      "catalogues": [],
+      "sitemap_discovery": false,
+      "notes": "Official physical PS5 product page retrieved via web tool on 2026-10-06. Scanner access/parse unverified."
     }
   ],
   "manual_only": [
     {
       "name": "Amazon India",
-      "reason": "No validated Pragmata ASIN or permitted stock adapter. Not scanned."
+      "reason": "No validated Onimusha PS5 ASIN or permitted stock adapter. Not scanned."
     }
   ]
 }

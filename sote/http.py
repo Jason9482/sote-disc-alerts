@@ -95,7 +95,8 @@ class StoreClient:
         self.base = source["base"]
         self.state = state
         self.config = config
-        self.agent = "PragmataStockWatcher" if config.get("target") == "pragmata" else "SOTEStockWatcher"
+        self.agent = {"pragmata": "PragmataStockWatcher", "onimusha": "OnimushaStockWatcher"}.get(
+            config.get("target"), "SOTEStockWatcher")
         repo = config.get("repository_url", "personal-stock-monitor")
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": f"{self.agent}/1.0 (+{repo})",
