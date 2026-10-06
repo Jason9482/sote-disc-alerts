@@ -1,32 +1,157 @@
 {
-  "heartbeat_at": 1790600111.509439,
-  "last_scan_at": 1791297313.0293424,
+  "heartbeat_at": 1791298420.2745934,
+  "last_scan_at": 1791298420.2745934,
   "listings": {
-    "00cd8fd9bc66134b4d926476": {
+    "053e0b5ddda3f6254d55c118": {
+      "alerted_cycle": 1,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Enabled product-specific Add to Cart button; delivery not tested",
+        "match": "exact",
+        "price": "5,499.00",
+        "source": "GameBuy",
+        "status": "in_stock",
+        "title": "Onimusha Way of The Sword PS5",
+        "url": "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5",
+        "variant": ""
+      },
+      "last_definite": "in_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 1
+    },
+    "05493453170f4898cd2d705e": {
+      "alerted_cycle": 1,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "6,499.00",
+        "source": "MCube Games",
+        "status": "in_stock",
+        "title": "Onimusha: Way of the Sword Steelbook Edition - PlayStation 5",
+        "url": "https://mcubegames.in/product/onimusha-way-of-the-sword-steelbook-edition---playstation-5",
+        "variant": ""
+      },
+      "last_definite": "in_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 1
+    },
+    "1947cb798c2f13ddd6a18244": {
       "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 4,499.00 is above INR 4,000.00",
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Claimed unused; region/expiry unverified",
+        "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
+        "match": "exact",
+        "price": "5,399.00",
+        "source": "Hitech Gamez",
+        "status": "backorder",
+        "title": "Onimusha Way Of The Sword (PS5)",
+        "url": "https://hitechgamez.in/product/onimusha-way-of-the-sword-ps5",
+        "variant": ""
+      },
+      "last_definite": "backorder",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "1af02d8a708d498f4bbbdb70": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
+        "match": "exact",
+        "price": "5,499.00",
+        "source": "e2zStore",
+        "status": "out_of_stock",
+        "title": "Onimusha Way of the Sword PS5 (Lenticular Edition)",
+        "url": "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "2f625f80277eeddc4899afdf": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "3,650.00",
+        "source": "DACBY",
+        "status": "out_of_stock",
+        "title": "Onimusha Way of the Sword",
+        "url": "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "55154160f8eaa85b2ef0902a": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "4,100.00",
+        "source": "DACBY",
+        "status": "out_of_stock",
+        "title": "Onimusha Way of the Sword Steelbook Edition",
+        "url": "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "6299acd46cd187f2d403d4b5": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "New (seller label)",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Shopify purchase-variant available flag; delivery not tested",
         "match": "exact",
-        "price": "4,499.00",
+        "price": "5,199.00",
         "source": "Console Garage",
         "status": "out_of_stock",
-        "title": "PRAGMATA  PS5",
-        "url": "https://consolegarage.com/products/pragmata-ps5?variant=43198067507259",
+        "title": "Onimusha Way of the Sword Lenticular Edition ps5",
+        "url": "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5?variant=44289287290939",
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791297313.0293424,
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": false
+      "stock_cycle": 0
     },
-    "19736deaa96bf3567e8b5791": {
-      "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 5,499.00 is above INR 4,000.00",
+    "7a008041e107a1304cedfd48": {
+      "alerted_cycle": 1,
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
@@ -35,64 +160,19 @@
         "match": "exact",
         "price": "5,499.00",
         "source": "MCube Games",
-        "status": "out_of_stock",
-        "title": "Pragmata - PlayStation 5",
-        "url": "https://mcubegames.in/product/pragmata---playstation-5",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791297313.0293424,
-      "possible_sent": false,
-      "stock_cycle": 1,
-      "within_budget": false
-    },
-    "1e29401b618ecfb64b4cdcc8": {
-      "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 4,499.00 is above INR 4,000.00",
-      "item": {
-        "condition": "New (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary purchase section explicitly says in stock; delivery not tested",
-        "match": "exact",
-        "price": "4,499.00",
-        "source": "e2zStore",
         "status": "in_stock",
-        "title": "Pragmata PS5",
-        "url": "https://e2zstore.com/product/pragmata-ps5",
+        "title": "Onimusha: Way of the Sword Lenticular Edition. - PlayStation 5",
+        "url": "https://mcubegames.in/product/onimusha-way-of-the-sword-lenticular-edition---playstation-5",
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791297313.0293424,
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
-      "stock_cycle": 1,
-      "within_budget": false
+      "stock_cycle": 1
     },
-    "2604d1bcad2e7297767e37d0": {
+    "99376a0b283a89fcbc4c85a6": {
       "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 4,050.00 is above INR 4,000.00",
-      "item": {
-        "condition": "Used (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Shopify purchase-variant available flag; delivery not tested",
-        "match": "exact",
-        "price": "4,050.00",
-        "source": "Console Garage",
-        "status": "out_of_stock",
-        "title": "PRAGMATA  PS5",
-        "url": "https://consolegarage.com/products/pragmata-ps5?variant=43198067474491",
-        "variant": "Pre-Owned (USED)"
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791297313.0293424,
-      "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": false
-    },
-    "2ae097828d4f5d478e040778": {
-      "alerted_cycle": 0,
-      "budget_note": "Suppressed: purchase price is not reliably readable",
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
@@ -102,150 +182,201 @@
         "price": "Not verified",
         "source": "Flipkart",
         "status": "unknown",
-        "title": "PS5 Pragmata (Standard) (Single-player, for PS5)",
-        "url": "https://www.flipkart.com/ps5-pragmata-standard/p/itmb431192eaadcb",
+        "title": "PS5 Onimusha Way of the Sword-Lenticular Edition (Standard) (Sin... more",
+        "url": "https://www.flipkart.com/ps5-onimusha-way-sword-lenticular-standard/p/itm96761ed58385f",
         "variant": ""
       },
-      "last_seen": 1791297313.0293424,
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
       "stock_cycle": 0
     },
-    "380b9867b3b39f5caf09ded5": {
+    "a0bdbe7d9015920ae19da349": {
       "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 4,599.00 is above INR 4,000.00",
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary-product structured availability; delivery not tested",
         "match": "exact",
-        "price": "4,599.00",
+        "price": "4,699.00",
         "source": "DACBY",
         "status": "out_of_stock",
-        "title": "Pragmata",
-        "url": "https://dacby.com/buy/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y",
+        "title": "Onimusha Way of the Sword",
+        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4",
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791297313.0293424,
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": false
+      "stock_cycle": 0
     },
-    "aa16536f0d35933a71ec5370": {
+    "a6dfad0af15cacaa2f24542f": {
       "alerted_cycle": 0,
-      "budget_note": "Within item-price cap: INR 3,300.00 <= INR 4,000.00; delivery/fees unverified",
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary-product structured availability; delivery not tested",
         "match": "exact",
-        "price": "3,300.00",
+        "price": "4,699.00",
         "source": "DACBY",
         "status": "out_of_stock",
-        "title": "Pragmata",
-        "url": "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y",
+        "title": "Onimusha Way of the Sword Steelbook Edition",
+        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX",
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791297313.0293424,
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": true
+      "stock_cycle": 0
     },
-    "d77b7801360c551ade6e2f5f": {
+    "a70de9e38fa5618208d31050": {
       "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 5,799.00 is above INR 4,000.00",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Claimed unused; region/expiry unverified",
-        "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
-        "match": "exact",
-        "price": "5,799.00",
-        "source": "Hitech Gamez",
-        "status": "backorder",
-        "title": "Pragmata \u2013 PS5",
-        "url": "https://hitechgamez.in/product/pragmata-ps5",
-        "variant": ""
-      },
-      "last_definite": "backorder",
-      "last_seen": 1791297313.0293424,
-      "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": false
-    },
-    "f747e02ed94c6d84529f40da": {
-      "alerted_cycle": 0,
-      "budget_note": "Within item-price cap: INR 1,799.00 <= INR 4,000.00; delivery/fees unverified",
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "Used (seller label)",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Shopify purchase-variant available flag; delivery not tested",
+        "match": "exact",
+        "price": "4,999.00",
+        "source": "Console Garage",
+        "status": "out_of_stock",
+        "title": "Onimusha Way of the Sword Lenticular Edition ps5",
+        "url": "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5?variant=44289287323707",
+        "variant": "Pre-Owned(USED)"
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "b13505c07077498259cb9ebf": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
         "match": "exact",
-        "price": "1,799.00",
-        "source": "GameBuy",
+        "price": "5,999.00",
+        "source": "e2zStore",
         "status": "out_of_stock",
-        "title": "Pragmata PS5 (Pre-Owned)",
-        "url": "https://gamebuy.in/product/pragmata-ps5-pre-owned",
+        "title": "Onimusha Way of the Sword PS5 (Steelbook Edition)",
+        "url": "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-steelbook-edition",
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791297313.0293424,
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": true
+      "stock_cycle": 0
     },
-    "fd9458d6c91610816f4812b3": {
+    "dcaaea752390268e351980ef": {
       "alerted_cycle": 0,
-      "budget_note": "Within item-price cap: INR 699.00 <= INR 4,000.00; delivery/fees unverified",
+      "budget_note": "No price cap configured",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
+        "evidence": "Primary-product structured availability; delivery not tested",
         "match": "exact",
-        "price": "699.00",
-        "source": "GameBuy",
-        "status": "backorder",
-        "title": "Pragmata PS5",
-        "url": "https://gamebuy.in/product/pragmata-ps5",
+        "price": "5,499.00",
+        "source": "DACBY",
+        "status": "out_of_stock",
+        "title": "Onimusha Way of the Sword",
+        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-b410Jn8bYPmKnnbBxKox",
         "variant": ""
       },
-      "last_definite": "backorder",
-      "last_seen": 1791297313.0293424,
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
       "possible_sent": false,
-      "stock_cycle": 0,
-      "within_budget": true
+      "stock_cycle": 0
+    },
+    "e16dd7eb6d69e8709fc637ce": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Claimed unused; region/expiry unverified",
+        "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
+        "match": "exact",
+        "price": "5,990.00",
+        "source": "Hitech Gamez",
+        "status": "out_of_stock",
+        "title": "Onimusha Way Of The Sword- Steel Book Edition (PS5)",
+        "url": "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-edition-ps5",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
+    },
+    "f4d838e57b38997c6a5b8696": {
+      "alerted_cycle": 0,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "5,999.00",
+        "source": "DACBY",
+        "status": "out_of_stock",
+        "title": "Onimusha Way of the Sword Steelbook Edition",
+        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-wV7DNvu2k8eArch37wpK",
+        "variant": ""
+      },
+      "last_definite": "out_of_stock",
+      "last_seen": 1791298420.2745934,
+      "possible_sent": false,
+      "stock_cycle": 0
     }
   },
   "reddit": {},
   "sources": {
     "cex": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "next sample not due; last attempt 1791279341.3972404",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "CeX India",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 4 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 32066 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-static.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 24 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "/sitemaps/cex/in/sitemap-in-products-1.xml: 32066 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1791279341.3972404,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791279341.3972404,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791236041.1866999,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1791257673.7595096,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1791279341.3972404
+        "https://in.webuy.com/sitemap.xml": 1791298420.2745934,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791298420.2745934,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://in.webuy.com/sitemap.xml"
@@ -253,34 +384,42 @@
     },
     "console-garage": {
       "cooldown_until": 1791167750.9489355,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {
-        "https://consolegarage.com/products/pragmata-nintendo-switch-2": 1791279341.3972404,
-        "https://consolegarage.com/products/pragmata-ps5": 1791279341.3972404
+        "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5": 1791298420.2745934
       },
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
-        ],
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
+        "errors": [],
         "name": "Console Garage",
         "observations": 2,
         "product_pages": 1,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_products_1.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 969 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_agentic_discovery.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1791279341.3972404,
-        "https://consolegarage.com/sitemap_agentic_discovery.xml": 1791257673.7595096,
-        "https://consolegarage.com/sitemap_blogs_1.xml": 1791279341.3972404,
-        "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1791205525.0268245,
-        "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1791236041.1866999,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7918891008059": 1790757363.5652468,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791279341.3972404
+        "https://consolegarage.com/sitemap.xml": 1791298420.2745934,
+        "https://consolegarage.com/sitemap_agentic_discovery.xml": 1791298420.2745934,
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://consolegarage.com/sitemap.xml"
@@ -288,28 +427,47 @@
     },
     "dacby": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {
-        "https://dacby.com/buy/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1791279341.3972404,
-        "https://dacby.com/sell/ps5-cds/pragmata-p3avDeXo2j8bXhgR5c6y": 1791279341.3972404
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791298420.2745934,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-b410Jn8bYPmKnnbBxKox": 1791298420.2745934,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791298420.2745934,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-wV7DNvu2k8eArch37wpK": 1791298420.2745934,
+        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791298420.2745934,
+        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791298420.2745934
       },
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "DACBY",
-        "observations": 2,
-        "product_pages": 2,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 6,
+        "product_pages": 6,
+        "requests": 10,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 16 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps5-cds.xml",
+            "result": "parsed; 6 candidate URL(s); 0 child map(s); 545 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps4-cds.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 17 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791279341.3972404,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791279341.3972404,
-        "https://dacby.com/sitemap.xml": 1791279341.3972404
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791298420.2745934,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791298420.2745934,
+        "https://dacby.com/sitemap.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://dacby.com/sitemap.xml"
@@ -317,23 +475,28 @@
     },
     "dtzone": {
       "cooldown_until": 1790340173.353402,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "next sample not due; last attempt 1791279341.3972404",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [],
         "name": "DTZone",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 0 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://dtzone.in/sitemap.xml": 1791279341.3972404
+        "https://dtzone.in/sitemap.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://dtzone.in/sitemap.xml"
@@ -341,29 +504,62 @@
     },
     "e2z": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
-      "known": {},
-      "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [],
-        "name": "e2zStore",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+      "discovery_at": 1791298420.2745934,
+      "known": {
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791298420.2745934,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-pc": 1791298420.2745934,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5": 1791298420.2745934,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-steelbook-edition": 1791298420.2745934
       },
-      "scanner_revision": "pragmata-switch-1"
+      "report": {
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "Candidate page did not expose a matching primary product; not an out-of-stock result",
+          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+        ],
+        "name": "e2zStore",
+        "observations": 2,
+        "product_pages": 2,
+        "requests": 12,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 20 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 4 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
+      },
+      "scanner_revision": "onimusha-unlimited-1",
+      "sitemap_attempted_at": {
+        "https://e2zstore.com/product-sitemap.xml": 1791298420.2745934,
+        "https://e2zstore.com/product-sitemap2.xml": 1791298420.2745934,
+        "https://e2zstore.com/sitemap.xml": 1791298420.2745934
+      },
+      "sitemap_root_cursor": 1,
+      "working_sitemaps": [
+        "https://e2zstore.com/sitemap.xml"
+      ]
     },
     "flipkart": {
       "cooldown_until": 1790850890.7343924,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "A matching page has unreadable/ambiguous stock signals"
@@ -375,35 +571,49 @@
         "sitemap_attempts": [],
         "warnings": []
       },
-      "scanner_revision": "pragmata-switch-1"
+      "scanner_revision": "onimusha-unlimited-1"
     },
     "gamebuy": {
       "cooldown_until": 1791200485.0017712,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {
-        "https://gamebuy.in/product/pragmata-nintendo-switch-2": 1791279341.3972404,
-        "https://gamebuy.in/product/pragmata-ps5": 1791279341.3972404,
-        "https://gamebuy.in/product/pragmata-ps5-pre-owned": 1791279341.3972404
+        "https://gamebuy.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791298420.2745934,
+        "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5": 1791298420.2745934
       },
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 5,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "GameBuy",
-        "observations": 2,
-        "product_pages": 2,
-        "requests": 7,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 11,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1001 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 727 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://gamebuy.in/product-sitemap.xml": 1791279341.3972404,
-        "https://gamebuy.in/product-sitemap2.xml": 1791279341.3972404,
-        "https://gamebuy.in/sitemap_index.xml": 1791279341.3972404
+        "https://gamebuy.in/product-sitemap.xml": 1791298420.2745934,
+        "https://gamebuy.in/product-sitemap2.xml": 1791298420.2745934,
+        "https://gamebuy.in/sitemap_index.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://gamebuy.in/sitemap_index.xml"
@@ -411,14 +621,14 @@
     },
     "gameloot": {
       "cooldown_until": 1791300948.4808881,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "next sample not due; last attempt 1791279341.3972404",
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
+          "catalogue: FetchError: Store is in a temporary backoff window",
           "sitemap setup: FetchError: Store is in a temporary backoff window"
         ],
         "name": "GameLoot",
@@ -428,54 +638,75 @@
         "sitemap_attempts": [],
         "warnings": []
       },
-      "scanner_revision": "pragmata-switch-1"
+      "scanner_revision": "onimusha-unlimited-1"
     },
     "gamenation": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
-      "known": {
-        "https://gamenation.in/Products/Games/pragmata-ps5-pre-owned-WzUwODEsMl0": 1790600111.509439
-      },
+      "discovery_at": 1791298420.2745934,
+      "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "sitemap /sitemap.xml: FetchError: HTTP 404; not a stock result",
+          "sitemap /sitemap_index.xml: FetchError: HTTP 404; not a stock result",
+          "sitemap /wp-sitemap.xml: FetchError: HTTP 404; not a stock result"
         ],
         "name": "GameNation",
         "observations": 0,
         "product_pages": 0,
-        "requests": 3,
-        "sitemap_attempts": [],
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/sitemap_index.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/wp-sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          }
+        ],
         "warnings": []
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1791279341.3972404,
-        "https://gamenation.in/sitemap_index.xml": 1791279341.3972404,
-        "https://gamenation.in/wp-sitemap.xml": 1791279341.3972404
+        "https://gamenation.in/sitemap.xml": 1791298420.2745934,
+        "https://gamenation.in/sitemap_index.xml": 1791298420.2745934,
+        "https://gamenation.in/wp-sitemap.xml": 1791298420.2745934
       }
     },
     "gts": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "next sample not due; last attempt 1791279341.3972404",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
         "errors": [],
         "name": "Games The Shop",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 2,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 33 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap contained unescaped ampersands; repaired for URL discovery only",
+          "/sitemap.xml: 20 opaque product URL(s) had no identifying title; their editions were NOT checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1791279341.3972404
+        "https://www.gamestheshop.com/sitemap.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
@@ -483,33 +714,42 @@
     },
     "hgworld": {
       "cooldown_until": 1791270224.7485423,
-      "discovery_at": 1791279341.3972404,
-      "known": {
-        "https://hgworld.in/shop/pragmata-nintendo-switch-2-game-capcom-sci-fi-action-adventure-physical-switch-2-game-shooting-puzzle-gameplay": 1791182785.6919212
-      },
+      "discovery_at": 1791298420.2745934,
+      "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "catalogue: FetchError: Disallowed by this site's robots.txt"
         ],
         "name": "HGWorld",
         "observations": 0,
         "product_pages": 0,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 201 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://hgworld.in/product-sitemap1.xml": 1791205525.0268245,
-        "https://hgworld.in/product-sitemap2.xml": 1791205525.0268245,
-        "https://hgworld.in/product-sitemap3.xml": 1791279341.3972404,
-        "https://hgworld.in/product-sitemap4.xml": 1791279341.3972404,
-        "https://hgworld.in/product-sitemap5.xml": 1791182785.6919212,
-        "https://hgworld.in/product-sitemap6.xml": 1791182785.6919212,
-        "https://hgworld.in/sitemap.xml": 1791279341.3972404
+        "https://hgworld.in/product-sitemap1.xml": 1791298420.2745934,
+        "https://hgworld.in/product-sitemap2.xml": 1791298420.2745934,
+        "https://hgworld.in/sitemap.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://hgworld.in/sitemap.xml"
@@ -517,27 +757,47 @@
     },
     "hitech": {
       "cooldown_until": 1791200484.9446967,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {
-        "https://hitechgamez.in/product/pragmata-ps5": 1791279341.3972404
+        "https://hitechgamez.in/product/onimusha-way-of-the-sword-ps5": 1791298420.2745934,
+        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-edition-ps5": 1791298420.2745934,
+        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-only": 1791298420.2745934
       },
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [],
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+        ],
         "name": "Hitech Gamez",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 2,
+        "product_pages": 2,
+        "requests": 10,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 592 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://hitechgamez.in/product-sitemap.xml": 1791279341.3972404,
-        "https://hitechgamez.in/product-sitemap2.xml": 1791279341.3972404,
-        "https://hitechgamez.in/sitemap_index.xml": 1791279341.3972404
+        "https://hitechgamez.in/product-sitemap.xml": 1791298420.2745934,
+        "https://hitechgamez.in/product-sitemap2.xml": 1791298420.2745934,
+        "https://hitechgamez.in/sitemap_index.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://hitechgamez.in/sitemap_index.xml"
@@ -545,30 +805,48 @@
     },
     "mcube": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {
-        "https://mcubegames.in/product/pragmata---nintendo-switch-2": 1791279341.3972404,
-        "https://mcubegames.in/product/pragmata---playstation-5": 1791279341.3972404
+        "https://mcubegames.in/product/onimusha-warlords-ps4": 1791298420.2745934,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-lenticular-edition---playstation-5": 1791298420.2745934,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791298420.2745934,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-pc-code-in-the-box-": 1791298420.2745934,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-steelbook-edition---playstation-5": 1791298420.2745934
       },
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
+          "Candidate page did not expose a matching primary product; not an out-of-stock result",
+          "Candidate page did not expose a matching primary product; not an out-of-stock result",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "MCube Games",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
-        "sitemap_attempts": [],
+        "observations": 2,
+        "product_pages": 2,
+        "requests": 9,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 2 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-products.xml",
+            "result": "parsed; 5 candidate URL(s); 0 child map(s); 2082 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-blog.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 3 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
-      "scanner_revision": "pragmata-switch-1",
+      "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1791279341.3972404,
-        "https://mcubegames.in/sitemap-products.xml": 1791279341.3972404,
-        "https://mcubegames.in/sitemap.xml": 1791279341.3972404
+        "https://mcubegames.in/sitemap-blog.xml": 1791298420.2745934,
+        "https://mcubegames.in/sitemap-products.xml": 1791298420.2745934,
+        "https://mcubegames.in/sitemap.xml": 1791298420.2745934
       },
       "working_sitemaps": [
         "https://mcubegames.in/sitemap.xml"
@@ -576,11 +854,11 @@
     },
     "mx2": {
       "cooldown_until": 0,
-      "discovery_at": 1791279341.3972404,
+      "discovery_at": 1791298420.2745934,
       "known": {},
       "report": {
-        "checked_at": 1791297313.0293424,
-        "discovery": "next sample not due; last attempt 1791279341.3972404",
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: DNS resolution failed; not a stock result",
@@ -589,13 +867,33 @@
         "name": "MX2Games",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
-      "scanner_revision": "pragmata-switch-1"
+      "scanner_revision": "onimusha-unlimited-1"
+    },
+    "sheenu": {
+      "cooldown_until": 1791320072.2463782,
+      "discovery_at": 1791298420.2745934,
+      "known": {},
+      "report": {
+        "checked_at": 1791298420.2745934,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 0,
+        "errors": [
+          "product: FetchError: HTTP 403; not a stock result"
+        ],
+        "name": "Sheenu Game Center",
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 2,
+        "sitemap_attempts": [],
+        "warnings": []
+      },
+      "scanner_revision": "onimusha-unlimited-1"
     }
   },
-  "target": "pragmata",
+  "target": "onimusha",
   "version": 1
 }
