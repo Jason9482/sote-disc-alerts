@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1791298420.2745934,
-  "last_scan_at": 1791361968.6085842,
+  "last_scan_at": 1791363451.8183875,
   "listings": {
     "053e0b5ddda3f6254d55c118": {
       "alerted_cycle": 1,
@@ -19,7 +19,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 1
     },
@@ -40,7 +40,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 1
     },
@@ -61,7 +61,7 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -82,7 +82,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -103,7 +103,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -124,7 +124,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -145,7 +145,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -166,7 +166,28 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
+      "possible_sent": false,
+      "stock_cycle": 1
+    },
+    "88ab99179c3a43eeb947677a": {
+      "alerted_cycle": 1,
+      "budget_note": "No price cap configured",
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary purchase section explicitly says in stock; delivery not tested",
+        "match": "exact",
+        "price": "5,499.00",
+        "source": "e2zStore",
+        "status": "in_stock",
+        "title": "Onimusha Way of the Sword PS5",
+        "url": "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-2",
+        "variant": ""
+      },
+      "last_definite": "in_stock",
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 1
     },
@@ -186,7 +207,7 @@
         "url": "https://www.flipkart.com/ps5-onimusha-way-sword-lenticular-standard/p/itm96761ed58385f",
         "variant": ""
       },
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -207,7 +228,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -228,7 +249,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -249,7 +270,7 @@
         "variant": "Pre-Owned(USED)"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -270,7 +291,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -291,7 +312,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -312,7 +333,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     },
@@ -333,7 +354,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1791361968.6085842,
+      "last_seen": 1791363451.8183875,
       "possible_sent": false,
       "stock_cycle": 0
     }
@@ -342,25 +363,41 @@
   "sources": {
     "cex": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "CeX India",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 4 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 32098 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-static.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 24 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "/sitemaps/cex/in/sitemap-in-products-1.xml: 32098 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1791341761.2284713,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791341761.2284713,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791298420.2745934,
+        "https://in.webuy.com/sitemap.xml": 1791363451.8183875,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791363451.8183875,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791363451.8183875,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1791320091.3409793,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1791341761.2284713
       },
@@ -370,29 +407,45 @@
     },
     "console-garage": {
       "cooldown_until": 1791336682.4481409,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {
-        "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5": 1791341761.2284713
+        "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5": 1791363451.8183875
       },
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
         "errors": [],
         "name": "Console Garage",
         "observations": 2,
         "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_products_1.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 969 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_metaobject_pages_1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 0 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1791341761.2284713,
+        "https://consolegarage.com/sitemap.xml": 1791363451.8183875,
         "https://consolegarage.com/sitemap_agentic_discovery.xml": 1791298420.2745934,
         "https://consolegarage.com/sitemap_blogs_1.xml": 1791320091.3409793,
         "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1791341761.2284713,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791341761.2284713
+        "https://consolegarage.com/sitemap_metaobject_pages_1.xml": 1791363451.8183875,
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://consolegarage.com/sitemap.xml"
@@ -400,21 +453,21 @@
     },
     "dacby": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {
-        "https://dacby.com/buy/ps4-cds/onimusha-warlords-avvxmXNz0hgdLBpJ7fZB": 1791341761.2284713,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791341761.2284713,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-b410Jn8bYPmKnnbBxKox": 1791341761.2284713,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791341761.2284713,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-wV7DNvu2k8eArch37wpK": 1791341761.2284713,
-        "https://dacby.com/sell/ps4-cds/onimusha-warlords-avvxmXNz0hgdLBpJ7fZB": 1791341761.2284713,
-        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791341761.2284713,
-        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791341761.2284713
+        "https://dacby.com/buy/ps4-cds/onimusha-warlords-avvxmXNz0hgdLBpJ7fZB": 1791363451.8183875,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791363451.8183875,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-b410Jn8bYPmKnnbBxKox": 1791363451.8183875,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791363451.8183875,
+        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-wV7DNvu2k8eArch37wpK": 1791363451.8183875,
+        "https://dacby.com/sell/ps4-cds/onimusha-warlords-avvxmXNz0hgdLBpJ7fZB": 1791363451.8183875,
+        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791363451.8183875,
+        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791363451.8183875
       },
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
@@ -422,15 +475,30 @@
         "name": "DACBY",
         "observations": 6,
         "product_pages": 6,
-        "requests": 9,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 12,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 16 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps5-cds.xml",
+            "result": "parsed; 6 candidate URL(s); 0 child map(s); 545 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps4-cds.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 838 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791341761.2284713,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791341761.2284713,
-        "https://dacby.com/sitemap.xml": 1791341761.2284713
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791363451.8183875,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791363451.8183875,
+        "https://dacby.com/sitemap.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://dacby.com/sitemap.xml"
@@ -438,23 +506,28 @@
     },
     "dtzone": {
       "cooldown_until": 1790340173.353402,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [],
         "name": "DTZone",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 0 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://dtzone.in/sitemap.xml": 1791341761.2284713
+        "https://dtzone.in/sitemap.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://dtzone.in/sitemap.xml"
@@ -462,50 +535,68 @@
     },
     "e2z": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791298420.2745934,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-pc": 1791298420.2745934,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5": 1791298420.2745934,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-steelbook-edition": 1791298420.2745934
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791363451.8183875,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-pc": 1791363451.8183875,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5": 1791363451.8183875,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-2": 1791363451.8183875,
+        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-steelbook-edition": 1791363451.8183875
       },
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "sitemap /sitemap.rss: ValueError: Response is not an XML sitemap (HTML/error page is not catalogue coverage)",
           "Candidate page did not expose a matching primary product; not an out-of-stock result",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "e2zStore",
-        "observations": 2,
-        "product_pages": 2,
-        "requests": 9,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 3,
+        "product_pages": 3,
+        "requests": 14,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.rss",
+            "result": "ValueError: Response is not an XML sitemap (HTML/error page is not catalogue coverage)"
+          },
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 20 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 5 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://e2zstore.com/product-sitemap.xml": 1791298420.2745934,
+        "https://e2zstore.com/product-sitemap.xml": 1791363451.8183875,
         "https://e2zstore.com/product-sitemap2.xml": 1791298420.2745934,
         "https://e2zstore.com/product-sitemap3.xml": 1791320091.3409793,
         "https://e2zstore.com/product-sitemap4.xml": 1791341761.2284713,
         "https://e2zstore.com/product-sitemap5.xml": 1791341761.2284713,
-        "https://e2zstore.com/sitemap.rss": 1791320091.3409793,
-        "https://e2zstore.com/sitemap.xml": 1791341761.2284713
+        "https://e2zstore.com/sitemap.rss": 1791363451.8183875,
+        "https://e2zstore.com/sitemap.xml": 1791363451.8183875
       },
-      "sitemap_root_cursor": 1,
+      "sitemap_root_cursor": 0,
       "working_sitemaps": [
         "https://e2zstore.com/sitemap.xml"
       ]
     },
     "flipkart": {
       "cooldown_until": 1790850890.7343924,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "A matching page has unreadable/ambiguous stock signals"
@@ -521,42 +612,57 @@
     },
     "gamebuy": {
       "cooldown_until": 1791327431.7971287,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {
-        "https://gamebuy.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791341761.2284713,
-        "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5": 1791341761.2284713
+        "https://gamebuy.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791363451.8183875,
+        "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5": 1791363451.8183875
       },
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 5,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "GameBuy",
         "observations": 1,
         "product_pages": 1,
-        "requests": 5,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 11,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1001 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 727 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://gamebuy.in/product-sitemap.xml": 1791341761.2284713,
-        "https://gamebuy.in/product-sitemap2.xml": 1791341761.2284713,
-        "https://gamebuy.in/sitemap_index.xml": 1791341761.2284713
+        "https://gamebuy.in/product-sitemap.xml": 1791363451.8183875,
+        "https://gamebuy.in/product-sitemap2.xml": 1791363451.8183875,
+        "https://gamebuy.in/sitemap_index.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://gamebuy.in/sitemap_index.xml"
       ]
     },
     "gameloot": {
-      "cooldown_until": 1791363373.6804073,
-      "discovery_at": 1791341761.2284713,
+      "cooldown_until": 1791385064.2921596,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
@@ -565,7 +671,7 @@
         "name": "GameLoot",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -573,12 +679,12 @@
     },
     "gamenation": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
         "errors": [
           "sitemap /sitemap.xml: FetchError: HTTP 404; not a stock result",
           "sitemap /sitemap_index.xml: FetchError: HTTP 404; not a stock result",
@@ -587,36 +693,57 @@
         "name": "GameNation",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/sitemap_index.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/wp-sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1791341761.2284713,
-        "https://gamenation.in/sitemap_index.xml": 1791341761.2284713,
-        "https://gamenation.in/wp-sitemap.xml": 1791341761.2284713
+        "https://gamenation.in/sitemap.xml": 1791363451.8183875,
+        "https://gamenation.in/sitemap_index.xml": 1791363451.8183875,
+        "https://gamenation.in/wp-sitemap.xml": 1791363451.8183875
       }
     },
     "gts": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 1,
         "errors": [],
         "name": "Games The Shop",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 2,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 33 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap contained unescaped ampersands; repaired for URL discovery only",
+          "/sitemap.xml: 20 opaque product URL(s) had no identifying title; their editions were NOT checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1791341761.2284713
+        "https://www.gamestheshop.com/sitemap.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
@@ -624,31 +751,46 @@
     },
     "hgworld": {
       "cooldown_until": 1791270224.7485423,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
           "catalogue: FetchError: Disallowed by this site's robots.txt"
         ],
         "name": "HGWorld",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 201 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://hgworld.in/product-sitemap1.xml": 1791298420.2745934,
-        "https://hgworld.in/product-sitemap2.xml": 1791298420.2745934,
+        "https://hgworld.in/product-sitemap1.xml": 1791363451.8183875,
+        "https://hgworld.in/product-sitemap2.xml": 1791363451.8183875,
         "https://hgworld.in/product-sitemap3.xml": 1791320091.3409793,
         "https://hgworld.in/product-sitemap4.xml": 1791320091.3409793,
         "https://hgworld.in/product-sitemap5.xml": 1791341761.2284713,
         "https://hgworld.in/product-sitemap6.xml": 1791341761.2284713,
-        "https://hgworld.in/sitemap.xml": 1791341761.2284713
+        "https://hgworld.in/sitemap.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://hgworld.in/sitemap.xml"
@@ -656,31 +798,47 @@
     },
     "hitech": {
       "cooldown_until": 1791327431.791655,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {
-        "https://hitechgamez.in/product/onimusha-way-of-the-sword-ps5": 1791341761.2284713,
-        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-edition-ps5": 1791341761.2284713,
-        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-only": 1791341761.2284713
+        "https://hitechgamez.in/product/onimusha-way-of-the-sword-ps5": 1791363451.8183875,
+        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-edition-ps5": 1791363451.8183875,
+        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-only": 1791363451.8183875
       },
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "Hitech Gamez",
         "observations": 2,
         "product_pages": 2,
-        "requests": 7,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 10,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 592 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://hitechgamez.in/product-sitemap.xml": 1791341761.2284713,
-        "https://hitechgamez.in/product-sitemap2.xml": 1791341761.2284713,
-        "https://hitechgamez.in/sitemap_index.xml": 1791341761.2284713
+        "https://hitechgamez.in/product-sitemap.xml": 1791363451.8183875,
+        "https://hitechgamez.in/product-sitemap2.xml": 1791363451.8183875,
+        "https://hitechgamez.in/sitemap_index.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://hitechgamez.in/sitemap_index.xml"
@@ -688,18 +846,18 @@
     },
     "mcube": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {
-        "https://mcubegames.in/product/onimusha-warlords-ps4": 1791341761.2284713,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-lenticular-edition---playstation-5": 1791341761.2284713,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791341761.2284713,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-pc-code-in-the-box-": 1791341761.2284713,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-steelbook-edition---playstation-5": 1791341761.2284713
+        "https://mcubegames.in/product/onimusha-warlords-ps4": 1791363451.8183875,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-lenticular-edition---playstation-5": 1791363451.8183875,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791363451.8183875,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-pc-code-in-the-box-": 1791363451.8183875,
+        "https://mcubegames.in/product/onimusha-way-of-the-sword-steelbook-edition---playstation-5": 1791363451.8183875
       },
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
           "Candidate page did not expose a matching primary product; not an out-of-stock result",
           "Candidate page did not expose a matching primary product; not an out-of-stock result",
@@ -708,15 +866,28 @@
         "name": "MCube Games",
         "observations": 2,
         "product_pages": 2,
-        "requests": 6,
-        "sitemap_attempts": [],
+        "requests": 9,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 2 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-products.xml",
+            "result": "parsed; 5 candidate URL(s); 0 child map(s); 2082 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-blog.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 3 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "onimusha-unlimited-1",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1791341761.2284713,
-        "https://mcubegames.in/sitemap-products.xml": 1791341761.2284713,
-        "https://mcubegames.in/sitemap.xml": 1791341761.2284713
+        "https://mcubegames.in/sitemap-blog.xml": 1791363451.8183875,
+        "https://mcubegames.in/sitemap-products.xml": 1791363451.8183875,
+        "https://mcubegames.in/sitemap.xml": 1791363451.8183875
       },
       "working_sitemaps": [
         "https://mcubegames.in/sitemap.xml"
@@ -724,11 +895,11 @@
     },
     "mx2": {
       "cooldown_until": 0,
-      "discovery_at": 1791341761.2284713,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "next sample not due; last attempt 1791341761.2284713",
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: DNS resolution failed; not a stock result",
@@ -737,27 +908,27 @@
         "name": "MX2Games",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "onimusha-unlimited-1"
     },
     "sheenu": {
-      "cooldown_until": 1791363411.001193,
-      "discovery_at": 1791341761.2284713,
+      "cooldown_until": 1791385103.1726987,
+      "discovery_at": 1791363451.8183875,
       "known": {},
       "report": {
-        "checked_at": 1791361968.6085842,
-        "discovery": "not due",
+        "checked_at": 1791363451.8183875,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "product: FetchError: Store is in a temporary backoff window"
+          "product: FetchError: HTTP 403; not a stock result"
         ],
         "name": "Sheenu Game Center",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
