@@ -1,360 +1,135 @@
 {
-  "heartbeat_at": 1791298420.2745934,
-  "last_scan_at": 1791660434.3683715,
+  "heartbeat_at": 1791661363.8051653,
+  "last_scan_at": 1791661363.8051653,
   "listings": {
-    "053e0b5ddda3f6254d55c118": {
-      "alerted_cycle": 1,
-      "budget_note": "No price cap configured",
+    "207ef61de977dbcea8a9e438": {
+      "alerted_cycle": 0,
+      "budget_note": "Suppressed: INR 5,999.00 is above INR 5,500.00",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
+        "match": "exact",
+        "price": "5,999.00",
+        "source": "GameBuy",
+        "status": "backorder",
+        "title": "Ace Combat 8: Wings of Theve PS5",
+        "url": "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5",
+        "variant": ""
+      },
+      "last_definite": "backorder",
+      "last_seen": 1791661363.8051653,
+      "possible_sent": false,
+      "stock_cycle": 0,
+      "within_budget": false
+    },
+    "41d535f2dce221d714c7c3e0": {
+      "alerted_cycle": 0,
+      "budget_note": "Suppressed: INR 5,999.00 is above INR 5,500.00",
+      "item": {
+        "condition": "Not stated",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "5,999.00",
+        "source": "MCube Games",
+        "status": "in_stock",
+        "title": "ACE COMBAT 8: WINGS OF THEVE - PlayStation 5",
+        "url": "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5",
+        "variant": ""
+      },
+      "last_definite": "in_stock",
+      "last_seen": 1791661363.8051653,
+      "possible_sent": false,
+      "stock_cycle": 1,
+      "within_budget": false
+    },
+    "4b5cc0b80fa7c305cff88219": {
+      "alerted_cycle": 0,
+      "budget_note": "Suppressed: INR 5,999.00 is above INR 5,500.00",
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Enabled product-specific Add to Cart button; delivery not tested",
+        "match": "exact",
+        "price": "5,999.00",
+        "source": "e2zStore",
+        "status": "in_stock",
+        "title": "Ace Combat 8 Wings of Theve PS5",
+        "url": "https://e2zstore.com/product/ace-combat-8-wings-of-theve-ps5",
+        "variant": ""
+      },
+      "last_definite": "in_stock",
+      "last_seen": 1791661363.8051653,
+      "possible_sent": false,
+      "stock_cycle": 1,
+      "within_budget": false
+    },
+    "51e76966be2f7cadd06bd23f": {
+      "alerted_cycle": 0,
+      "budget_note": "Suppressed: INR 5,999.00 is above INR 5,500.00",
+      "item": {
+        "condition": "New (seller label)",
+        "currency": "INR",
+        "dlc": "Unknown; verify code, region and expiry",
+        "evidence": "Primary-product structured availability; delivery not tested",
+        "match": "exact",
+        "price": "5,999.00",
+        "source": "Play HQ",
+        "status": "in_stock",
+        "title": "PS5 Ace Combat 8: Wings Of Theve (New)",
+        "url": "https://playhq.games/products/ps5-ace-combat-8-wings-of-theve-new-preorder",
+        "variant": ""
+      },
+      "last_definite": "in_stock",
+      "last_seen": 1791661363.8051653,
+      "possible_sent": false,
+      "stock_cycle": 1,
+      "within_budget": false
+    },
+    "cdb94699838bba985da2a1e0": {
+      "alerted_cycle": 0,
+      "budget_note": "Suppressed: INR 5,999.00 is above INR 5,500.00",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Enabled product-specific Add to Cart button; delivery not tested",
         "match": "exact",
-        "price": "5,499.00",
-        "source": "GameBuy",
+        "price": "5,999.00",
+        "source": "DTZone",
         "status": "in_stock",
-        "title": "Onimusha Way of The Sword PS5",
-        "url": "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5",
+        "title": "PS5 Ace Combat 8 wings of thieves (compatible with Thrustmaster t.flight simulator)",
+        "url": "https://dtzone.in/index.php/product/ps5-ace-combat-8-wings-of-thieves-compatible-with-thrustmaster-t-flight-simulator",
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1791660434.3683715,
+      "last_seen": 1791661363.8051653,
       "possible_sent": false,
-      "stock_cycle": 1
+      "stock_cycle": 1,
+      "within_budget": false
     },
-    "05493453170f4898cd2d705e": {
-      "alerted_cycle": 1,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "6,499.00",
-        "source": "MCube Games",
-        "status": "in_stock",
-        "title": "Onimusha: Way of the Sword Steelbook Edition - PlayStation 5",
-        "url": "https://mcubegames.in/product/onimusha-way-of-the-sword-steelbook-edition---playstation-5",
-        "variant": ""
-      },
-      "last_definite": "in_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 1
-    },
-    "1947cb798c2f13ddd6a18244": {
+    "f56149074c503c08c8ba4055": {
       "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Claimed unused; region/expiry unverified",
-        "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
-        "match": "exact",
-        "price": "5,399.00",
-        "source": "Hitech Gamez",
-        "status": "backorder",
-        "title": "Onimusha Way Of The Sword (PS5)",
-        "url": "https://hitechgamez.in/product/onimusha-way-of-the-sword-ps5",
-        "variant": ""
-      },
-      "last_definite": "backorder",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "1af02d8a708d498f4bbbdb70": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "New (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Explicit primary-product backorder/preorder label; not ready stock",
-        "match": "exact",
-        "price": "5,499.00",
-        "source": "e2zStore",
-        "status": "backorder",
-        "title": "Onimusha Way of the Sword PS5 (Lenticular Edition)",
-        "url": "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5",
-        "variant": ""
-      },
-      "last_definite": "backorder",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "2f625f80277eeddc4899afdf": {
-      "alerted_cycle": 1,
-      "budget_note": "No price cap configured",
+      "budget_note": "Suppressed: purchase price is not reliably readable",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "3,650.00",
-        "source": "DACBY",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword",
-        "url": "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 1
-    },
-    "55154160f8eaa85b2ef0902a": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "4,100.00",
-        "source": "DACBY",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword Steelbook Edition",
-        "url": "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "6299acd46cd187f2d403d4b5": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "New (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Shopify purchase-variant available flag; delivery not tested",
-        "match": "exact",
-        "price": "5,199.00",
-        "source": "Console Garage",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword Lenticular Edition ps5",
-        "url": "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5?variant=44289287290939",
-        "variant": "New"
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "7a008041e107a1304cedfd48": {
-      "alerted_cycle": 1,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "5,499.00",
-        "source": "MCube Games",
-        "status": "in_stock",
-        "title": "Onimusha: Way of the Sword Lenticular Edition. - PlayStation 5",
-        "url": "https://mcubegames.in/product/onimusha-way-of-the-sword-lenticular-edition---playstation-5",
-        "variant": ""
-      },
-      "last_definite": "in_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 1
-    },
-    "88ab99179c3a43eeb947677a": {
-      "alerted_cycle": 1,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "New (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary purchase section explicitly says in stock; delivery not tested",
-        "match": "exact",
-        "price": "5,499.00",
-        "source": "e2zStore",
-        "status": "in_stock",
-        "title": "Onimusha Way of the Sword PS5",
-        "url": "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-2",
-        "variant": ""
-      },
-      "last_definite": "in_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 1
-    },
-    "99376a0b283a89fcbc4c85a6": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "No reliable stock signal",
+        "evidence": "Primary title explicitly says preorder/backorder; ready stock not established",
         "match": "exact",
         "price": "Not verified",
-        "source": "Flipkart",
-        "status": "unknown",
-        "title": "PS5 Onimusha Way of the Sword-Lenticular Edition (Standard) (Sin... more",
-        "url": "https://www.flipkart.com/ps5-onimusha-way-sword-lenticular-standard/p/itm96761ed58385f",
+        "source": "PSX Gaming",
+        "status": "backorder",
+        "title": "Ace Combat 8: Wings of Theve \u2013 PS5 Pre Order",
+        "url": "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order",
         "variant": ""
       },
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "a0bdbe7d9015920ae19da349": {
-      "alerted_cycle": 1,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "4,699.00",
-        "source": "DACBY",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword",
-        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 1
-    },
-    "a6dfad0af15cacaa2f24542f": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "4,699.00",
-        "source": "DACBY",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword Steelbook Edition",
-        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "a70de9e38fa5618208d31050": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Used (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Shopify purchase-variant available flag; delivery not tested",
-        "match": "exact",
-        "price": "4,999.00",
-        "source": "Console Garage",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword Lenticular Edition ps5",
-        "url": "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5?variant=44289287323707",
-        "variant": "Pre-Owned(USED)"
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "b13505c07077498259cb9ebf": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "New (seller label)",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
-        "match": "exact",
-        "price": "5,999.00",
-        "source": "e2zStore",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword PS5 (Steelbook Edition)",
-        "url": "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-steelbook-edition",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "dcaaea752390268e351980ef": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "5,499.00",
-        "source": "DACBY",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword",
-        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-b410Jn8bYPmKnnbBxKox",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "e16dd7eb6d69e8709fc637ce": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Claimed unused; region/expiry unverified",
-        "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
-        "match": "exact",
-        "price": "5,990.00",
-        "source": "Hitech Gamez",
-        "status": "out_of_stock",
-        "title": "Onimusha Way Of The Sword- Steel Book Edition (PS5)",
-        "url": "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-edition-ps5",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
-      "possible_sent": false,
-      "stock_cycle": 0
-    },
-    "f4d838e57b38997c6a5b8696": {
-      "alerted_cycle": 0,
-      "budget_note": "No price cap configured",
-      "item": {
-        "condition": "Not stated",
-        "currency": "INR",
-        "dlc": "Unknown; verify code, region and expiry",
-        "evidence": "Primary-product structured availability; delivery not tested",
-        "match": "exact",
-        "price": "5,999.00",
-        "source": "DACBY",
-        "status": "out_of_stock",
-        "title": "Onimusha Way of the Sword Steelbook Edition",
-        "url": "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-wV7DNvu2k8eArch37wpK",
-        "variant": ""
-      },
-      "last_definite": "out_of_stock",
-      "last_seen": 1791660434.3683715,
+      "last_definite": "backorder",
+      "last_seen": 1791661363.8051653,
       "possible_sent": false,
       "stock_cycle": 0
     }
@@ -363,27 +138,41 @@
   "sources": {
     "cex": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "CeX India",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 4 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 31905 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-static.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 24 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "/sitemaps/cex/in/sitemap-in-products-1.xml: 31905 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1791657078.0626707,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791657078.0626707,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791633295.3144677,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1791657078.0626707,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1791610112.8375933
+        "https://in.webuy.com/sitemap.xml": 1791661363.8051653,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1791661363.8051653,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://in.webuy.com/sitemap.xml"
@@ -391,31 +180,40 @@
     },
     "console-garage": {
       "cooldown_until": 1791406702.4592528,
-      "discovery_at": 1791657078.0626707,
-      "known": {
-        "https://consolegarage.com/products/onimusha-way-of-the-sword-lenticular-edition-ps5": 1791657078.0626707
-      },
+      "discovery_at": 1791661363.8051653,
+      "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
         "errors": [],
         "name": "Console Garage",
-        "observations": 2,
-        "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_products_1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 969 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_agentic_discovery.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1791657078.0626707,
-        "https://consolegarage.com/sitemap_agentic_discovery.xml": 1791633295.3144677,
-        "https://consolegarage.com/sitemap_blogs_1.xml": 1791657078.0626707,
-        "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1791565103.0287774,
-        "https://consolegarage.com/sitemap_metaobject_pages_1.xml": 1791588481.3172503,
-        "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1791610112.8375933,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791657078.0626707
+        "https://consolegarage.com/sitemap.xml": 1791661363.8051653,
+        "https://consolegarage.com/sitemap_agentic_discovery.xml": 1791661363.8051653,
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://consolegarage.com/sitemap.xml"
@@ -423,37 +221,40 @@
     },
     "dacby": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
-      "known": {
-        "https://dacby.com/buy/ps4-cds/onimusha-warlords-avvxmXNz0hgdLBpJ7fZB": 1791657078.0626707,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791657078.0626707,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-b410Jn8bYPmKnnbBxKox": 1791657078.0626707,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791657078.0626707,
-        "https://dacby.com/buy/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-wV7DNvu2k8eArch37wpK": 1791657078.0626707,
-        "https://dacby.com/sell/ps4-cds/onimusha-warlords-avvxmXNz0hgdLBpJ7fZB": 1791657078.0626707,
-        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-HYYNut8BKqPWxWE0YqI4": 1791657078.0626707,
-        "https://dacby.com/sell/ps5-cds/onimusha-way-of-the-sword-steelbook-edition-1nUGPjBQrWs3mmtq3VcX": 1791657078.0626707
-      },
+      "discovery_at": 1791661363.8051653,
+      "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result",
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
-        ],
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
+        "errors": [],
         "name": "DACBY",
-        "observations": 6,
-        "product_pages": 6,
-        "requests": 9,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 16 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps5-cds.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 545 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps4-cds.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 842 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791657078.0626707,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791657078.0626707,
-        "https://dacby.com/sitemap.xml": 1791657078.0626707
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1791661363.8051653,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1791661363.8051653,
+        "https://dacby.com/sitemap.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://dacby.com/sitemap.xml"
@@ -461,23 +262,33 @@
     },
     "dtzone": {
       "cooldown_until": 1790340173.353402,
-      "discovery_at": 1791657078.0626707,
-      "known": {},
+      "discovery_at": 1791661363.8051653,
+      "known": {
+        "https://dtzone.in/index.php/product/ps5-ace-combat-8-wings-of-thieves-compatible-with-thrustmaster-t-flight-simulator": 1791661363.8051653,
+        "https://dtzone.in/index.php/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1791661363.8051653
+      },
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
-        "discovery_pages": 0,
-        "errors": [],
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
+        "errors": [
+          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+        ],
         "name": "DTZone",
-        "observations": 0,
-        "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 8,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 0 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://dtzone.in/sitemap.xml": 1791657078.0626707
+        "https://dtzone.in/sitemap.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://dtzone.in/sitemap.xml"
@@ -485,38 +296,46 @@
     },
     "e2z": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791633295.3144677,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-pc": 1791633295.3144677,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5": 1791633295.3144677,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-2": 1791633295.3144677,
-        "https://e2zstore.com/product/onimusha-way-of-the-sword-ps5-steelbook-edition": 1791633295.3144677
+        "https://e2zstore.com/product/ace-combat-8-wings-of-theve-ps5": 1791661363.8051653,
+        "https://e2zstore.com/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1791661363.8051653
       },
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result",
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "e2zStore",
-        "observations": 3,
-        "product_pages": 3,
-        "requests": 11,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 8,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 20 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://e2zstore.com/product-sitemap.xml": 1791633295.3144677,
-        "https://e2zstore.com/product-sitemap2.xml": 1791657078.0626707,
-        "https://e2zstore.com/product-sitemap3.xml": 1791610112.8375933,
-        "https://e2zstore.com/product-sitemap4.xml": 1791657078.0626707,
-        "https://e2zstore.com/product-sitemap5.xml": 1791610112.8375933,
-        "https://e2zstore.com/sitemap.rss": 1791633295.3144677,
-        "https://e2zstore.com/sitemap.xml": 1791657078.0626707
+        "https://e2zstore.com/product-sitemap.xml": 1791661363.8051653,
+        "https://e2zstore.com/product-sitemap2.xml": 1791661363.8051653,
+        "https://e2zstore.com/sitemap.xml": 1791661363.8051653
       },
       "sitemap_root_cursor": 1,
       "working_sitemaps": [
@@ -524,51 +343,46 @@
       ]
     },
     "flipkart": {
-      "cooldown_until": 1790850890.7343924,
-      "discovery_at": 1791657078.0626707,
-      "known": {},
-      "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [
-          "A matching page has unreadable/ambiguous stock signals"
-        ],
-        "name": "Flipkart",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
-        "warnings": []
-      },
-      "scanner_revision": "onimusha-unlimited-1"
+      "cooldown_until": 1790850890.7343924
     },
     "gamebuy": {
       "cooldown_until": 1791521793.4969544,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {
-        "https://gamebuy.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791657078.0626707,
-        "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5": 1791657078.0626707
+        "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5": 1791661363.8051653
       },
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
-        ],
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 5,
+        "errors": [],
         "name": "GameBuy",
         "observations": 1,
         "product_pages": 1,
-        "requests": 5,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 8,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 6 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 1001 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 727 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://gamebuy.in/product-sitemap.xml": 1791657078.0626707,
-        "https://gamebuy.in/product-sitemap2.xml": 1791657078.0626707,
-        "https://gamebuy.in/sitemap_index.xml": 1791657078.0626707
+        "https://gamebuy.in/product-sitemap.xml": 1791661363.8051653,
+        "https://gamebuy.in/product-sitemap2.xml": 1791661363.8051653,
+        "https://gamebuy.in/sitemap_index.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://gamebuy.in/sitemap_index.xml"
@@ -576,14 +390,14 @@
     },
     "gameloot": {
       "cooldown_until": 1791678690.3548355,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
+          "catalogue: FetchError: Store is in a temporary backoff window",
           "sitemap setup: FetchError: Store is in a temporary backoff window"
         ],
         "name": "GameLoot",
@@ -593,16 +407,16 @@
         "sitemap_attempts": [],
         "warnings": []
       },
-      "scanner_revision": "onimusha-unlimited-1"
+      "scanner_revision": "acecombat8-5500-1"
     },
     "gamenation": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [
           "sitemap /sitemap.xml: FetchError: HTTP 404; not a stock result",
           "sitemap /sitemap_index.xml: FetchError: HTTP 404; not a stock result",
@@ -611,36 +425,57 @@
         "name": "GameNation",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/sitemap_index.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/wp-sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          }
+        ],
         "warnings": []
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1791657078.0626707,
-        "https://gamenation.in/sitemap_index.xml": 1791657078.0626707,
-        "https://gamenation.in/wp-sitemap.xml": 1791657078.0626707
+        "https://gamenation.in/sitemap.xml": 1791661363.8051653,
+        "https://gamenation.in/sitemap_index.xml": 1791661363.8051653,
+        "https://gamenation.in/wp-sitemap.xml": 1791661363.8051653
       }
     },
     "gts": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [],
         "name": "Games The Shop",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 3,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 33 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap contained unescaped ampersands; repaired for URL discovery only",
+          "/sitemap.xml: 20 opaque product URL(s) had no identifying title; their editions were NOT checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1791657078.0626707
+        "https://www.gamestheshop.com/sitemap.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
@@ -648,31 +483,42 @@
     },
     "hgworld": {
       "cooldown_until": 1791270224.7485423,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
           "catalogue: FetchError: Disallowed by this site's robots.txt"
         ],
         "name": "HGWorld",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 201 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://hgworld.in/product-sitemap1.xml": 1791633295.3144677,
-        "https://hgworld.in/product-sitemap2.xml": 1791633295.3144677,
-        "https://hgworld.in/product-sitemap3.xml": 1791657078.0626707,
-        "https://hgworld.in/product-sitemap4.xml": 1791657078.0626707,
-        "https://hgworld.in/product-sitemap5.xml": 1791610112.8375933,
-        "https://hgworld.in/product-sitemap6.xml": 1791610112.8375933,
-        "https://hgworld.in/sitemap.xml": 1791657078.0626707
+        "https://hgworld.in/product-sitemap1.xml": 1791661363.8051653,
+        "https://hgworld.in/product-sitemap2.xml": 1791661363.8051653,
+        "https://hgworld.in/sitemap.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://hgworld.in/sitemap.xml"
@@ -680,31 +526,42 @@
     },
     "hitech": {
       "cooldown_until": 1791521793.4930382,
-      "discovery_at": 1791657078.0626707,
-      "known": {
-        "https://hitechgamez.in/product/onimusha-way-of-the-sword-ps5": 1791657078.0626707,
-        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-edition-ps5": 1791657078.0626707,
-        "https://hitechgamez.in/product/onimusha-way-of-the-sword-steel-book-only": 1791657078.0626707
-      },
+      "discovery_at": 1791661363.8051653,
+      "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "catalogue: FetchError: Disallowed by this site's robots.txt"
         ],
         "name": "Hitech Gamez",
-        "observations": 2,
-        "product_pages": 2,
-        "requests": 7,
-        "sitemap_attempts": [],
-        "warnings": []
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap2.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 623 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://hitechgamez.in/product-sitemap.xml": 1791657078.0626707,
-        "https://hitechgamez.in/product-sitemap2.xml": 1791657078.0626707,
-        "https://hitechgamez.in/sitemap_index.xml": 1791657078.0626707
+        "https://hitechgamez.in/product-sitemap.xml": 1791661363.8051653,
+        "https://hitechgamez.in/product-sitemap2.xml": 1791661363.8051653,
+        "https://hitechgamez.in/sitemap_index.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://hitechgamez.in/sitemap_index.xml"
@@ -712,35 +569,40 @@
     },
     "mcube": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {
-        "https://mcubegames.in/product/onimusha-warlords-ps4": 1791657078.0626707,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-lenticular-edition---playstation-5": 1791657078.0626707,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-nintendo-switch-2": 1791657078.0626707,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-pc-code-in-the-box-": 1791657078.0626707,
-        "https://mcubegames.in/product/onimusha-way-of-the-sword-steelbook-edition---playstation-5": 1791657078.0626707
+        "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1791661363.8051653
       },
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
-        "discovery_pages": 0,
-        "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result",
-          "Candidate page did not expose a matching primary product; not an out-of-stock result",
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
-        ],
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [],
         "name": "MCube Games",
-        "observations": 2,
-        "product_pages": 2,
-        "requests": 6,
-        "sitemap_attempts": [],
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 2 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-products.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 2084 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-blog.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 3 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
-      "scanner_revision": "onimusha-unlimited-1",
+      "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1791657078.0626707,
-        "https://mcubegames.in/sitemap-products.xml": 1791657078.0626707,
-        "https://mcubegames.in/sitemap.xml": 1791657078.0626707
+        "https://mcubegames.in/sitemap-blog.xml": 1791661363.8051653,
+        "https://mcubegames.in/sitemap-products.xml": 1791661363.8051653,
+        "https://mcubegames.in/sitemap.xml": 1791661363.8051653
       },
       "working_sitemaps": [
         "https://mcubegames.in/sitemap.xml"
@@ -748,11 +610,11 @@
     },
     "mx2": {
       "cooldown_until": 0,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "next sample not due; last attempt 1791657078.0626707",
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: DNS resolution failed; not a stock result",
@@ -761,22 +623,108 @@
         "name": "MX2Games",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
-      "scanner_revision": "onimusha-unlimited-1"
+      "scanner_revision": "acecombat8-5500-1"
+    },
+    "playhq": {
+      "discovery_at": 1791661363.8051653,
+      "known": {},
+      "report": {
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
+        "errors": [],
+        "name": "Play HQ",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 5 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 27 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
+      },
+      "scanner_revision": "acecombat8-5500-1",
+      "sitemap_attempted_at": {
+        "https://playhq.games/sitemap.xml": 1791661363.8051653,
+        "https://playhq.games/sitemap.xml?collection=brands&page=1": 1791661363.8051653,
+        "https://playhq.games/sitemap.xml?collection=categories&page=1": 1791661363.8051653
+      },
+      "working_sitemaps": [
+        "https://playhq.games/sitemap.xml"
+      ]
+    },
+    "psx": {
+      "discovery_at": 1791661363.8051653,
+      "known": {
+        "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order": 1791661363.8051653,
+        "https://psxgaming.com/shop": 1791661363.8051653
+      },
+      "report": {
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
+        "errors": [
+          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+        ],
+        "name": "PSX Gaming",
+        "observations": 1,
+        "product_pages": 1,
+        "requests": 9,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 70 page URL(s) inspected"
+          },
+          {
+            "path": "/woodmart_slider-sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
+      },
+      "scanner_revision": "acecombat8-5500-1",
+      "sitemap_attempted_at": {
+        "https://psxgaming.com/product-sitemap.xml": 1791661363.8051653,
+        "https://psxgaming.com/sitemap_index.xml": 1791661363.8051653,
+        "https://psxgaming.com/woodmart_slider-sitemap.xml": 1791661363.8051653
+      },
+      "working_sitemaps": [
+        "https://psxgaming.com/sitemap_index.xml"
+      ]
     },
     "sheenu": {
       "cooldown_until": 1791678729.7462416,
-      "discovery_at": 1791657078.0626707,
+      "discovery_at": 1791661363.8051653,
       "known": {},
       "report": {
-        "checked_at": 1791660434.3683715,
-        "discovery": "not due",
+        "checked_at": 1791661363.8051653,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "product: FetchError: Store is in a temporary backoff window"
+          "catalogue: FetchError: Store is in a temporary backoff window",
+          "sitemap setup: FetchError: Store is in a temporary backoff window"
         ],
         "name": "Sheenu Game Center",
         "observations": 0,
@@ -785,9 +733,9 @@
         "sitemap_attempts": [],
         "warnings": []
       },
-      "scanner_revision": "onimusha-unlimited-1"
+      "scanner_revision": "acecombat8-5500-1"
     }
   },
-  "target": "onimusha",
+  "target": "acecombat8",
   "version": 1
 }
