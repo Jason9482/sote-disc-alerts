@@ -27,6 +27,11 @@ def parse_shopify(data: dict, source: dict, url: str) -> list[Listing]:
     level = match_product(title, url, source.get("target", "sote"))
     if level == "reject":
         return []
+    if source.get("target") == "acecombat8":
+        description = normalized(BeautifulSoup(str(data.get("description", "")), "html.parser").get_text(" ", strip=True))
+        if re.search(r"\bno physical disc\b|\bshared account\b|\bcode in (?:a |the )?box\b|"
+                     r"\b(?:game\s+)?disc (?:is )?not included\b|\bsteel\s?book only\b", description):
+            return []
     variants = data.get("variants")
     if not isinstance(variants, list) or not variants:
         return [Listing(source["name"], title, url, match=level,
@@ -45,7 +50,7 @@ def parse_shopify(data: dict, source: dict, url: str) -> list[Listing]:
         # Never use the product-level 'available': it may refer to BUYBACK only.
         available = v.get("available")
         status = "in_stock" if available is True else "out_of_stock" if available is False else "unknown"
-        if source.get("target") == "onimusha" and re.search(
+        if source.get("target") in {"onimusha", "acecombat8"} and status != "out_of_stock" and re.search(
                 r"\bpre\s?order\b|\bback\s?order\b", normalized(title + " " + label)):
             status = "backorder"
         if v.get("requires_selling_plan") is True:
@@ -123,6 +128,9 @@ def stock_label(text: str) -> str | None:
     t = normalized(text)
     if not t or len(t) > 140 or re.search(r"\b(?:policy|policies|terms|rules|guidelines|instructions|example)\b", t):
         return None
+    # Bonus descriptions can remain after launch; they are not stock labels.
+    if re.match(r"^pre ?order (?:bonus|bonuses|benefits?|incentives?)\b", t):
+        return None
     # The wrapper must be affirmative and local, e.g. 'Availability: Out of stock'.
     t = re.sub(r"^(?:availability|stock status|status)\s+", "", t)
     t = re.sub(r"^(?:this\s+)?(?:item|product)\s+is\s+", "", t)
@@ -167,7 +175,7 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
         return []
     scope = clean_purchase_scope(primary_scope(soup, heading))
     scope_text = scope.get_text(" ", strip=True) if scope else ""
-    if source.get("target") in {"pragmata", "onimusha"} and re.search(
+    if source.get("target") in {"pragmata", "onimusha", "acecombat8"} and re.search(
             r"\bno physical disc\b|\b(?:account credentials|shared account|account login)\b|"
             r"\bdigital delivery only\b|\bcode in (?:a |the )?box\b|"
             r"\b(?:game\s+)?disc (?:is )?not included\b|\bno (?:ps5 )?game disc\b|"
@@ -216,6 +224,9 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
                 if "out_of_stock" in labels or availability_label == "out_of_stock":
                     status = "out_of_stock"
                 elif status == "in_stock" and ("backorder" in labels or availability_label == "backorder"):
+                    status = "backorder"
+                if source.get("target") == "acecombat8" and status != "out_of_stock" and re.search(
+                        r"\bpre\s?order\b|\bback\s?order\b", normalized(title + " " + label)):
                     status = "backorder"
                 query = {"variation_id": v.get("variation_id", ""), **v.get("attributes", {})}
                 results.append(Listing(source["name"], title, url.split("?")[0] + "?" + urlencode(query),
@@ -292,6 +303,10 @@ def parse_html(html: str, source: dict, url: str) -> list[Listing]:
             elif len(distinct) > 1:
                 price = "Not verified"
                 evidence += "; price range cannot be assigned to one purchase variant"
+
+    if source.get("target") == "acecombat8" and status != "out_of_stock" and re.search(
+            r"\bpre\s?order\b|\bback\s?order\b", normalized(title)):
+        status, evidence = "backorder", "Primary title explicitly says preorder/backorder; ready stock not established"
 
     # A mixed-platform heading can never produce a strong stock alert.
     return [Listing(source["name"], title, url, status=status, match=level, price=price,

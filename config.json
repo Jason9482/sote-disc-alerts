@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "target": "onimusha",
-  "max_price_inr": null,
+  "target": "acecombat8",
+  "max_price_inr": 5500,
   "daily_health": false,
   "alert_possible": false,
   "discovery_hours": 6,
@@ -32,10 +32,10 @@
       "adapter": "shopify",
       "products": [],
       "catalogues": [
-        "https://consolegarage.com/search?q=onimusha&type=product"
+        "https://consolegarage.com/search?q=ace+combat+8&type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "currency": "INR"
     },
@@ -45,11 +45,11 @@
       "base": "https://e2zstore.com",
       "products": [],
       "catalogues": [
-        "https://e2zstore.com/?s=onimusha&post_type=product"
+        "https://e2zstore.com/?s=ace+combat+8&post_type=product"
       ],
       "sitemap_discovery": true,
       "default_condition": "New",
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
@@ -58,12 +58,14 @@
       "id": "dtzone",
       "name": "DTZone",
       "base": "https://dtzone.in",
-      "products": [],
+      "products": [
+        "https://dtzone.in/index.php/product/ps5-ace-combat-8-wings-of-thieves-compatible-with-thrustmaster-t-flight-simulator/"
+      ],
       "catalogues": [
-        "https://dtzone.in/?s=onimusha&post_type=product"
+        "https://dtzone.in/?s=ace+combat+8&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Exact product page retrieved via web tool on 2026-10-11; title misspells Theve and includes a controller-compatibility note. No assumption that scheduled scanner can read it. Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
@@ -74,10 +76,10 @@
       "base": "https://hitechgamez.in",
       "products": [],
       "catalogues": [
-        "https://hitechgamez.in/?s=onimusha&post_type=product"
+        "https://hitechgamez.in/?s=ace+combat+8&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR"
@@ -87,10 +89,10 @@
       "name": "GameLoot",
       "base": "https://gameloot.in",
       "catalogues": [
-        "https://gameloot.in/?s=onimusha&post_type=product"
+        "https://gameloot.in/?s=ace+combat+8&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -101,16 +103,16 @@
       "name": "GameBuy",
       "base": "https://gamebuy.in",
       "catalogues": [
-        "https://gamebuy.in/?s=onimusha&post_type=product",
+        "https://gamebuy.in/?s=ace+combat+8&post_type=product",
         "https://gamebuy.in/"
       ],
       "sitemap_discovery": true,
-      "notes": "Seed obtained by following the official catalogue link on 2026-10-06. Product page retrieved via web tool. Scanner access/parse must still be tested on GitHub.",
+      "notes": "Exact link followed from official homepage on 2026-10-11; product fetch failed in web tool. Seed is a discovery lead only. Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
       "products": [
-        "https://gamebuy.in/product/onimusha-way-of-the-sword-ps5/"
+        "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5/"
       ]
     },
     {
@@ -118,10 +120,10 @@
       "name": "MX2Games",
       "base": "https://mx2games.com",
       "catalogues": [
-        "https://mx2games.com/?s=onimusha&post_type=product"
+        "https://mx2games.com/?s=ace+combat+8&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -132,10 +134,10 @@
       "name": "HGWorld",
       "base": "https://hgworld.in",
       "catalogues": [
-        "https://hgworld.in/?s=onimusha&post_type=product"
+        "https://hgworld.in/?s=ace+combat+8&post_type=product"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -147,19 +149,23 @@
       "base": "https://mcubegames.in",
       "catalogues": [],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Exact product retrieved via web tool on 2026-10-11. Conflicting preorder/stock language; not a ready-stock promise. Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
-      "products": []
+      "products": [
+        "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5"
+      ]
     },
     {
       "id": "gts",
       "name": "Games The Shop",
       "base": "https://www.gamestheshop.com",
-      "catalogues": [],
+      "catalogues": [
+        "https://www.gamestheshop.com/"
+      ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -170,10 +176,11 @@
       "name": "GameNation",
       "base": "https://gamenation.in",
       "catalogues": [
-        "https://gamenation.in/"
+        "https://gamenation.in/",
+        "https://gamenation.in/PlayStation/PS5/"
       ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -183,9 +190,11 @@
       "id": "dacby",
       "name": "DACBY",
       "base": "https://dacby.com",
-      "catalogues": [],
+      "catalogues": [
+        "https://dacby.com/buy/pre-orders"
+      ],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -197,7 +206,7 @@
       "base": "https://in.webuy.com",
       "catalogues": [],
       "sitemap_discovery": true,
-      "notes": "Onimusha: Way of the Sword PS5. Discovery only unless a seed is listed. Bounded catalogue/sitemap checks; not complete store coverage. No stock, permission or live scanner compatibility claim. Ignore older Onimusha and case-only products.",
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable.",
       "enabled": true,
       "adapter": "html",
       "currency": "INR",
@@ -207,13 +216,11 @@
       "id": "flipkart",
       "name": "Flipkart",
       "base": "https://www.flipkart.com",
-      "products": [
-        "https://www.flipkart.com/ps5-onimusha-way-sword-lenticular-standard/p/itm96761ed58385f"
-      ],
+      "products": [],
       "catalogues": [],
       "sitemap_discovery": false,
-      "notes": "Official exact-product search result located 2026-10-06; live page failed in web tool. Scanner compatibility unverified. PIN delivery, seller selection and checkout fees are NOT checked.",
-      "enabled": true,
+      "notes": "Disabled: no validated exact Ace Combat 8 PS5 product URL or supported discovery adapter. Not scanned.",
+      "enabled": false,
       "adapter": "html",
       "currency": "INR"
     },
@@ -225,18 +232,52 @@
       "currency": "INR",
       "enabled": true,
       "default_condition": "New",
+      "products": [],
+      "catalogues": [
+        "https://sheenugamecenter.com/?s=ace+combat+8&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable."
+    },
+    {
+      "id": "psx",
+      "name": "PSX Gaming",
+      "base": "https://psxgaming.com",
+      "adapter": "html",
+      "currency": "INR",
+      "enabled": true,
       "products": [
-        "https://sheenugamecenter.com/product/onimusha-way-of-the-sword-ps5/"
+        "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order/"
+      ],
+      "catalogues": [
+        "https://psxgaming.com/?s=ace+combat+8&post_type=product"
+      ],
+      "sitemap_discovery": true,
+      "notes": "Exact page retrieved via web tool on 2026-10-11. Primary title says Pre Order; no ready-stock claim. Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable."
+    },
+    {
+      "id": "playhq",
+      "name": "Play HQ",
+      "base": "https://playhq.games",
+      "adapter": "html",
+      "currency": "INR",
+      "enabled": true,
+      "products": [
+        "https://playhq.games/products/ps5-ace-combat-8-wings-of-theve-new-preorder"
       ],
       "catalogues": [],
-      "sitemap_discovery": false,
-      "notes": "Official physical PS5 product page retrieved via web tool on 2026-10-06. Scanner access/parse unverified."
+      "sitemap_discovery": true,
+      "notes": "Exact product found in official indexed result on 2026-10-11; direct web fetch failed. Stale preorder slug alone is NOT a stock status. Ace Combat 8: Wings of Theve PS5 physical-game discovery. Bounded catalogue/sitemap samples, not exhaustive inventory. Website claims do not verify stock, authenticity, checkout, PIN delivery or seller protection. Older Ace Combat, hardware and digital-only offers are excluded where identifiable."
     }
   ],
   "manual_only": [
     {
       "name": "Amazon India",
-      "reason": "No validated Onimusha PS5 ASIN or permitted stock adapter. Not scanned."
+      "reason": "No validated physical Ace Combat 8 PS5 ASIN or permitted stock adapter. Not scanned."
+    },
+    {
+      "name": "Flipkart",
+      "reason": "No validated Ace Combat 8 PS5 product URL; disabled in sources."
     }
   ]
 }

@@ -42,13 +42,13 @@ class MemoryStore:
 
 class UnlimitedPriceTests(unittest.TestCase):
     def test_config_is_onimusha_unlimited(self):
-        cfg=read_config(str(REPO/'config.json'))
+        cfg=read_config(str(REPO/'tests/fixtures/onimusha_config.json'))
         self.assertEqual(cfg['target'],'onimusha')
         self.assertIsNone(cfg['max_price_inr'])
         self.assertFalse(cfg['daily_health'])
         self.assertFalse(cfg['reddit']['enabled'])
     def test_config_uses_real_json_null_not_text(self):
-        text=(REPO/'config.json').read_text()
+        text=(REPO/'tests/fixtures/onimusha_config.json').read_text()
         self.assertIn('"max_price_inr": null',text)
         self.assertNotIn('"max_price_inr": "null"',text)
     def test_above_old_4000_threshold_allowed(self):
@@ -161,17 +161,17 @@ class UnlimitedIntegrationTests(unittest.TestCase):
         self.assertIn(safe_text('Unlimited (no price cap)'),field['value'])
         self.assertEqual(payload['allowed_mentions'],{'parse':[]})
     def test_cli_test_reports_unlimited(self):
-        with patch.object(tracker.sys,'argv',['tracker.py','--mode','test','--config',str(REPO/'config.json')]), patch.object(tracker,'Discord') as cls, redirect_stdout(io.StringIO()):
+        with patch.object(tracker.sys,'argv',['tracker.py','--mode','test','--config',str(REPO/'tests/fixtures/onimusha_config.json')]), patch.object(tracker,'Discord') as cls, redirect_stdout(io.StringIO()):
             self.assertEqual(tracker.main(),0)
             text=cls.return_value.send.call_args.args[1]
             self.assertIn('Price limit: Unlimited (no price cap)',text)
             self.assertIn('Daily health messages: off',text)
             self.assertNotIn('INR None',text)
     def test_no_filter_change_required_in_discord_secret(self):
-        cfg=json.loads((REPO/'config.json').read_text())
+        cfg=json.loads((REPO/'tests/fixtures/onimusha_config.json').read_text())
         self.assertNotIn('webhook',json.dumps(cfg).lower())
     def test_three_existing_seed_sources_have_new_target_only(self):
-        cfg=read_config(str(REPO/'config.json'))
+        cfg=read_config(str(REPO/'tests/fixtures/onimusha_config.json'))
         seeds={s['id']:s['products'] for s in cfg['sources'] if s.get('products')}
         self.assertEqual(set(seeds),{'gamebuy','flipkart','sheenu'})
         for urls in seeds.values():

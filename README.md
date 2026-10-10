@@ -1,94 +1,92 @@
-# Onimusha: Way of the Sword PS5 watcher - unlimited price
+# Ace Combat 8 PS5 disc watcher - INR 5,500 ceiling
 
-Revision: `onimusha-unlimited-1` | Built: 2026-10-06
+Revision: `acecombat8-5500-1`. Prepared 11 October 2026.
 
-This is an update for the existing SOTE/Pragmata GitHub Actions project.
-Keep the existing workflow, secrets, requirements, Discord destinations and state branch.
-The Python package is still called `sote`; that name is not the active search target.
+This update replaces the active Onimusha target with **Ace Combat 8: Wings of Theve**.
+It does not deploy itself. Upload it into the existing repository's `main` branch.
 
-## Active settings
+## Configuration
 
-- Target: Onimusha: Way of the Sword, PS5 physical purchase listings.
-- New and used accepted; no numeric price ceiling.
-- `max_price_inr: null` means unlimited. Do not use 0 or the string "null".
-- `daily_health: false`: scheduled scans do not send routine daily health messages.
-- A manually requested `status` run still sends a health report.
-- `alert_possible: false`: ambiguous edition/platform/stock leads do not alert.
-- Direct GitHub Reddit module stays disabled. MonitoRSS is separate.
+- `target`: `acecombat8`
+- `max_price_inr`: `5500` (inclusive item-price cap, not a delivered-price guarantee)
+- `daily_health`: `false`
+- `alert_possible`: `false`
+- `reddit.enabled`: `false` (MonitoRSS remains independent)
 
-## Installation
+New and used physical PS5 purchase offers are accepted where the parser can identify them.
+INR 5,500 qualifies; INR 5,500.01 does not. Foreign-currency or unreadable prices are
+suppressed while a numeric INR cap is active. Coupons, card discounts and shipping
+are not calculated. No automated purchase, cart write or seller contact occurs.
+Original case, disc condition, authenticity, delivery and payment protection remain manual checks.
 
-Temporarily disable the existing workflow and wait for any active run to finish.
-Upload the CONTENTS of `UPLOAD_THESE_FILES` to your repository ROOT on `main`:
-`sote/`, `tests/`, `config.json`, `tracker.py`, `README.md`.
-Do not delete existing folders. Do not upload the enclosing folder or ZIP.
-Re-enable the workflow, start a NEW `test` run, then a NEW `status` run.
-You should see `Onimusha: Way of the Sword` and `Unlimited (no price cap)`.
+## Update, not a reinstall
 
-Do not edit `tracker-state`, `.github/workflows/watch.yml` or webhook secrets.
-Old target URLs and alert history reset automatically on the first real target switch;
-store cooldowns remain. Old commits and existing Discord messages are not erased.
+1. Pause the existing workflow and let a current run finish.
+2. Upload the contents of UPLOAD_THESE_FILES to the repository root on main.
+   Do not delete folders or upload the enclosing folder.
+3. Leave `.github/workflows/watch.yml`, `requirements.txt`, the Discord secret and
+   the tracker-state branch alone. The existing workflow and schedule remain.
+4. Re-enable the workflow. Start a new `test`, then a new `status` run on main.
+5. Update the three MonitoRSS connections separately, preserving the author exclusion.
 
-## What it does and does not do
+The old `sote` folder, SOTE workflow/repository labels and original Discord channel
+names are safe to keep. They are not the active search criteria.
 
-Known product pages are checked on the existing schedule; catalogue and sitemap
-sampling is bounded and takes place about every six hours. Matching distinguishes
-Way of the Sword from older Onimusha games, wrong platforms, digital accounts,
-code-only products, buybacks and explicit case/SteelBook-only products.
-Readable in-stock exact matches can alert at ANY listed price. An unreadable price
-is labelled unverified and does not suppress an otherwise eligible stock lead.
-No currency conversion or price-ceiling comparison is performed in unlimited mode.
-Out-of-stock, unknown-stock, preorder/backorder and ambiguous-platform results do
-not become purchase alerts. Matching descriptions are store claims, not guarantees.
+## State and alerts
 
-An ordinary price change by itself does not cause a repeated alert in unlimited
-mode. New in-stock offers and returns to stock do. Successful delivery is acknowledged
-before deduplication is committed. A network timeout can still cause a duplicate.
+The first scan with a changed target discards remembered product URLs and alert
+history for the previous target, but retains source cooldowns. It does not erase
+GitHub history or old Discord messages. An unchanged qualifying offer is not sent
+every scan. A genuine restock or a price moving back inside the cap can trigger a
+new alert. A `status` run deliberately sends a health message; normal scheduled
+scans do not send daily health messages with the supplied configuration.
 
-The update does not add working coverage to every previously blocked store.
-15 sources are configured; only GameBuy, Flipkart and Sheenu currently have specific
-Onimusha seed URLs. Others rely on bounded discovery. Amazon is manual-only.
-A green workflow is NOT proof that all sources were checked. Inspect each source's
-result, evidence and discovery diagnostics. No checkout, PIN delivery, final price,
-buyer-protection or seller-trust verification is performed. No purchases are made.
+Explicit preorder/backorder signals are not treated as ready stock. An old URL
+slug containing 'preorder' by itself does not override a current product status.
+Some titles that bundle discs with digital extras may require manual review.
+Failed fetches are not 'out of stock'. A green workflow is not proof of full coverage.
 
-## Reddit / MonitoRSS
+## Coverage and access
 
-Keep the three existing feeds and destinations. Change their connection filters:
+There are 17 configured store entries, 16 enabled. Five sources have known exact
+product links: DTZone, GameBuy, MCube, PSX Gaming and Play HQ. The others primarily
+use bounded catalogue/sitemap discovery. Known links were located through public
+retailer pages or their indexed results on 11 October 2026; they are not verified
+stock claims or proof that GitHub can fetch/parse them. Source-specific notes are
+in config.json. Amazon is not implemented. Flipkart is disabled without an exact
+validated product URL. Numeric-ID catalogues and JavaScript-dependent pages can
+remain unresolved. This is not complete coverage of every Indian shop.
 
-New-post feeds (IndianGaming, and combined resale/Bangalore/PlayStation): one ANY group:
-- title DOES CONTAIN onimusha
-- description DOES CONTAIN onimusha
-- title DOES CONTAIN way of the sword
-- description DOES CONTAIN way of the sword
+Requests respect the existing rate limits, robots exclusions, HTTPS verification,
+response size limits and backoff rules. No login automation, CAPTCHA bypass,
+rotating proxies or private API endpoints are used.
 
-Sale-thread comments: one ANY group:
-- description DOES CONTAIN onimusha
-- description DOES CONTAIN way of the sword
+## Reddit: change MonitoRSS, not this program
 
-Remove old Pragmata/Elden Ring/price conditions, save, reopen, preview and test.
-These are broad leads, not automatic checks of the game, platform or physical format.
-Older Onimusha games, discussions and wanted posts can appear. Check them manually.
-Photo-only mentions can be missed. No price limit is configured in either system.
-Do not create a fourth feed. A replaced megathread still needs its URL updated manually.
+For the two new-post feeds, use these six keyword conditions in one ANY group:
 
-## Testing and limits
+- title contains ace combat 8
+- description contains ace combat 8
+- title contains wings of theve
+- description contains wings of theve
+- title contains acecombat8
+- description contains acecombat8
 
-305 offline tests passed. Production-client probes could not resolve the three seed
-store domains in this build environment. The first GitHub status run is the live
-scanner compatibility check. Public pages viewed with a separate web tool are not
-proof that the Python scanner can fetch or parse them. No user account or webhook
-was accessed or modified while building this update.
+For the sale-thread comments use only the three description conditions.
+Preserve any existing outer ALL group and author-does-not-equal exclusion.
+Do not put the author exclusion inside the ANY keyword group. Reddit prices,
+platform, format and seller trustworthiness must still be checked manually.
 
-The original and capped-target regression fixtures remain in tests; the presence of
-4000 in a test does NOT impose a live limit. The installed config uses JSON null.
+## Tests and limitations
 
-## Local developer verification (not needed for browser setup)
+Run: `python -m unittest discover -s tests -v`
 
-```sh
-python -m unittest discover -s tests -v
-python tracker.py --mode demo --config config.json
-```
+388 offline tests pass (305 earlier tests plus 83 new tests). Earlier Onimusha
+configuration tests now read a historical fixture rather than the current user
+config; this preserves their original assertions after the target switch.
+That fixture is not active retailer configuration. Tests use synthetic data and
+mock delivery, not live purchases or your Discord/Reddit accounts.
 
-`demo` is entirely synthetic and does not send messages or query stores.
-Do not commit real credentials, private source content or local state files.
+The five seeded retailer smoke checks all failed at DNS lookup from the build
+environment. No live availability was established. Your new GitHub status report
+is required to assess the actual source-by-source coverage.

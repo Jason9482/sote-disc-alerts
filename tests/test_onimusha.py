@@ -237,7 +237,7 @@ class OnimushaIntegrationTests(unittest.TestCase):
         self.invoke(store,notify,dry=True)
         self.assertEqual(before,store.state); notify.send.assert_not_called(); notify.listing.assert_not_called()
     def test_config_target_and_budget(self):
-        cfg=read_config(str(Path(__file__).resolve().parents[1]/'config.json'))
+        cfg=read_config(str(Path(__file__).parent/'fixtures/onimusha_config.json'))
         self.assertEqual(cfg['target'],'onimusha'); self.assertIsNone(cfg['max_price_inr'])
         self.assertFalse(cfg['daily_health']); self.assertFalse(cfg['alert_possible']); self.assertFalse(cfg['reddit']['enabled'])
         for source in cfg['sources']:
@@ -250,7 +250,7 @@ class OnimushaIntegrationTests(unittest.TestCase):
             cfg=copy.deepcopy(CFG); cfg['reddit']['enabled']=True
             path=Path(directory)/'config.json'; path.write_text(json.dumps(cfg))
             with self.assertRaises(ValueError): read_config(str(path))
-    def test_revision_marker(self): self.assertEqual(SCANNER_REVISION,'onimusha-unlimited-1')
+    def test_revision_marker(self): self.assertEqual(SCANNER_REVISION,'acecombat8-5500-1')
     def test_summary_branding_budget_and_off(self):
         old=os.getcwd()
         with tempfile.TemporaryDirectory() as directory, patch.dict(os.environ,{'GITHUB_STEP_SUMMARY':''}):
@@ -273,7 +273,7 @@ class OnimushaIntegrationTests(unittest.TestCase):
         self.assertEqual(client.agent,'OnimushaStockWatcher')
     def test_demo_uses_selected_target_without_network(self):
         repo=Path(__file__).resolve().parents[1]
-        p=subprocess.run([sys.executable,str(repo/'tracker.py'),'--mode','demo','--config',str(repo/'config.json')],capture_output=True,text=True,timeout=15)
+        p=subprocess.run([sys.executable,str(repo/'tracker.py'),'--mode','demo','--config',str(repo/'tests/fixtures/onimusha_config.json')],capture_output=True,text=True,timeout=15)
         self.assertEqual(p.returncode,0,p.stderr)
         self.assertEqual(json.loads(p.stdout)['title'],TITLE)
 

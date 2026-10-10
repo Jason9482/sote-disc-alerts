@@ -103,18 +103,21 @@ class Listing:
         return asdict(self)
 
 
-SUPPORTED_TARGETS = {"sote", "pragmata", "onimusha"}
+SUPPORTED_TARGETS = {"sote", "pragmata", "onimusha", "acecombat8"}
 
 
 def target_name(target: str = "sote") -> str:
     return {"sote": "SOTE", "pragmata": "Pragmata",
-            "onimusha": "Onimusha: Way of the Sword"}.get(target, "SOTE")
+            "onimusha": "Onimusha: Way of the Sword",
+            "acecombat8": "Ace Combat 8: Wings of Theve"}.get(target, "SOTE")
 
 
 def match_product(title: str, url: str = "", target: str = "sote") -> str:
     """Classify a primary product title. Discovery never establishes availability."""
     if target == "sote":
         return match_title(title, url)
+    if target == "acecombat8":
+        return match_acecombat8(title, url)
     if target == "onimusha":
         return match_onimusha(title, url)
     if target != "pragmata":
@@ -138,6 +141,8 @@ def match_product(title: str, url: str = "", target: str = "sote") -> str:
 
 def discovery_hint(text: str, target: str = "sote") -> bool:
     t = normalized(text)
+    if target == "acecombat8":
+        return bool(re.search(r"\bace\s*combat\s*(?:8|viii)\b|\bwings (?:of )?(?:the )?theve\b", t))
     if target == "onimusha":
         return bool(re.search(r"\bonimusha\b|\bway (?:of )?(?:the )?sword\b", t))
     if target == "pragmata":
@@ -179,6 +184,54 @@ def match_onimusha(title: str, url: str = "") -> str:
         subtitle = bool(re.search(r"\bonimusha\b", u) and
                         re.search(r"\bway (?:of )?(?:the )?sword\b", u))
     if not subtitle:
+        return "possible"
+    if ps5 or re.search(r"\bps\s?5\b|\bplaystation\s?5\b", u):
+        return "exact"
+    return "possible"
+
+
+
+def match_acecombat8(title: str, url: str = "") -> str:
+    """Match a primary PS5 game title, not a themed controller or an older game.
+
+    Recognised compact spellings are normalised for matching. URL evidence can
+    fill a missing platform/subtitle, but cannot rescue a wrong primary title.
+    A mixed-platform offer stays possible and is not alerted by default.
+    """
+    t = normalized(title)
+    u = normalized(urlsplit(url).path)
+    t = re.sub(r"\bace\s*combat\s*(\d+|viii)\b", r"ace combat \1", t)
+    u = re.sub(r"\bace\s*combat\s*(\d+|viii)\b", r"ace combat \1", u)
+    numbered = bool(re.search(r"\bace combat (?:8|viii)\b", t))
+    subtitle = bool(re.search(r"\bwings (?:of )?(?:the )?theve\b", t))
+    if not (numbered or subtitle) or is_buyback(t):
+        return "reject"
+    # Old titles must not be rescued by an AC8 slug or compatibility wording.
+    if re.search(r"\bace combat (?:[0-7]|9|[1-9]\d+|zero|assault horizon|infinity)\b|\bskies unknown\b", t):
+        return "reject"
+    # Bare subtitle listings need AC8 in their actual product URL to be exact.
+    identified = numbered or bool(subtitle and re.search(r"\bace combat (?:8|viii)\b", u))
+    # These are not physical-game offers. A disc plus an optional digital bonus
+    # may need manual review; prioritise avoiding code/account false positives.
+    if re.search(r"\b(?:digital|account|rental|rent|steam|key|keys|code|codes|voucher|dlc|upgrade|"
+                 r"bonus|demo|soundtrack|artbook|poster|statue|figure|amiibo|deposit|reservation|"
+                 r"booking|walkthrough|guide|wtb|wanted)\b|\blooking to buy\b", t):
+        return "reject"
+    if re.search(r"\b(?:case|box|steel\s?book) only\b|\bempty (?:case|box|steel\s?book)\b|"
+                 r"\bno (?:game|disc)\b|\b(?:game\s+)?disc (?:is )?not included\b|"
+                 r"\bwithout (?:a |the )?(?:game|disc)\b", t):
+        return "reject"
+    # A shop's game title may say '(compatible with Thrustmaster...)'. That
+    # trailing note is not the product identity. A hardware-first title is.
+    product_identity = re.split(r"\bcompatible with\b", t, maxsplit=1)[0]
+    if re.search(r"\b(?:thrustmaster|hotas|joystick|flightstick|controller|headset|console)\b|"
+                 r"\bt flight\b|\bflight stick\b", product_identity):
+        return "reject"
+    ps5 = bool(re.search(r"\bps\s?5\b|\bplaystation\s?5\b", t))
+    other = bool(re.search(r"\bps\s?[1234]\b|\bplaystation\s?[1234]\b|\bxbox\b|\bswitch\b|\bpc\b", t))
+    if other:
+        return "possible" if ps5 else "reject"
+    if not identified:
         return "possible"
     if ps5 or re.search(r"\bps\s?5\b|\bplaystation\s?5\b", u):
         return "exact"

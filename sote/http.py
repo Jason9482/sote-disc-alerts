@@ -95,7 +95,7 @@ class StoreClient:
         self.base = source["base"]
         self.state = state
         self.config = config
-        self.agent = {"pragmata": "PragmataStockWatcher", "onimusha": "OnimushaStockWatcher"}.get(
+        self.agent = {"pragmata": "PragmataStockWatcher", "onimusha": "OnimushaStockWatcher", "acecombat8": "AceCombat8StockWatcher"}.get(
             config.get("target"), "SOTEStockWatcher")
         repo = config.get("repository_url", "personal-stock-monitor")
         self.session = requests.Session()

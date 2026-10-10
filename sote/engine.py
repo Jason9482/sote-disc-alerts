@@ -16,7 +16,7 @@ from .parsers import parse_html, parse_shopify, discover_html, sitemap_links
 from .notify import Discord, NotificationError, safe_text
 from .discovery import ordered_child_maps
 
-SCANNER_REVISION = "onimusha-unlimited-1"
+SCANNER_REVISION = "acecombat8-5500-1"
 
 
 def read_config(path: str) -> dict:
@@ -25,13 +25,13 @@ def read_config(path: str) -> dict:
         raise ValueError("config.json must contain a nonempty sources array")
     target = cfg.get("target", "sote")
     if target not in SUPPORTED_TARGETS:
-        raise ValueError("Unsupported target; use onimusha, pragmata or sote")
+        raise ValueError("Unsupported target; use acecombat8, onimusha, pragmata or sote")
     cap = cfg.get("max_price_inr")
     if cap is not None and (isinstance(cap, bool) or not isinstance(cap, (int, float)) or not 0 < cap < 10000000):
         raise ValueError("max_price_inr must be a positive number, or null")
     if not isinstance(cfg.get("daily_health", False), bool):
         raise ValueError("daily_health must be true or false")
-    if target in {"pragmata", "onimusha"} and cfg.get("reddit", {}).get("enabled"):
+    if target in {"pragmata", "onimusha", "acecombat8"} and cfg.get("reddit", {}).get("enabled"):
         raise ValueError("Keep the GitHub Reddit module disabled; use the separate MonitoRSS filters")
     ids = set()
     for src in cfg["sources"]:
@@ -236,7 +236,7 @@ def scan_source(source: dict, source_state: dict, cfg: dict, now: float,
 def event_for(item: Listing, history: dict, now: float, cfg: dict) -> str | None:
     """Observe stock; failures/unknowns never erase the last definite stock state."""
     target = cfg.get("target", "sote")
-    if target in {"pragmata", "onimusha"}:
+    if target in {"pragmata", "onimusha", "acecombat8"}:
         verified = match_product(item.title + " " + item.variant, item.url, target)
         if verified == "reject":
             return None
