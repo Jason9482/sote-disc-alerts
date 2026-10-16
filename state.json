@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1791661363.8051653,
-  "last_scan_at": 1792170645.213469,
+  "last_scan_at": 1792172320.920916,
   "listings": {
     "157a54c61a1602beac7b9c7b": {
       "alerted_cycle": 0,
@@ -19,7 +19,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1792170645.213469,
+      "last_seen": 1792172320.920916,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792170645.213469,
+      "last_seen": 1792172320.920916,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792170645.213469,
+      "last_seen": 1792172320.920916,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -107,7 +107,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792170645.213469,
+      "last_seen": 1792172320.920916,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -151,7 +151,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1792170645.213469,
+      "last_seen": 1792172320.920916,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -182,27 +182,43 @@
   "sources": {
     "cex": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "CeX India",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 4,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 4 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 32020 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemaps/cex/in/sitemap-in-supercats.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 183 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "/sitemaps/cex/in/sitemap-in-products-1.xml: 32020 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1792149144.7105627,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1792149144.7105627,
+        "https://in.webuy.com/sitemap.xml": 1792172320.920916,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1792172320.920916,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1792127439.6682186,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1792149144.7105627,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1792105353.0947673
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1792172320.920916
       },
       "working_sitemaps": [
         "https://in.webuy.com/sitemap.xml"
@@ -210,30 +226,45 @@
     },
     "console-garage": {
       "cooldown_until": 1791406702.4592528,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
         "errors": [],
         "name": "Console Garage",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_products_1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 970 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap_agentic_discovery.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1792149144.7105627,
-        "https://consolegarage.com/sitemap_agentic_discovery.xml": 1792082613.8231332,
+        "https://consolegarage.com/sitemap.xml": 1792172320.920916,
+        "https://consolegarage.com/sitemap_agentic_discovery.xml": 1792172320.920916,
         "https://consolegarage.com/sitemap_blogs_1.xml": 1792105353.0947673,
         "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1792127439.6682186,
         "https://consolegarage.com/sitemap_metaobject_pages_1.xml": 1791949295.4666257,
         "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1792149144.7105627,
         "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791817427.9309237,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7991272570939": 1792149144.7105627
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7991272570939": 1792172320.920916
       },
       "working_sitemaps": [
         "https://consolegarage.com/sitemap.xml"
@@ -241,28 +272,43 @@
     },
     "dacby": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
-        "https://dacby.com/buy/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1792149144.7105627,
-        "https://dacby.com/sell/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1792149144.7105627
+        "https://dacby.com/buy/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1792172320.920916,
+        "https://dacby.com/sell/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1792172320.920916
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 4,
         "errors": [],
         "name": "DACBY",
         "observations": 2,
         "product_pages": 2,
-        "requests": 3,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 7,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 16 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps5-cds.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 549 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap-ps4-cds.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 844 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1792149144.7105627,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1792149144.7105627,
-        "https://dacby.com/sitemap.xml": 1792149144.7105627
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1792172320.920916,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1792172320.920916,
+        "https://dacby.com/sitemap.xml": 1792172320.920916
       },
       "working_sitemaps": [
         "https://dacby.com/sitemap.xml"
@@ -270,22 +316,25 @@
     },
     "dtzone": {
       "cooldown_until": 1790340173.353402,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
         "https://dtzone.in/index.php/product/ps5-ace-combat-8-wings-of-thieves-compatible-with-thrustmaster-t-flight-simulator": 1792149144.7105627,
         "https://dtzone.in/index.php/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1792149144.7105627
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "product: FetchError: Network connection failed; not a stock result",
+          "catalogue: FetchError: Network connection failed; not a stock result",
+          "sitemap setup: FetchError: Network connection failed; not a stock result",
+          "product: FetchError: Network connection failed; not a stock result"
         ],
         "name": "DTZone",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 5,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 4,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -299,36 +348,54 @@
     },
     "e2z": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
         "https://e2zstore.com/product/ace-combat-8-wings-of-theve-ps5": 1792127439.6682186,
         "https://e2zstore.com/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1792127439.6682186
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [
+          "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "sitemap /sitemap.rss: ValueError: Response is not an XML sitemap (HTML/error page is not catalogue coverage)",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "e2zStore",
         "observations": 1,
         "product_pages": 1,
-        "requests": 5,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 8,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.rss",
+            "result": "ValueError: Response is not an XML sitemap (HTML/error page is not catalogue coverage)"
+          },
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 20 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap3.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "/product-sitemap3.xml: 1 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
         "https://e2zstore.com/product-sitemap.xml": 1792127439.6682186,
         "https://e2zstore.com/product-sitemap2.xml": 1792149144.7105627,
-        "https://e2zstore.com/product-sitemap3.xml": 1792105353.0947673,
+        "https://e2zstore.com/product-sitemap3.xml": 1792172320.920916,
         "https://e2zstore.com/product-sitemap4.xml": 1792105353.0947673,
         "https://e2zstore.com/product-sitemap5.xml": 1792149144.7105627,
-        "https://e2zstore.com/sitemap.rss": 1792127439.6682186,
-        "https://e2zstore.com/sitemap.xml": 1792149144.7105627
+        "https://e2zstore.com/sitemap.rss": 1792172320.920916,
+        "https://e2zstore.com/sitemap.xml": 1792172320.920916
       },
-      "sitemap_root_cursor": 1,
+      "sitemap_root_cursor": 0,
       "working_sitemaps": [
         "https://e2zstore.com/sitemap.xml"
       ]
@@ -338,19 +405,24 @@
     },
     "gamebuy": {
       "cooldown_until": 1792145503.0886738,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
         "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5": 1792149144.7105627
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
-        "errors": [],
+        "errors": [
+          "product: FetchError: Network connection failed; not a stock result",
+          "catalogue: FetchError: Network connection failed; not a stock result",
+          "catalogue: FetchError: Network connection failed; not a stock result",
+          "sitemap setup: FetchError: Network connection failed; not a stock result"
+        ],
         "name": "GameBuy",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 4,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -365,12 +437,12 @@
       ]
     },
     "gameloot": {
-      "cooldown_until": 1792170754.0530775,
-      "discovery_at": 1792149144.7105627,
+      "cooldown_until": 1792193931.0915823,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: robots.txt not accessible (HTTP 403); check deferred",
@@ -379,7 +451,7 @@
         "name": "GameLoot",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -387,12 +459,12 @@
     },
     "gamenation": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [
           "sitemap /sitemap.xml: FetchError: HTTP 404; not a stock result",
           "sitemap /sitemap_index.xml: FetchError: HTTP 404; not a stock result",
@@ -401,36 +473,57 @@
         "name": "GameNation",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
+        "requests": 6,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/sitemap_index.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          },
+          {
+            "path": "/wp-sitemap.xml",
+            "result": "FetchError: HTTP 404; not a stock result"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1792149144.7105627,
-        "https://gamenation.in/sitemap_index.xml": 1792149144.7105627,
-        "https://gamenation.in/wp-sitemap.xml": 1792149144.7105627
+        "https://gamenation.in/sitemap.xml": 1792172320.920916,
+        "https://gamenation.in/sitemap_index.xml": 1792172320.920916,
+        "https://gamenation.in/wp-sitemap.xml": 1792172320.920916
       }
     },
     "gts": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 2,
         "errors": [],
         "name": "Games The Shop",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 3,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 33 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap contained unescaped ampersands; repaired for URL discovery only",
+          "/sitemap.xml: 20 opaque product URL(s) had no identifying title; their editions were NOT checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1792149144.7105627
+        "https://www.gamestheshop.com/sitemap.xml": 1792172320.920916
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
@@ -438,21 +531,36 @@
     },
     "hgworld": {
       "cooldown_until": 1791270224.7485423,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [
           "catalogue: FetchError: Disallowed by this site's robots.txt"
         ],
         "name": "HGWorld",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 9 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap5.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 60 page URL(s) inspected"
+          },
+          {
+            "path": "/product-sitemap6.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
@@ -460,9 +568,9 @@
         "https://hgworld.in/product-sitemap2.xml": 1792127439.6682186,
         "https://hgworld.in/product-sitemap3.xml": 1792149144.7105627,
         "https://hgworld.in/product-sitemap4.xml": 1792149144.7105627,
-        "https://hgworld.in/product-sitemap5.xml": 1792105353.0947673,
-        "https://hgworld.in/product-sitemap6.xml": 1792105353.0947673,
-        "https://hgworld.in/sitemap.xml": 1792149144.7105627
+        "https://hgworld.in/product-sitemap5.xml": 1792172320.920916,
+        "https://hgworld.in/product-sitemap6.xml": 1792172320.920916,
+        "https://hgworld.in/sitemap.xml": 1792172320.920916
       },
       "working_sitemaps": [
         "https://hgworld.in/sitemap.xml"
@@ -470,19 +578,20 @@
     },
     "hitech": {
       "cooldown_until": 1791521793.4930382,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "catalogue: FetchError: Disallowed by this site's robots.txt"
+          "catalogue: FetchError: Network connection failed; not a stock result",
+          "sitemap setup: FetchError: Network connection failed; not a stock result"
         ],
         "name": "Hitech Gamez",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -498,27 +607,40 @@
     },
     "mcube": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
-        "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1792149144.7105627
+        "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1792172320.920916
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "MCube Games",
         "observations": 1,
         "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 2 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-products.xml",
+            "result": "parsed; 1 candidate URL(s); 0 child map(s); 2088 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap-blog.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 3 page URL(s) inspected"
+          }
+        ],
         "warnings": []
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1792149144.7105627,
-        "https://mcubegames.in/sitemap-products.xml": 1792149144.7105627,
-        "https://mcubegames.in/sitemap.xml": 1792149144.7105627
+        "https://mcubegames.in/sitemap-blog.xml": 1792172320.920916,
+        "https://mcubegames.in/sitemap-products.xml": 1792172320.920916,
+        "https://mcubegames.in/sitemap.xml": 1792172320.920916
       },
       "working_sitemaps": [
         "https://mcubegames.in/sitemap.xml"
@@ -526,11 +648,11 @@
     },
     "mx2": {
       "cooldown_until": 0,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: DNS resolution failed; not a stock result",
@@ -539,37 +661,52 @@
         "name": "MX2Games",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
+        "requests": 2,
         "sitemap_attempts": [],
         "warnings": []
       },
       "scanner_revision": "acecombat8-5500-1"
     },
     "playhq": {
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
         "https://playhq.games/products/ps5-ace-combat-8-wings-of-theve-new-preorder": 1792149144.7105627
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
-        "discovery_pages": 0,
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
+        "discovery_pages": 3,
         "errors": [],
         "name": "Play HQ",
         "observations": 1,
         "product_pages": 1,
-        "requests": 2,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 5,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 5 child map(s); 0 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 5 page URL(s) inspected"
+          },
+          {
+            "path": "/sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 27 page URL(s) inspected"
+          }
+        ],
+        "warnings": [
+          "Sitemap sampling limit reached; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://playhq.games/sitemap.xml": 1792149144.7105627,
+        "https://playhq.games/sitemap.xml": 1792172320.920916,
         "https://playhq.games/sitemap.xml?collection=brands&page=1": 1792149144.7105627,
-        "https://playhq.games/sitemap.xml?collection=categories&page=1": 1792127439.6682186,
+        "https://playhq.games/sitemap.xml?collection=categories&page=1": 1792172320.920916,
         "https://playhq.games/sitemap.xml?collection=pages&page=1": 1792127439.6682186,
         "https://playhq.games/sitemap.xml?collection=products&page=1": 1792149144.7105627,
-        "https://playhq.games/sitemap.xml?collection=static&page=1": 1792105353.0947673
+        "https://playhq.games/sitemap.xml?collection=static&page=1": 1792172320.920916
       },
       "working_sitemaps": [
         "https://playhq.games/sitemap.xml"
@@ -577,22 +714,25 @@
     },
     "psx": {
       "cooldown_until": 1792145506.4249074,
-      "discovery_at": 1792149144.7105627,
+      "discovery_at": 1792172320.920916,
       "known": {
         "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order": 1792149144.7105627,
         "https://psxgaming.com/shop": 1792149144.7105627
       },
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "not due",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "product: FetchError: Network connection failed; not a stock result",
+          "catalogue: FetchError: Network connection failed; not a stock result",
+          "sitemap setup: FetchError: Network connection failed; not a stock result",
+          "product: FetchError: Network connection failed; not a stock result"
         ],
         "name": "PSX Gaming",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 5,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 4,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -607,12 +747,12 @@
       ]
     },
     "sheenu": {
-      "cooldown_until": 1792170784.6351414,
-      "discovery_at": 1792149144.7105627,
+      "cooldown_until": 1792193974.0287838,
+      "discovery_at": 1792172320.920916,
       "known": {},
       "report": {
-        "checked_at": 1792170645.213469,
-        "discovery": "next sample not due; last attempt 1792149144.7105627",
+        "checked_at": 1792172320.920916,
+        "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
           "catalogue: FetchError: HTTP 403; not a stock result",
@@ -621,13 +761,20 @@
         "name": "Sheenu Game Center",
         "observations": 0,
         "product_pages": 0,
-        "requests": 0,
-        "sitemap_attempts": [],
-        "warnings": []
+        "requests": 2,
+        "sitemap_attempts": [
+          {
+            "path": "/sitemap_index.xml",
+            "result": "FetchError: Store is in a temporary backoff window"
+          }
+        ],
+        "warnings": [
+          "Sitemap access was deferred; other map files were not checked"
+        ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://sheenugamecenter.com/sitemap_index.xml": 1792149144.7105627
+        "https://sheenugamecenter.com/sitemap_index.xml": 1792172320.920916
       }
     }
   },
