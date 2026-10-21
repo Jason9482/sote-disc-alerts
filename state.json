@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1791661363.8051653,
-  "last_scan_at": 1792613318.6097662,
+  "last_scan_at": 1792615335.225659,
   "listings": {
     "157a54c61a1602beac7b9c7b": {
       "alerted_cycle": 1,
@@ -19,7 +19,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792613318.6097662,
+      "last_seen": 1792615335.225659,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": true
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792613318.6097662,
+      "last_seen": 1792615335.225659,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792613318.6097662,
+      "last_seen": 1792615335.225659,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -107,7 +107,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792613318.6097662,
+      "last_seen": 1792615335.225659,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -129,7 +129,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792613318.6097662,
+      "last_seen": 1792615335.225659,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -151,7 +151,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1792613318.6097662,
+      "last_seen": 1792615335.225659,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -185,7 +185,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [],
@@ -213,7 +213,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [],
@@ -247,7 +247,7 @@
         "https://dacby.com/sell/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1792600946.4648824
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -276,7 +276,7 @@
         "https://dtzone.in/index.php/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1792600946.4648824
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -305,7 +305,7 @@
         "https://e2zstore.com/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1792600946.4648824
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -337,20 +337,22 @@
       "cooldown_until": 1790850890.7343924
     },
     "gamebuy": {
-      "cooldown_until": 1792573955.815556,
+      "cooldown_until": 1792636936.019806,
       "discovery_at": 1792600946.4648824,
       "known": {
         "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5": 1792600946.4648824
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
-        "errors": [],
+        "errors": [
+          "product: FetchError: robots.txt not accessible (HTTP 403); check deferred"
+        ],
         "name": "GameBuy",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 3,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -369,7 +371,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [
@@ -390,7 +392,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [
@@ -417,7 +419,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [],
@@ -441,7 +443,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [
@@ -473,7 +475,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [
@@ -503,7 +505,7 @@
         "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1792600946.4648824
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -529,7 +531,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [
@@ -551,7 +553,7 @@
         "https://playhq.games/products/ps5-ace-combat-8-wings-of-theve-new-preorder": 1792556089.7877085
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -576,23 +578,24 @@
       ]
     },
     "psx": {
-      "cooldown_until": 1792573959.0842795,
+      "cooldown_until": 1792636939.3609574,
       "discovery_at": 1792600946.4648824,
       "known": {
         "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order": 1792600946.4648824,
         "https://psxgaming.com/shop": 1792600946.4648824
       },
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
-          "Candidate page did not expose a matching primary product; not an out-of-stock result"
+          "product: FetchError: robots.txt not accessible (HTTP 403); check deferred",
+          "product: FetchError: Store is in a temporary backoff window"
         ],
         "name": "PSX Gaming",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 5,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -611,7 +614,7 @@
       "discovery_at": 1792600946.4648824,
       "known": {},
       "report": {
-        "checked_at": 1792613318.6097662,
+        "checked_at": 1792615335.225659,
         "discovery": "next sample not due; last attempt 1792600946.4648824",
         "discovery_pages": 0,
         "errors": [
