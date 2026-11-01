@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1791661363.8051653,
-  "last_scan_at": 1793490325.919082,
+  "last_scan_at": 1793500688.0517955,
   "listings": {
     "157a54c61a1602beac7b9c7b": {
       "alerted_cycle": 1,
@@ -19,21 +19,21 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": true
     },
     "207ef61de977dbcea8a9e438": {
       "alerted_cycle": 0,
-      "budget_note": "Suppressed: INR 5,999.00 is above INR 5,500.00",
+      "budget_note": "Within item-price cap: INR 3,999.00 <= INR 5,500.00; delivery/fees unverified",
       "item": {
         "condition": "Not stated",
         "currency": "INR",
         "dlc": "Unknown; verify code, region and expiry",
         "evidence": "Primary purchase section explicitly says unavailable; generic preorder/waitlist text is ignored",
         "match": "exact",
-        "price": "5,999.00",
+        "price": "3,999.00",
         "source": "GameBuy",
         "status": "out_of_stock",
         "title": "Ace Combat 8: Wings of Theve PS5",
@@ -41,10 +41,10 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 0,
-      "within_budget": false
+      "within_budget": true
     },
     "41d535f2dce221d714c7c3e0": {
       "alerted_cycle": 0,
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -129,7 +129,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -151,7 +151,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -173,7 +173,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -195,7 +195,7 @@
         "variant": "Pre-Owned (USED)"
       },
       "last_definite": "in_stock",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": true
@@ -217,7 +217,7 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1793490325.919082,
+      "last_seen": 1793500688.0517955,
       "possible_sent": false,
       "stock_cycle": 0
     }
@@ -229,7 +229,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [],
@@ -259,7 +259,7 @@
         "https://consolegarage.com/products/lego-batman-legacy-of-the-dark-knight-ps5-copy": 1793479243.3955812
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -294,7 +294,7 @@
         "https://dacby.com/sell/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1793479243.3955812
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -323,7 +323,7 @@
         "https://dtzone.in/index.php/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1793479243.3955812
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -352,7 +352,7 @@
         "https://e2zstore.com/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1793407618.7003553
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -390,7 +390,7 @@
         "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5": 1793479243.3955812
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -416,7 +416,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [
@@ -437,7 +437,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [],
@@ -463,7 +463,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [],
@@ -487,7 +487,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [
@@ -523,7 +523,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [
@@ -553,7 +553,7 @@
         "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1793479243.3955812
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [],
@@ -579,7 +579,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [
@@ -601,14 +601,16 @@
         "https://playhq.games/products/ps5-ace-combat-8-wings-of-theve-new-preorder": 1793451918.6717534
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
-        "errors": [],
+        "errors": [
+          "product: FetchError: Connection or read timed out; not a stock result"
+        ],
         "name": "Play HQ",
-        "observations": 1,
-        "product_pages": 1,
-        "requests": 2,
+        "observations": 0,
+        "product_pages": 0,
+        "requests": 1,
         "sitemap_attempts": [],
         "warnings": []
       },
@@ -633,7 +635,7 @@
         "https://psxgaming.com/shop": 1793479243.3955812
       },
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "not due",
         "discovery_pages": 0,
         "errors": [
@@ -661,7 +663,7 @@
       "discovery_at": 1793479243.3955812,
       "known": {},
       "report": {
-        "checked_at": 1793490325.919082,
+        "checked_at": 1793500688.0517955,
         "discovery": "next sample not due; last attempt 1793479243.3955812",
         "discovery_pages": 0,
         "errors": [
