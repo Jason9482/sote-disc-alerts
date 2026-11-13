@@ -1,6 +1,6 @@
 {
   "heartbeat_at": 1791661363.8051653,
-  "last_scan_at": 1794538537.3551514,
+  "last_scan_at": 1794567363.699339,
   "listings": {
     "157a54c61a1602beac7b9c7b": {
       "alerted_cycle": 1,
@@ -19,7 +19,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": true
@@ -41,7 +41,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -63,7 +63,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -85,7 +85,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -107,7 +107,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 2,
       "within_budget": false
@@ -129,7 +129,7 @@
         "variant": "New"
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": true
@@ -151,7 +151,7 @@
         "variant": ""
       },
       "last_definite": "in_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": false
@@ -173,7 +173,7 @@
         "variant": ""
       },
       "last_definite": "out_of_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": true
@@ -195,7 +195,7 @@
         "variant": "Pre-Owned (USED)"
       },
       "last_definite": "in_stock",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 1,
       "within_budget": true
@@ -217,7 +217,7 @@
         "variant": ""
       },
       "last_definite": "backorder",
-      "last_seen": 1794538537.3551514,
+      "last_seen": 1794567363.699339,
       "possible_sent": false,
       "stock_cycle": 0,
       "within_budget": false
@@ -227,10 +227,10 @@
   "sources": {
     "cex": {
       "cooldown_until": 0,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [],
@@ -245,25 +245,25 @@
           },
           {
             "path": "/sitemaps/cex/in/sitemap-in-products-1.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 32650 page URL(s) inspected"
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 32863 page URL(s) inspected"
           },
           {
-            "path": "/sitemaps/cex/in/sitemap-in-stores.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 14 page URL(s) inspected"
+            "path": "/sitemaps/cex/in/sitemap-in-supercats.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 185 page URL(s) inspected"
           }
         ],
         "warnings": [
-          "/sitemaps/cex/in/sitemap-in-products-1.xml: 32650 opaque product URL(s) had no identifying title; their editions were NOT checked",
+          "/sitemaps/cex/in/sitemap-in-products-1.xml: 32863 opaque product URL(s) had no identifying title; their editions were NOT checked",
           "Sitemap sampling limit reached; other map files were not checked"
         ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://in.webuy.com/sitemap.xml": 1794538537.3551514,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1794538537.3551514,
+        "https://in.webuy.com/sitemap.xml": 1794567363.699339,
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-products-1.xml": 1794567363.699339,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-static.xml": 1794503119.625904,
         "https://in.webuy.com/sitemaps/cex/in/sitemap-in-stores.xml": 1794538537.3551514,
-        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1794471521.1523314
+        "https://in.webuy.com/sitemaps/cex/in/sitemap-in-supercats.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://in.webuy.com/sitemap.xml"
@@ -271,12 +271,12 @@
     },
     "console-garage": {
       "cooldown_until": 1791406702.4592528,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://consolegarage.com/products/lego-batman-legacy-of-the-dark-knight-ps5-copy": 1794538537.3551514
+        "https://consolegarage.com/products/lego-batman-legacy-of-the-dark-knight-ps5-copy": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 4,
         "errors": [],
@@ -294,8 +294,8 @@
             "result": "parsed; 1 candidate URL(s); 0 child map(s); 972 page URL(s) inspected"
           },
           {
-            "path": "/sitemap_collections_1.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 12 page URL(s) inspected"
+            "path": "/sitemap_pages_1.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 4 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -304,15 +304,15 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://consolegarage.com/sitemap.xml": 1794538537.3551514,
+        "https://consolegarage.com/sitemap.xml": 1794567363.699339,
         "https://consolegarage.com/sitemap_agentic_discovery.xml": 1794471521.1523314,
         "https://consolegarage.com/sitemap_blogs_1.xml": 1794503119.625904,
         "https://consolegarage.com/sitemap_collections_1.xml?from=270139719739&to=302897201211": 1794538537.3551514,
         "https://consolegarage.com/sitemap_metaobject_pages_1.xml": 1791949295.4666257,
-        "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1794445189.621513,
+        "https://consolegarage.com/sitemap_pages_1.xml?from=84516307003&to=84658421819": 1794567363.699339,
         "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7938216034363": 1791817427.9309237,
         "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=7991272570939": 1792716926.0259361,
-        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=8058546520123": 1794538537.3551514
+        "https://consolegarage.com/sitemap_products_1.xml?from=6827350851643&to=8058546520123": 1794567363.699339
       },
       "working_sitemaps": [
         "https://consolegarage.com/sitemap.xml"
@@ -320,13 +320,13 @@
     },
     "dacby": {
       "cooldown_until": 0,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://dacby.com/buy/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1794538537.3551514,
-        "https://dacby.com/sell/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1794538537.3551514
+        "https://dacby.com/buy/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1794567363.699339,
+        "https://dacby.com/sell/ps5-cds/ace-combat-8-wings-of-theve-gqU35untoVERheaE5BmP": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 4,
         "errors": [],
@@ -354,9 +354,9 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://dacby.com/product-sitemap-ps4-cds.xml": 1794538537.3551514,
-        "https://dacby.com/product-sitemap-ps5-cds.xml": 1794538537.3551514,
-        "https://dacby.com/sitemap.xml": 1794538537.3551514
+        "https://dacby.com/product-sitemap-ps4-cds.xml": 1794567363.699339,
+        "https://dacby.com/product-sitemap-ps5-cds.xml": 1794567363.699339,
+        "https://dacby.com/sitemap.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://dacby.com/sitemap.xml"
@@ -364,13 +364,13 @@
     },
     "dtzone": {
       "cooldown_until": 1790340173.353402,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://dtzone.in/index.php/product/ps5-ace-combat-8-wings-of-thieves-compatible-with-thrustmaster-t-flight-simulator": 1794538537.3551514,
-        "https://dtzone.in/index.php/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1794538537.3551514
+        "https://dtzone.in/index.php/product/ps5-ace-combat-8-wings-of-thieves-compatible-with-thrustmaster-t-flight-simulator": 1794567363.699339,
+        "https://dtzone.in/index.php/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 2,
         "errors": [
@@ -390,7 +390,7 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://dtzone.in/sitemap.xml": 1794538537.3551514
+        "https://dtzone.in/sitemap.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://dtzone.in/sitemap.xml"
@@ -398,17 +398,18 @@
     },
     "e2z": {
       "cooldown_until": 1793828782.4470892,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://e2zstore.com/product/ace-combat-8-wings-of-theve-ps5": 1794471521.1523314,
-        "https://e2zstore.com/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1794471521.1523314
+        "https://e2zstore.com/product/ace-combat-8-wings-of-theve-ps5": 1794567363.699339,
+        "https://e2zstore.com/product/thrustmaster-t-flight-hotas-neo-ace-combat-8-flight-stick-for-ps5-ps4-pc": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
-        "discovery_pages": 3,
+        "discovery_pages": 2,
         "errors": [
           "catalogue: FetchError: Disallowed by this site's robots.txt",
+          "sitemap /sitemap.rss: ValueError: Response is not an XML sitemap (HTML/error page is not catalogue coverage)",
           "Candidate page did not expose a matching primary product; not an out-of-stock result"
         ],
         "name": "e2zStore",
@@ -417,35 +418,34 @@
         "requests": 8,
         "sitemap_attempts": [
           {
+            "path": "/sitemap.rss",
+            "result": "ValueError: Response is not an XML sitemap (HTML/error page is not catalogue coverage)"
+          },
+          {
             "path": "/sitemap.xml",
             "result": "parsed; 0 candidate URL(s); 20 child map(s); 0 page URL(s) inspected"
           },
           {
-            "path": "/product-sitemap2.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
-          },
-          {
-            "path": "/product-sitemap4.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
+            "path": "/product-sitemap.xml",
+            "result": "parsed; 2 candidate URL(s); 0 child map(s); 1000 page URL(s) inspected"
           }
         ],
         "warnings": [
-          "/product-sitemap4.xml: 2 opaque product URL(s) had no identifying title; their editions were NOT checked",
           "Sitemap sampling limit reached; other map files were not checked"
         ]
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://e2zstore.com/product-sitemap.xml": 1794471521.1523314,
+        "https://e2zstore.com/product-sitemap.xml": 1794567363.699339,
         "https://e2zstore.com/product-sitemap2.xml": 1794538537.3551514,
         "https://e2zstore.com/product-sitemap3.xml": 1794471521.1523314,
         "https://e2zstore.com/product-sitemap4.xml": 1794538537.3551514,
         "https://e2zstore.com/product-sitemap5.xml": 1794503119.625904,
-        "https://e2zstore.com/sitemap.rss": 1794503119.625904,
-        "https://e2zstore.com/sitemap.xml": 1794538537.3551514,
+        "https://e2zstore.com/sitemap.rss": 1794567363.699339,
+        "https://e2zstore.com/sitemap.xml": 1794567363.699339,
         "https://e2zstore.com/sitemap_index.xml": 1794422494.6245425
       },
-      "sitemap_root_cursor": 1,
+      "sitemap_root_cursor": 0,
       "working_sitemaps": [
         "https://e2zstore.com/sitemap.xml"
       ]
@@ -455,12 +455,12 @@
     },
     "gamebuy": {
       "cooldown_until": 1792755674.7383995,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5": 1794538537.3551514
+        "https://gamebuy.in/product/ace-combat-8-wings-of-theve-ps5": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 5,
         "errors": [],
@@ -488,20 +488,20 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://gamebuy.in/product-sitemap.xml": 1794538537.3551514,
-        "https://gamebuy.in/product-sitemap2.xml": 1794538537.3551514,
-        "https://gamebuy.in/sitemap_index.xml": 1794538537.3551514
+        "https://gamebuy.in/product-sitemap.xml": 1794567363.699339,
+        "https://gamebuy.in/product-sitemap2.xml": 1794567363.699339,
+        "https://gamebuy.in/sitemap_index.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://gamebuy.in/sitemap_index.xml"
       ]
     },
     "gameloot": {
-      "cooldown_until": 1794560149.448523,
-      "discovery_at": 1794538537.3551514,
+      "cooldown_until": 1794588976.152703,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
@@ -519,10 +519,10 @@
     },
     "gamenation": {
       "cooldown_until": 0,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [],
@@ -540,7 +540,7 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://gamenation.in/sitemap.xml": 1794538537.3551514,
+        "https://gamenation.in/sitemap.xml": 1794567363.699339,
         "https://gamenation.in/sitemap_index.xml": 1793354324.4247837,
         "https://gamenation.in/wp-sitemap.xml": 1793354324.4247837
       },
@@ -550,10 +550,10 @@
     },
     "gts": {
       "cooldown_until": 0,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 2,
         "errors": [],
@@ -574,7 +574,7 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://www.gamestheshop.com/sitemap.xml": 1794538537.3551514
+        "https://www.gamestheshop.com/sitemap.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://www.gamestheshop.com/sitemap.xml"
@@ -582,10 +582,10 @@
     },
     "hgworld": {
       "cooldown_until": 1791270224.7485423,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [
@@ -601,11 +601,11 @@
             "result": "parsed; 0 candidate URL(s); 13 child map(s); 0 page URL(s) inspected"
           },
           {
-            "path": "/product-sitemap4.xml",
+            "path": "/product-sitemap5.xml",
             "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
           },
           {
-            "path": "/product-sitemap7.xml",
+            "path": "/product-sitemap8.xml",
             "result": "parsed; 0 candidate URL(s); 0 child map(s); 200 page URL(s) inspected"
           }
         ],
@@ -620,12 +620,12 @@
         "https://hgworld.in/product-sitemap2.xml": 1794503119.625904,
         "https://hgworld.in/product-sitemap3.xml": 1794503119.625904,
         "https://hgworld.in/product-sitemap4.xml": 1794538537.3551514,
-        "https://hgworld.in/product-sitemap5.xml": 1794422494.6245425,
+        "https://hgworld.in/product-sitemap5.xml": 1794567363.699339,
         "https://hgworld.in/product-sitemap6.xml": 1794471521.1523314,
         "https://hgworld.in/product-sitemap7.xml": 1794538537.3551514,
-        "https://hgworld.in/product-sitemap8.xml": 1794422494.6245425,
+        "https://hgworld.in/product-sitemap8.xml": 1794567363.699339,
         "https://hgworld.in/product-sitemap9.xml": 1794445189.621513,
-        "https://hgworld.in/sitemap.xml": 1794538537.3551514
+        "https://hgworld.in/sitemap.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://hgworld.in/sitemap.xml"
@@ -633,10 +633,10 @@
     },
     "hitech": {
       "cooldown_until": 1792489319.1555347,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [
@@ -666,9 +666,9 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://hitechgamez.in/product-sitemap.xml": 1794538537.3551514,
-        "https://hitechgamez.in/product-sitemap2.xml": 1794538537.3551514,
-        "https://hitechgamez.in/sitemap_index.xml": 1794538537.3551514
+        "https://hitechgamez.in/product-sitemap.xml": 1794567363.699339,
+        "https://hitechgamez.in/product-sitemap2.xml": 1794567363.699339,
+        "https://hitechgamez.in/sitemap_index.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://hitechgamez.in/sitemap_index.xml"
@@ -676,12 +676,12 @@
     },
     "mcube": {
       "cooldown_until": 0,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1794538537.3551514
+        "https://mcubegames.in/product/ace-combat-8-wings-of-theve---playstation-5": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [],
@@ -707,9 +707,9 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://mcubegames.in/sitemap-blog.xml": 1794538537.3551514,
-        "https://mcubegames.in/sitemap-products.xml": 1794538537.3551514,
-        "https://mcubegames.in/sitemap.xml": 1794538537.3551514
+        "https://mcubegames.in/sitemap-blog.xml": 1794567363.699339,
+        "https://mcubegames.in/sitemap-products.xml": 1794567363.699339,
+        "https://mcubegames.in/sitemap.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://mcubegames.in/sitemap.xml"
@@ -717,10 +717,10 @@
     },
     "mx2": {
       "cooldown_until": 0,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {},
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 0,
         "errors": [
@@ -737,12 +737,12 @@
       "scanner_revision": "acecombat8-5500-1"
     },
     "playhq": {
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
         "https://playhq.games/products/ps5-ace-combat-8-wings-of-theve-new-preorder": 1794538537.3551514
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 3,
         "errors": [],
@@ -757,11 +757,11 @@
           },
           {
             "path": "/sitemap.xml",
-            "result": "parsed; 1 candidate URL(s); 0 child map(s); 181 page URL(s) inspected"
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 5 page URL(s) inspected"
           },
           {
             "path": "/sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 27 page URL(s) inspected"
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 5 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -770,12 +770,12 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://playhq.games/sitemap.xml": 1794538537.3551514,
-        "https://playhq.games/sitemap.xml?collection=brands&page=1": 1794503119.625904,
+        "https://playhq.games/sitemap.xml": 1794567363.699339,
+        "https://playhq.games/sitemap.xml?collection=brands&page=1": 1794567363.699339,
         "https://playhq.games/sitemap.xml?collection=categories&page=1": 1794538537.3551514,
         "https://playhq.games/sitemap.xml?collection=pages&page=1": 1794503119.625904,
         "https://playhq.games/sitemap.xml?collection=products&page=1": 1794538537.3551514,
-        "https://playhq.games/sitemap.xml?collection=static&page=1": 1794471521.1523314
+        "https://playhq.games/sitemap.xml?collection=static&page=1": 1794567363.699339
       },
       "working_sitemaps": [
         "https://playhq.games/sitemap.xml"
@@ -783,13 +783,13 @@
     },
     "psx": {
       "cooldown_until": 1792755678.3356893,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order": 1794538537.3551514,
-        "https://psxgaming.com/shop": 1794538537.3551514
+        "https://psxgaming.com/product/ace-combat-8-wings-of-theve-ps5-pre-order": 1794567363.699339,
+        "https://psxgaming.com/shop": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 4,
         "errors": [
@@ -819,9 +819,9 @@
       },
       "scanner_revision": "acecombat8-5500-1",
       "sitemap_attempted_at": {
-        "https://psxgaming.com/product-sitemap.xml": 1794538537.3551514,
-        "https://psxgaming.com/sitemap_index.xml": 1794538537.3551514,
-        "https://psxgaming.com/woodmart_slider-sitemap.xml": 1794538537.3551514
+        "https://psxgaming.com/product-sitemap.xml": 1794567363.699339,
+        "https://psxgaming.com/sitemap_index.xml": 1794567363.699339,
+        "https://psxgaming.com/woodmart_slider-sitemap.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://psxgaming.com/sitemap_index.xml"
@@ -829,12 +829,12 @@
     },
     "sheenu": {
       "cooldown_until": 1794416121.6264436,
-      "discovery_at": 1794538537.3551514,
+      "discovery_at": 1794567363.699339,
       "known": {
-        "https://sheenugamecenter.com/shop": 1794538537.3551514
+        "https://sheenugamecenter.com/shop": 1794567363.699339
       },
       "report": {
-        "checked_at": 1794538537.3551514,
+        "checked_at": 1794567363.699339,
         "discovery": "bounded catalogue/sitemap sample (not exhaustive)",
         "discovery_pages": 5,
         "errors": [
@@ -854,8 +854,8 @@
             "result": "parsed; 0 candidate URL(s); 0 child map(s); 306 page URL(s) inspected"
           },
           {
-            "path": "/post-sitemap.xml",
-            "result": "parsed; 0 candidate URL(s); 0 child map(s); 69 page URL(s) inspected"
+            "path": "/product_cat-sitemap.xml",
+            "result": "parsed; 0 candidate URL(s); 0 child map(s); 35 page URL(s) inspected"
           }
         ],
         "warnings": [
@@ -869,8 +869,9 @@
         "https://sheenugamecenter.com/category-sitemap.xml": 1794471521.1523314,
         "https://sheenugamecenter.com/page-sitemap.xml": 1794503119.625904,
         "https://sheenugamecenter.com/post-sitemap.xml": 1794538537.3551514,
-        "https://sheenugamecenter.com/product-sitemap.xml": 1794538537.3551514,
-        "https://sheenugamecenter.com/sitemap_index.xml": 1794538537.3551514
+        "https://sheenugamecenter.com/product-sitemap.xml": 1794567363.699339,
+        "https://sheenugamecenter.com/product_cat-sitemap.xml": 1794567363.699339,
+        "https://sheenugamecenter.com/sitemap_index.xml": 1794567363.699339
       },
       "working_sitemaps": [
         "https://sheenugamecenter.com/sitemap_index.xml"
